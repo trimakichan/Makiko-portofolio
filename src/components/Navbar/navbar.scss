@@ -1,0 +1,38 @@
+.container-nav {
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(10px);
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    // z-index: 100;
+
+.icons {
+    font-size: 2.8rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+  .nav {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+  }
+
+  .links-container {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+
+    a {
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
