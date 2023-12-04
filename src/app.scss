@@ -1,2 +1,8 @@
 @use 'styles/main';
 
+
+.container {
+    background: center no-repeat url('./assets/images/bg.png');
+    background-size: cover;
+    min-height: 100vh;
+}

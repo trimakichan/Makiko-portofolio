@@ -1,38 +1,95 @@
-.container-nav {
-    background-color: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(10px);
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    width: 100%;
-    // z-index: 100;
+@use "../../styles/variables";
 
-.icons {
-    font-size: 2.8rem;
+.header-container {
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2em;
+  // position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+
+  .menu-icon {
+    font-size: 1rem;
     color: white;
     cursor: pointer;
-    display: none;
-}
-
-  .nav {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5em;
   }
 
-  .links-container {
+  .nav-close {
+    color: white;
+  }
+
+  .nav-list {
     display: flex;
-    gap: 3rem;
+    flex-direction: column;
+    row-gap: 1.5rem;
     list-style: none;
 
-    a {
-      font-size: 1.3rem;
+    li a {
+      font-size: 1rem;
       font-weight: bold;
       text-decoration: none;
+    }
+
+  }
+  
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .3rem;
+
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  }
+
+  .theme-icon {
+    color: rgb(239, 239, 6);
+    cursor: pointer;
+  }
+
+
+@media (min-width: variables.$breakpoint-small) {
+  .header-container {
+    min-height: auto;
+    padding: 0.3em;
+
+    .header-nav {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2em;
+      min-height: auto;
+
+      .menu-icon {
+        display: none;
+      }
+
+      .nav-close {
+        display: none;
+      }
+
+      .nav-list {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        list-style: none;
+
+
+        .nav-link {
+          font-size: 1.1rem;
+
+        }
+      }
+
+    
     }
   }
 }

@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar/Navbar";
 import "./app.scss";
-import HomeScreen from "./screens/HomeScreen";
+import HomeScreen from "./screens/HomeScreen/HomeScreen";
 
 function App() {
   return (
