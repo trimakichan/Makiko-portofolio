@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect, useContext} from "react";
 import "./header.scss";
-
+import { NavContext } from "../../contexts/NavContext";
 import { IoMenu } from "react-icons/io5";
 import Navbar from "../Navbar/Navbar";
 
 const Header = () => {
+  const {showNav, setShowNav} = useContext(NavContext);
   const [isDesktop, setIsDesktop] = useState(false);
-  const [showNav, setShowNav] = useState(false);
-
+ 
     useEffect(() => {
       const handleResize = () => {
         setIsDesktop(window.innerWidth > 576); 
@@ -42,8 +42,8 @@ const Header = () => {
 
             {/* Toggle Button */}
             <div className="header__toggle" id="header-toggle">
-              <div className="menu-icon" onClick={() => setShowNav(true)}>
-                <IoMenu />
+              <div className="header__toggle__menuIcon" onClick={() => setShowNav(true)}>
+                <IoMenu className="menu-icon"/>
               </div>
             </div>
           </nav>

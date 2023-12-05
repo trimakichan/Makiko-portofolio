@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import "./navbar.scss";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { NavContext } from "../../contexts/NavContext";
 
 // icons
 import { MdDarkMode } from "react-icons/md";
@@ -12,11 +13,12 @@ import { LuUser } from "react-icons/lu";
 
 const Navbar = () => {
   const { theme, setTheme } = useContext(ThemeContext);
+  const {showNav, setShowNav} = useContext(NavContext);
 
   return (
     <div className="nav-container">
       <nav className="nav">
-        <div className="nav__close" id="nav-close">
+        <div className="nav__close" onClick={() => setShowNav(false)}>
           <IoMdClose />
         </div>
 
