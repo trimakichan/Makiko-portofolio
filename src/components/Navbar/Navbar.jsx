@@ -15,6 +15,10 @@ const Navbar = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const {showNav, setShowNav} = useContext(NavContext);
 
+  function handleLinkClick () {
+    setShowNav(false);
+  }
+
   return (
     <div className="nav-container">
       <nav className="nav">
@@ -26,25 +30,25 @@ const Navbar = () => {
 
         <ul className="nav__list">
           <li className="nav__item">
-            <a href="#home" className="nav__link">
+            <a href="#home" className="nav__link" onClick={handleLinkClick}>
               Home
               <AiOutlineHome />
             </a>
           </li>
           <li className="nav__item">
-            <a href="#about" className="nav__link">
+            <a href="#about" className="nav__link" onClick={handleLinkClick}>
               About
               <LuUser />
             </a>
           </li>
           <li className="nav__item">
-            <a href="#projects" className="nav__link">
+            <a href="#projects" className="nav__link" onClick={handleLinkClick}>
               Projects
               <RiBriefcase3Fill />
             </a>
           </li>
           <li className="nav__item">
-            <a href="#contact" className="nav__link">
+            <a href="#contact" className="nav__link" onClick={handleLinkClick}>
               Contact
               <FiMessageSquare />
             </a>
