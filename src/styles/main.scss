@@ -1,5 +1,4 @@
-@use 'variables';
-@use 'layout';
+@use './index' as *;
 
 
 * {
@@ -13,7 +12,7 @@ html {
 }
 
 body {
-    font-family: variables.$font-family;
+    font-family: $font-family;
 }
 
 

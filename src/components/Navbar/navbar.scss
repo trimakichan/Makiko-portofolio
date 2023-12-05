@@ -1,6 +1,6 @@
-@use "../../styles/variables";
+@use "../../styles" as *;
 
-.header-container {
+.nav-container {
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   padding: 2em;
@@ -10,86 +10,72 @@
   width: 100%;
   min-height: 100vh;
 
-  .menu-icon {
-    font-size: 1rem;
-    color: white;
-    cursor: pointer;
-  }
+  .nav {
+    &__close {
+      color: white;
+    }
 
-  .nav-close {
-    color: white;
-  }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+      list-style: none;
+    }
 
-  .nav-list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
-    list-style: none;
-
-    li a {
+    &__link {
       font-size: 1rem;
       font-weight: bold;
       text-decoration: none;
-    }
+      display: inline-flex;
+      align-items: center;
+      column-gap: 0.3rem;
+      transition: 0.3s;
 
-  }
-  
-  .nav-link {
-    display: inline-flex;
-    align-items: center;
-    column-gap: .3rem;
-
-    &:hover {
-      color: white;
-      cursor: pointer;
+      &:hover {
+        color: white;
+        cursor: pointer;
+      }
     }
   }
+}
 
-  }
+.theme-icon {
+  color: rgb(239, 239, 6);
+  cursor: pointer;
+}
 
-  .theme-icon {
-    color: rgb(239, 239, 6);
-    cursor: pointer;
-  }
-
-
-@media (min-width: variables.$breakpoint-small) {
-  .header-container {
+@media (min-width: $breakpoint-small) {
+  .nav-container {
     min-height: auto;
     padding: 0.3em;
+    transition: 1s;
 
-    .header-nav {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
+    .nav {
+      @include base-container;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.2em;
+      padding: 1.2em 0;
       min-height: auto;
 
-      .menu-icon {
+      &__close {
         display: none;
       }
 
-      .nav-close {
-        display: none;
-      }
-
-      .nav-list {
+      &__list {
         display: flex;
         flex-direction: row;
         gap: 3rem;
         list-style: none;
 
-
-        .nav-link {
+        &__link {
           font-size: 1.1rem;
-
         }
       }
+    }
 
-    
+    .menu-icon {
+      display: none;
     }
   }
 }

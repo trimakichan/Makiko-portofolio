@@ -1,10 +1,9 @@
 import { useContext } from "react";
 import "./navbar.scss";
-import { ThemeContext } from "../../context/ThemeContext";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 // icons
 import { MdDarkMode } from "react-icons/md";
-import { IoMenu } from "react-icons/io5";
 import { AiOutlineHome } from "react-icons/ai";
 import { RiBriefcase3Fill } from "react-icons/ri";
 import { FiMessageSquare } from "react-icons/fi";
@@ -15,55 +14,47 @@ const Navbar = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
-    <div className="header-container">
-      <nav className="header-nav">
-        <div className="nav-close" id="nav-close">
+    <div className="nav-container">
+      <nav className="nav">
+        <div className="nav__close" id="nav-close">
           <IoMdClose />
         </div>
 
-        <a href="#">LOGO</a>
+        <a href="#" className="nav__logo">LOGO</a>
 
-        {/* Toggle button */}
-        <div className="header-toggle" id="header-toggle"></div>
-        
-
-        <ul className="nav-list">
-          <li className="nav-item">
-            <a href="#home" className="nav-link">
+        <ul className="nav__list">
+          <li className="nav__item">
+            <a href="#home" className="nav__link">
               Home
               <AiOutlineHome />
             </a>
           </li>
-          <li className="nav-item">
-            <a href="#about" className="nav-link">
+          <li className="nav__item">
+            <a href="#about" className="nav__link">
               About
               <LuUser />
             </a>
           </li>
-          <li className="nav-item">
-            <a href="#projects" className="nav-link">
+          <li className="nav__item">
+            <a href="#projects" className="nav__link">
               Projects
               <RiBriefcase3Fill />
             </a>
           </li>
-          <li className="nav-item">
-            <a href="#contact" className="nav-link">
+          <li className="nav__item">
+            <a href="#contact" className="nav__link">
               Contact
               <FiMessageSquare />
             </a>
           </li>
 
           <p
-            className="theme-icon"
+            className="nav__link theme-icon"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
             <MdDarkMode />
           </p>
         </ul>
-
-        <div className="menu-icon">
-          <IoMenu />
-        </div>
       </nav>
     </div>
   );
