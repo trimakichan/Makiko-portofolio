@@ -1,11 +1,12 @@
+import Main from "../../components/Main/Main";
 import "./homeScreen.scss";
 
 
 const HomeScreen = () => {
   return (
-    <div className="home-container">
-      <section className="section section-height" id="home">
-        <h1>Home</h1>
+    <div className="home">
+      <section className="home_main">
+        <Main />
       </section>
 
       <section className="section section-height" id="about">

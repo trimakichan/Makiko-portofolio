@@ -30,7 +30,7 @@ const Navbar = () => {
 
         <ul className="nav__list">
           <li className="nav__item">
-            <a href="#home" className="nav__link" onClick={handleLinkClick}>
+            <a href="#" className="nav__link" onClick={handleLinkClick}>
               Home
               <AiOutlineHome />
             </a>

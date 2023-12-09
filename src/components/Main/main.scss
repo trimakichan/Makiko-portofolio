@@ -1,0 +1,101 @@
+@use "../../styles" as *;
+
+.main {
+  padding: 2em;
+  border: 1px solid black;
+  // min-height: 70vh;
+
+  &__contentWrapper {
+    // width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    border: 1px solid red;
+  }
+
+  &__content {
+    border: 1px solid red;
+  }
+
+  &__profilePic {
+//     // width: 70%;
+height: 300px;
+    margin: 0 auto;
+border: 1px solid red;
+
+    position: relative;
+    width: 70%;
+  }
+
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    // margin: 0;
+
+    position: absolute;
+    top: 0;
+    z-index: 2;
+   
+  }
+
+  .profile-imgBg {
+    position: absolute;
+    border-top-right-radius: 30%;
+    border-top-left-radius: 30%;
+    background: linear-gradient(
+      224deg,
+      hsla(277, 81%, 55%, 1) -2%,
+      hsla(277, 97%, 83%, 1) 97%);
+    z-index: 1;
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .main {
+    // height: 80vh;
+    // min-height: 80vh;
+
+    &__contentWrapper {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      // min-height: 70vh;
+  
+    }
+
+    &__content {
+      flex: 0 2 30%;
+      // max-width: 50%;
+     
+    }
+
+    &__profilePic {
+      height: 100%;
+      margin: 0 0;
+      flex: 0 0 25%;
+      position: static;
+      // width: 40%;
+      // flex-basis: 400px;
+      // flex-shrink: 0;
+  
+
+      .profile-img {
+        position: static;
+    
+        // width: 400px;
+        // height: 500px;
+      }
+
+      .profile-imgBg {
+
+        // width: 450px;
+        // height: 550px;
+
+      }
+      
+
+    }
+  }
+
+}

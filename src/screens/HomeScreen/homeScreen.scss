@@ -1,14 +1,18 @@
-@use '../../styles/layout';
-@use '../../styles/variables';
+@use '../../styles' as *;
 
-
-@media (min-width: variables.$breakpoint-small) {
-    .home-container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
+.home {
+    // margin: 0 auto;
     
-    }
+
+}
+
+
+@media (min-width: $breakpoint-small) {
+ 
+}
+
+@media (min-width: $breakpoint-large) {
+    
 }
 
 
