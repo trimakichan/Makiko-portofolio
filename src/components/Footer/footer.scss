@@ -1,0 +1,38 @@
+@use "../../styles" as *;
+
+.footer {
+    height: 10rem;
+    background-color:antiquewhite;
+    border-top: 1px solid rgb(188, 187, 187);
+    display: flex;
+
+
+    &__left {
+        //create mixin later
+        padding: 1rem;
+        width: 40%;
+        border-right: 1px solid rgb(188, 187, 187);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__right {
+        padding: 1rem;
+        width: 60%; 
+
+        p {
+            text-align: center;
+        }
+
+        &__icons {
+            font-size: 2rem;
+           margin-top: 1em;
+           display: flex;
+           justify-content: space-evenly;
+        }
+        
+    }
+
+}

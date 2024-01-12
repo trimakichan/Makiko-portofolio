@@ -1,24 +1,48 @@
 @use "../../styles" as *;
 
 .main {
-  margin: 3em; 
+
   padding: 2em;
   border: 1px solid black;
 
   &__contentWrapper {
     display: flex;
-    justify-content: space-around;
-
-
+    flex-direction: column;
   }
 
   &__content {
-    padding: 2em;
-    width: 50%;
-    align-self: center;
+
   }
 
+  &__image {
+    z-index: 1;  
+  }
 
+}
 
- 
+@media (min-width: $breakpoint-small) {
+  .main {
+    margin: 3em; 
+    padding: 2em;
+    border: 1px solid black;
+  
+    &__contentWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  
+    }
+  
+    &__content {
+      padding: 2em;
+      width: 50%;
+      align-self: center;
+    }
+  
+    &__image {
+      z-index: 1;  
+    }
+  
+  }
+
 }

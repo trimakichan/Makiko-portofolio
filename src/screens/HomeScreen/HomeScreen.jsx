@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer/Footer";
 import Main from "../../components/Main/Main";
 import "./homeScreen.scss";
 
@@ -20,6 +21,8 @@ const HomeScreen = () => {
       <section className="section section-height" id="contact">
         <h1>Contact</h1>
       </section>
+
+      <Footer />
     </div>
   )
 

@@ -1,6 +1,7 @@
 @use "../../styles" as *;
 
 .nav-container {
+  z-index: 2;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   padding: 2em;

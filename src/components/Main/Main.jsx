@@ -14,7 +14,7 @@ const Main = () => {
             possimus? Ea, provident.
           </p>
         </section>
-        <section>
+        <section className="main__image">
             <ProfileImage />
         </section>
 
