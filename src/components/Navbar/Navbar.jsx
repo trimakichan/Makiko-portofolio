@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "./navbar.scss";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { NavContext } from "../../contexts/NavContext";
+import logo from '../../assets/images/logo.webp'
 
 // icons
 import { MdDarkMode } from "react-icons/md";
@@ -26,7 +27,9 @@ const Navbar = () => {
           <IoMdClose />
         </div>
 
-        <a href="#" className="nav__logo">LOGO</a>
+        <a href="#" className="nav__logo">
+          <img src={logo} />
+        </a>
 
         <ul className="nav__list">
           <li className="nav__item">

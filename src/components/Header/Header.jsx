@@ -4,6 +4,7 @@ import "./header.scss";
 import { NavContext } from "../../contexts/NavContext";
 import { IoMenu } from "react-icons/io5";
 import Navbar from "../Navbar/Navbar";
+import logo from '../../assets/images/logo.webp'
 
 const Header = () => {
   const {showNav, setShowNav} = useContext(NavContext);
@@ -36,13 +37,11 @@ const Header = () => {
       ) : (
         <div className="header">
           <nav className="header__nav">
-            <a href="#" className="header__logo">
-              Makiko
-            </a>
+            <img href="#" src={logo} className="header__nav__logo" />
 
             {/* Toggle Button */}
-            <div className="header__toggle" id="header-toggle">
-              <div className="header__toggle__menuIcon" onClick={() => setShowNav(true)}>
+            <div className="header__nav__toggle" id="header-toggle">
+              <div onClick={() => setShowNav(true)}>
                 <IoMenu className="menu-icon"/>
               </div>
             </div>

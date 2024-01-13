@@ -4,7 +4,7 @@
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  padding: 2em;
+  padding: 1em;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +15,7 @@
 
   .nav {
     &__close {
-      color: white;
+      color: grey;
     }
 
     &__list {
@@ -39,6 +39,12 @@
         cursor: pointer;
       }
     }
+
+    &__logo {
+      img {
+        width: 3em;
+      }
+    }
   }
 }
 
@@ -59,7 +65,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.2em 0;
+      padding: .4em 0;
       min-height: auto;
 
       &__close {
