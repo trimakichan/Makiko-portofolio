@@ -1,20 +1,39 @@
 @use '../../styles' as *;
 
+
 .home {
-    // margin: 0 auto;
-    
+    &__background {
+        /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=cb3cd0&c2=f28b08&gt=r&gd=dtl
+*/
+        background: #CB3CD0;
+        background: radial-gradient(at left top, #CB3CD0, #F28B08);
+        position: relative;
 
+    }
 }
 
-
-@media (min-width: $breakpoint-small) {
- 
+.custom-shape-divider-bottom-1705415047 {
+    position: absolute;
+    bottom: 0;
+    // left: 0;
+    // width: 100%;
+    // overflow: hidden;
+    line-height: 0;
 }
 
-@media (min-width: $breakpoint-large) {
-    
+.custom-shape-divider-bottom-1705415047 svg {
+    // position: relative;
+    // display: block;
+    width: calc(130% + 1.3px);
+    height: 140px;
 }
 
+.custom-shape-divider-bottom-1705415047 .shape-fill {
+    fill: #FFFFFF;
+}
 
+@media (min-width: $breakpoint-small) {}
 
-
+@media (min-width: $breakpoint-large) {}

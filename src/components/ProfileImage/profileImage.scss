@@ -1,8 +1,9 @@
+@use '../../styles' as *;
 
 .myImage {
   margin-top: 2rem;
   position: relative;
-  max-width: 25rem;
+  max-width: 50%;
   margin-inline: auto;
 
   &__container {
@@ -49,7 +50,19 @@
     display: block;
   }
 
-
-
-
 }
+
+
+@media (min-width: $breakpoint-small) {
+  .myImage {
+    max-width: 22em;
+  }
+    
+ 
+}
+
+@media (min-width: $breakpoint-large) {
+    
+}
+
+
