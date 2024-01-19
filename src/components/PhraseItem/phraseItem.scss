@@ -1,0 +1,52 @@
+@use '../../styles/theme' as *;
+
+.phrase {
+
+
+    &__container {
+        width: 100%;
+        // display: inline-block;
+        height: 8em;
+        text-align: center;
+        
+        display: flex;
+        justify-content: center;
+
+        &__text {
+            text-align: start;
+            font-size: clamp(.8rem, 3vw + 1rem, 3rem);
+            font-weight: bold;
+            text-transform: uppercase;
+            color: transparent;
+
+            span {
+                background: url('../../assets/images/colorful.webp') bottom;
+                object-fit:contain;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-stroke: 1px purple;
+            }
+
+            span:nth-child(2) {
+                background: url('../../assets/images/leaves.webp') bottom;
+                object-fit:contain;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-stroke: 1px green;
+                
+            }
+         
+        }
+
+        &__text:nth-child(2) {
+            text-align: center;
+            margin-top: 0;
+            align-self: end;
+
+
+        }
+
+        // nth child second to left 
+    }
+
+}

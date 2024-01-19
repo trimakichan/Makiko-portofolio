@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import "./navbar.scss";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { NavContext } from "../../contexts/NavContext";
@@ -18,6 +18,7 @@ const Navbar = () => {
 
   function handleLinkClick () {
     setShowNav(false);
+    // console.log('showNav:', showNav)
   }
 
   return (

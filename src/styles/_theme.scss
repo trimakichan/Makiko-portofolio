@@ -1,9 +1,116 @@
+@use './variables' as *;
+
+// Colors
+$orange-100: #FF6720;
+$orange-90: #FF7636;
+$orange-80: #FF854D;
+$orange-70: #FFA479;
+$orange-60: #FFC2A6;
+$orange-50: #FFE1D2;
+$orange-40: #FFF0E9;
+$orange-30: #FFF7F4;
+
+
+$blue-100: #000000;
+$blue-90: #1b1239;
+$blue-80: #291b71;
+$blue-70: #3223ae;
+$blue-60: #5323e1;
+$blue-50: #8060f6;
+$blue-40: #b093fb;
+$blue-30: #d9c8fe;
+$blue-20: #ffffff;
+
+/** SCSS greyWhite COLORS */
+$white-100: #ffffff;
+$white-90: #ebded8;
+$white-80: #f0e6e2;
+$white-70: #f5eeeb;
+$white-60: #faf7f5;
+
+$grey: #323131;
+$navy: #1b133f;
+$neonblue: #03EADD;
+
+
 
 
 .light {
+    .color-primary {
+        color: $white-100;
+    }
+
+    .color-secondary {
+        color: $orange-30;
+    }
+
+
+    .color-decoration {
+        color: $orange-30;
+    }
+
+    .gradient-bg {
+        /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=cb3cd0&c2=f28b08&gt=r&gd=dtl
+*/
+        background: #CB3CD0;
+        background: radial-gradient(at left top, #CB3CD0, #F28B08);
+    }
+
+    .shape-fill {
+        fill: #FFFFFF;
+    }
+
+    .bg-color {
+        background-color: #FFFFFF;
+    }
+
+    // PhraseItem component 
+
+    .font-stroke {
+        -webkit-text-stroke: 2px $grey;
+    
+        }
 
 }
 
 .dark {
+    .color-primary {
+        color: $white-100;
+    }
+
+    .color-secondary {
+        color: $white-60;
+    }
+
+    .color-decoration {
+        color: $blue-60;
+    }
+
+    .gradient-bg {
+        /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=db1ddd&c2=50d8d7&gt=l&gd=dbl
+*/
+        background: #DB1DDD;
+        background: linear-gradient(45deg, #DB1DDD, #50D8D7);
+    }
+
+    .shape-fill {
+        fill: #1b133f;
+    }
+
+    .bg-color {
+        background-color: $navy;
+    }
+
+
+       // PhraseItem component 
+    .font-stroke {
+        -webkit-text-stroke: 1px $neonblue;
+        }
+
+
     
 }

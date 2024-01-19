@@ -29,9 +29,8 @@ const Header = () => {
 
   return (
     <>
-
+  {/* Show Navbar when the screen size is desktop */}
     {isDesktop && (<Navbar />)}
-
       {showNav && !isDesktop ? (
         <Navbar />
       ) : (

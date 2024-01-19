@@ -1,0 +1,88 @@
+@use "../../styles" as *;
+
+.main {
+    &__bgText {
+        display: none;
+    }
+
+    &__contentWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content {
+        font-size: 1.6em;
+        text-align: center;    
+    }
+
+    &__image {
+        z-index: 1;
+
+    }
+}
+
+.neon {
+    font-size: 3em;
+    font-family: 'Reenie Beanie', cursive;
+    font-style: italic;
+    animation: neonAnim 3s alternate-reverse infinite;
+    color: #03EADD;
+   
+}
+
+@keyframes neonAnim {
+    from {
+        text-shadow:
+            0 0 34px rgba(3, 234, 221, .7),
+            0 0 64px rgba(3, 234, 221, .7),
+            0 0 124px rgba(3, 234, 221, .7);
+    }
+
+    to {
+        text-shadow:
+            0 0 29px rgba(3, 234, 221, .7),
+            0 0 44px rgba(3, 234, 221, .7),
+            0 0 84px rgba(3, 234, 221, .7);
+    }
+}
+
+
+@media (min-width: $breakpoint-small) {
+    .main {
+        position: relative;
+
+        &__bgText {
+            display: block;
+            position: absolute;
+            font-size: clamp(1rem, 10vw + 1rem, 10rem);
+            line-height: 1em;
+            text-wrap: nowrap;
+            opacity: .3;
+
+        }
+
+        &__contentWrapper {
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        &__content {
+            padding: 2em;
+            width: 50%;
+            align-self: center;
+        }
+
+    }
+
+}
+
+@media (min-width: $breakpoint-extra-large) {
+    .main {
+        
+        &__bgText {
+            
+        }
+
+    }
+}
