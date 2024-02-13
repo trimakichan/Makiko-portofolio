@@ -59,10 +59,10 @@ const Navbar = () => {
           </li>
 
           <p
-            className="nav__link theme-icon"
+            className="nav__link"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
-            <MdDarkMode />
+            <MdDarkMode className="icon-color" />
           </p>
         </ul>
       </nav>

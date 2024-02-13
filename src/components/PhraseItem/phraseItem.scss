@@ -1,19 +1,19 @@
-@use '../../styles/theme' as *;
+@use '../../styles/' as *;
 
 .phrase {
-
 
     &__container {
         width: 100%;
         // display: inline-block;
         height: 8em;
         text-align: center;
-        
+
         display: flex;
+        flex-direction: column;
         justify-content: center;
 
         &__text {
-            text-align: start;
+            // text-align: start;
             font-size: clamp(.8rem, 3vw + 1rem, 3rem);
             font-weight: bold;
             text-transform: uppercase;
@@ -21,7 +21,7 @@
 
             span {
                 background: url('../../assets/images/colorful.webp') bottom;
-                object-fit:contain;
+                object-fit: contain;
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-stroke: 1px purple;
@@ -29,24 +29,41 @@
 
             span:nth-child(2) {
                 background: url('../../assets/images/leaves.webp') bottom;
-                object-fit:contain;
+                object-fit: contain;
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-stroke: 1px green;
-                
+
             }
-         
+
         }
 
         &__text:nth-child(2) {
-            text-align: center;
+            // text-align: center;
             margin-top: 0;
             align-self: end;
 
+        }
+
+    }
+
+    &__skills {
+        width: 50%;
+        height: 200px;
+        margin: auto auto;
+        border: 1px solid darkblue
+   
+    } 
+
+}
+
+@media (min-width: $breakpoint-small) {
+    .phrase {
+
+        &__container {
+            flex-direction: row;
 
         }
 
-        // nth child second to left 
     }
-
 }

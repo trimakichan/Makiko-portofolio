@@ -19,7 +19,8 @@ $blue-60: #5323e1;
 $blue-50: #8060f6;
 $blue-40: #b093fb;
 $blue-30: #d9c8fe;
-$blue-20: #ffffff;
+$blue-20:  #e2d7f9;
+;
 
 /** SCSS greyWhite COLORS */
 $white-100: #ffffff;
@@ -66,12 +67,15 @@ $neonblue: #03EADD;
         background-color: #FFFFFF;
     }
 
-    // PhraseItem component 
+    .picBgColor {
+        background-color: $orange-50;
+    }
 
+    // PhraseItem component 
     .font-stroke {
         -webkit-text-stroke: 2px $grey;
-    
-        }
+
+    }
 
 }
 
@@ -105,12 +109,16 @@ $neonblue: #03EADD;
         background-color: $navy;
     }
 
+    .picBgColor {
+        background-color: $blue-20;
+    }
 
-       // PhraseItem component 
+
+    // PhraseItem component 
     .font-stroke {
         -webkit-text-stroke: 1px $neonblue;
-        }
+    }
 
 
-    
+
 }

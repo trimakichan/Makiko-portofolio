@@ -16,33 +16,46 @@
     }
 
     &__image {
-        z-index: 1;
+        animation: profilePicAnim 3s ease-in;
+        z-index: 1;  
 
     }
 }
 
 .neon {
-    font-size: 3em;
+    font-size: 3.5em;
     font-family: 'Reenie Beanie', cursive;
     font-style: italic;
-    animation: neonAnim 3s alternate-reverse infinite;
+    animation: neonAnim 2s alternate-reverse infinite;
     color: #03EADD;
    
 }
 
+@keyframes profilePicAnim {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+    }
+    
+}
+
 @keyframes neonAnim {
     from {
-        text-shadow:
-            0 0 34px rgba(3, 234, 221, .7),
-            0 0 64px rgba(3, 234, 221, .7),
-            0 0 124px rgba(3, 234, 221, .7);
+        // text-shadow:
+        //     0 0 28px 55px rgba(255, 255, 255, .7),
+        //     0 0 55px 88px rgba(255, 255, 255, .7),
+        //     0 0 128px 155px rgba(255, 255, 255, .7);
     }
 
     to {
         text-shadow:
-            0 0 29px rgba(3, 234, 221, .7),
-            0 0 44px rgba(3, 234, 221, .7),
-            0 0 84px rgba(3, 234, 221, .7);
+            0 0 40px rgba(4, 253, 240, 0.7),
+            0 0 70px rgba(4, 252, 240, 0.7),
+            0 0 80px rgba(0, 255, 242, 0.7);
     }
 }
 
