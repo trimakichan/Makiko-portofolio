@@ -1,6 +1,7 @@
 @use "../../styles" as *;
 
 .main {
+ 
     &__bgText {
         display: none;
     }
@@ -8,48 +9,47 @@
     &__contentWrapper {
         display: flex;
         flex-direction: column;
+        padding: 1rem;
     }
 
     &__content {
         font-size: 1.6em;
         text-align: center;   
-
         
-        p span {
+        &__nameText {
             position: relative;
             font-size: 3.5em;
             font-family: 'Reenie Beanie', cursive;
             font-style: italic;
             animation: neonAnim 2s alternate-reverse infinite;
-            // color: #e1eea6; // for light mode
-            color: #03EADD; //for dark mode
+       
         }
 
         @keyframes neonAnim {
             from {
                  text-shadow:
-                     0 0 28px 55px rgba(255, 255, 255, 1),
-                     0 0 55px 88px rgba(255, 255, 255, 1),
-                   0 0 128px 155px rgba(255, 255, 255, 1);
+                     0 0 28px 55px $white-100,
+                     0 0 55px 88px $white-100,
+                   0 0 128px 155px $white-100;
             }
         
             to {
                 text-shadow:
-                    0 0 40px rgba(255, 255, 255, 1),
-                    0 0 70px rgba(255, 255, 255, 1),
-                    0 0 100px rgba(255, 255, 255, 1);
+                    0 0 40px $white-100,
+                    0 0 70px $white-100,
+                    0 0 100px $white-100;
             }
         }
         
         
-        p span::before {
+        &__nameText::before {
             content: "";
             right: -15px;
             top: 50%;
             position: absolute;
             height: 3.5rem;
             width: 2px;
-            background: #03EADD;
+            background: $white-80;
             transform: translateY(-45%);
             animation: blink 0.7s infinite;
 
@@ -66,9 +66,11 @@
     }
 
     &__image {
+        z-index:2;
         animation: profilePicAnim 2s ease-in;
-        z-index: 1;  
+        
     }
+
 
     @keyframes profilePicAnim {
         from {
@@ -82,13 +84,6 @@
         
     }
 }
-
-
-
-
-
-
-
 
 // .neon {
 //     font-size: 3.5em;
@@ -104,6 +99,7 @@
 @media (min-width: $breakpoint-small) {
     .main {
         position: relative;
+       
 
         &__bgText {
             display: block;
@@ -118,25 +114,33 @@
         &__contentWrapper {
             flex-direction: row;
             justify-content: center;
+            margin: 1rem 1rem 0;
 
         }
 
         &__content {
             padding: 2em;
-            width: 50%;
             align-self: center;
+            flex: .5 2 auto;
+        }
+
+        &__image {
+            min-width: 20rem;
+            // align-self: flex-start;
+            flex-grow: 1;
+   
         }
 
     }
 
 }
 
-@media (min-width: $breakpoint-extra-large) {
-    .main {
+// @media (min-width: $breakpoint-extra-large) {
+//     .main {
         
-        &__bgText {
+//         &__bgText {
             
-        }
+//         }
 
-    }
-}
+//     }
+// }

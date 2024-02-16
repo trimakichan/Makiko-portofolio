@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from 'react'
-import './phraseItem.scss'
+import './skillSection.scss'
 import { ThemeContext } from '../../contexts/ThemeContext'
+import SkillScrollSlider from '../SkillScrollSlider/SkillScrollSlider'
 
-const PhraseItem = () => {
+const SkillSection = () => {
     const { theme } = useContext(ThemeContext)
 
     return (
@@ -16,10 +17,11 @@ const PhraseItem = () => {
             </div>
 
             <div className='phrase__skills'>
+                <SkillScrollSlider />
 
             </div>
         </div>
     )
 }
 
-export default PhraseItem
+export default SkillSection

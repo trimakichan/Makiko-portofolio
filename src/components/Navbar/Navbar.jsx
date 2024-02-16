@@ -36,25 +36,26 @@ const Navbar = () => {
           <li className="nav__item">
             <a href="#" className="nav__link" onClick={handleLinkClick}>
               Home
-              <AiOutlineHome />
+              <AiOutlineHome className="icon"/>
             </a>
+          
           </li>
           <li className="nav__item">
             <a href="#about" className="nav__link" onClick={handleLinkClick}>
               About
-              <LuUser />
+              <LuUser className="icon"/>
             </a>
           </li>
           <li className="nav__item">
             <a href="#projects" className="nav__link" onClick={handleLinkClick}>
               Projects
-              <RiBriefcase3Fill />
+              <RiBriefcase3Fill className="icon" />
             </a>
           </li>
           <li className="nav__item">
             <a href="#contact" className="nav__link" onClick={handleLinkClick}>
               Contact
-              <FiMessageSquare />
+              <FiMessageSquare className="icon"/>
             </a>
           </li>
 
@@ -62,7 +63,7 @@ const Navbar = () => {
             className="nav__link"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
-            <MdDarkMode className="icon-color" />
+            <MdDarkMode className="moonIcon-color" />
           </p>
         </ul>
       </nav>

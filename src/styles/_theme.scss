@@ -33,6 +33,12 @@ $grey: #323131;
 $navy: #1b133f;
 $neonblue: #03EADD;
 
+//nav links
+$purple: #4e034e;
+
+//moon icon
+$yellow: #f4f411;
+
 
 
 
@@ -45,7 +51,7 @@ $neonblue: #03EADD;
         color: $orange-30;
     }
 
-
+    //change the color later
     .color-decoration {
         color: $orange-30;
     }
@@ -67,7 +73,7 @@ $neonblue: #03EADD;
         background-color: #FFFFFF;
     }
 
-    .picBgColor {
+    .picBg-color{
         background-color: $orange-50;
     }
 
@@ -75,6 +81,12 @@ $neonblue: #03EADD;
     .font-stroke {
         -webkit-text-stroke: 2px $grey;
 
+    }
+
+    //mainItem component
+    .name-color {
+        color: #e1eea6; 
+       
     }
 
 }
@@ -109,7 +121,7 @@ $neonblue: #03EADD;
         background-color: $navy;
     }
 
-    .picBgColor {
+    .picBg-color {
         background-color: $blue-20;
     }
 
@@ -118,6 +130,13 @@ $neonblue: #03EADD;
     .font-stroke {
         -webkit-text-stroke: 1px $neonblue;
     }
+
+
+    .name-color {
+        color: #03EADD; 
+    }
+
+
 
 
 

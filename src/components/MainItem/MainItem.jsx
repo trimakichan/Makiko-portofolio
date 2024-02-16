@@ -16,7 +16,7 @@ const MainItem = () => {
             <h1 className='main__bgText color-decoration'>WEB DEVELOPER</h1>
             <div className="main__contentWrapper">
                 <section className="main__content">
-                    <p className="color-primary">HI, I AM <span>{text}</span></p>
+                    <p className="color-primary">HI, I AM <span className='main__content__nameText name-color'>{text}</span></p>
                     <p className='color-secondary'>
                         I am a web designer and developer.
                     </p>

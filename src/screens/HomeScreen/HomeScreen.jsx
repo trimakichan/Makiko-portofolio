@@ -5,7 +5,8 @@ import Header from "../../components/Header/Header";
 import MainItem from "../../components/MainItem/MainItem";
 import "./homeScreen.scss";
 import { ThemeContext } from "../../contexts/ThemeContext";
-import PhraseItem from '../../components/PhraseItem/PhraseItem';
+import SkillSection from '../../components/SkillSection/SkillSection';
+import SkillScrollSlider from '../../components/SkillScrollSlider/SkillScrollSlider';
 
 
 
@@ -26,8 +27,7 @@ const HomeScreen = () => {
                     </div>
                 </div>
 
-                <PhraseItem />
-
+                <SkillSection />
 
                 <div className="wavy_bottom">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

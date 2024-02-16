@@ -1,50 +1,65 @@
 @use '../../styles' as *;
 
 .myImage {
-  margin-top: 2rem;
   position: relative;
-  max-width: 50%;
+  max-width: 55%;
   margin-inline: auto;
 
   &__container {
-    // background-color: pink;
-    aspect-ratio: 1/1.25;
+    // z-index: 1;
+    aspect-ratio: 1/1.1;
     display: grid;
     align-items: end;
-    border-radius: 0 0 100vw 100vw;
-    overflow: hidden;
-    transition: transform 250ms ease-in-out; 
+    transition: transform 250ms ease-in-out;
 
     &:hover {
       transform: scale(1.1);
     }
+
   }
-  
+
   &__circle {
     position: absolute;
-    // inset: auto 0 0;
+    inset: auto 0 0;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    width: 100%;
-    // margin-inline: auto;
-    // object-fit: cover;
+    width: 70%;
+    margin-inline: auto;
   }
 
   &__Makiko {
-    position: relative;
-    z-index: 2;
-   margin-inline: auto;
-   transition: transform 250ms ease-in-out;
+    position: absolute;
+    margin-inline: auto;
+    transition: transform 250ms ease-in-out;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    width: 70%;
+    inset: auto 0 0;
 
-   &:hover {
-    transform: scale(1.05) 
-    translateY(-.8rem);
-
-   }
+    &:hover {
+      transform: scale(1.05) translateY(-.35rem);
+    }
 
   }
 
-  
+  &__background {
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: -3rem;
+    right: 0;
+    left: 0;
+
+    &__splash {
+      transform: scale(1.25);
+      line-height: 0;
+    }
+  }
+
+
   img {
     max-width: 100%;
     display: block;
@@ -52,18 +67,16 @@
 
 }
 
-
 @media (min-width: $breakpoint-small) {
   .myImage {
-    max-width: 22em;
+    max-width: 25rem;
+
+    &__Makiko {
+      &:hover {
+        transform: scale(1.05) translateY(-.4rem);
+
+      }
+
+    }
   }
-    
- 
 }
-
-@media (min-width: $breakpoint-large) {
-    
-}
-
-
-// box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
