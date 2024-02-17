@@ -8,17 +8,16 @@ const SkillSection = () => {
     const { theme } = useContext(ThemeContext)
 
     return (
-        <div className={`phrase ${theme} bg-color`}>
-            <div className='phrase__container'>
-                <p className='phrase__container__text font-stroke hidden'>bringing <span>ideas</span> to <span>life</span>
+        <div className={`skillSection ${theme} bg-color`}>
+            <div className='skillSection__container'>
+                <p className='skillSection__container__text font-stroke hidden'>bringing <span>ideas</span> to <span>life</span>
                 </p>
-                <p className='phrase__container__text font-stroke hidden'>
+                <p className='skillSection__container__text font-stroke hidden'>
                     on the web is my calling.</p>
             </div>
 
-            <div className='phrase__skills'>
-                <SkillScrollSlider />
-
+            <div className='skillSection__skills'>
+            <SkillScrollSlider />
             </div>
         </div>
     )

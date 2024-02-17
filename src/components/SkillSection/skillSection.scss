@@ -1,6 +1,6 @@
 @use '../../styles/' as *;
 
-.phrase {
+.skillSection {
 
     &__container {
         width: 100%;
@@ -48,7 +48,7 @@
     }
 
     &__skills {
-        width: 50%;
+        width: 70%;
         height: 200px;
         margin: auto auto;
         border: 1px solid darkblue
@@ -58,7 +58,7 @@
 }
 
 @media (min-width: $breakpoint-small) {
-    .phrase {
+    .skillSection {
 
         &__container {
             flex-direction: row;

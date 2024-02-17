@@ -13,11 +13,13 @@
     }
 
     &__content {
+        margin-top: 2rem;
         font-size: 1.6em;
         text-align: center;   
         
         &__nameText {
             position: relative;
+            line-height: 2rem;
             font-size: 3.5em;
             font-family: 'Reenie Beanie', cursive;
             font-style: italic;
@@ -85,16 +87,6 @@
     }
 }
 
-// .neon {
-//     font-size: 3.5em;
-//     font-family: 'Reenie Beanie', cursive;
-//     font-style: italic;
-//     animation: neonAnim 2s alternate-reverse infinite;
-//     color: #03EADD;
-   
-// } 
-
-
 
 @media (min-width: $breakpoint-small) {
     .main {
@@ -113,13 +105,13 @@
 
         &__contentWrapper {
             flex-direction: row;
-            justify-content: center;
+            // justify-content: center;
             margin: 1rem 1rem 0;
 
         }
 
         &__content {
-            padding: 2em;
+            padding: 1rem;
             align-self: center;
             flex: .5 2 auto;
         }
