@@ -1,53 +1,44 @@
-// import { useState, useEffect } from "react"
 import "./skillScrollSlider.scss"
+import { dataSkills } from "./data-skill"
+import { IconContext } from "react-icons";
+
+
+
 
 const SkillScrollSlider = () => {
-//   const [dataAnimated, setDataAnimated] = useState("false")
+  
+  const skills = dataSkills.concat(dataSkills)
 
-// useEffect(() => {
-//   if(!window.matchMedia("(prefers-reduced-motion: reduce").matches) {
+  // Creat an component for this part 
+  // eslint-disable-next-line react/prop-types
+  const Item = ({ items }) => {
 
-//     addAnimation();
-//   }
+    return items.map((item, index) =>
+      <div key={index} >
+        <li className="skill" >
+          <div className="skill__icon">
+            <IconContext.Provider value={{ color: `${item.color}`, className: "global-class-name", size: "3rem" }}>
+              {item.icon}
+            </IconContext.Provider>
+          </div>
+          <div className="skill__name">{item.skill}</div>
+        </li>
+      </div>
+    )
+  }
 
-//   function addAnimation() {
-//     setDataAnimated(!dataAnimated);
-//   }
-
-
-
-// }, [dataAnimated])
-const skillArray = ['Html', 'CSS', 'JavaScript', 'React', 'Angular', 'Node.js', 'SASS', 'Boostrap', 'Git & GitHub', 'MongoDB', "Response Design"]
-const skillArray2 = skillArray.concat(skillArray)
-
-// eslint-disable-next-line react/prop-types
-const Item = ({items}) => {
-    return items.map(item => <li key={item}>{item}</li> )
-}
 
 
   return (
     <div>
-      <h1>Skills</h1> 
+      <h1>Skills</h1>
 
-    <div className='scroller' data-animated='true' >
-      <ul className="tag-list scroller__inner">
-        <Item  items={skillArray2}/>
-        {/* <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Angular</li>
-        <li>Node.js</li>
-        <li>Bootstrap</li>
-        <li>Sass</li>
-        <li>Git & GitHub</li>
-        <li>MongoDB</li>
-        <li>Response Design</li> */}
-      </ul>
-    </div>
+      <div className='scroller' data-animated='true' >
+        <ul className="tag-list scroller__inner">
+          <Item items={skills} />
 
-
+        </ul>
+      </div>
 
     </div>
   )
