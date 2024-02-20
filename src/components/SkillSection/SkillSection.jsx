@@ -9,15 +9,15 @@ const SkillSection = () => {
 
     return (
         <div className={`skillSection ${theme} bg-color`}>
-            {/* <div className='skillSection__container'>
-                <p className='skillSection__container__text font-stroke hidden'>bringing <span>ideas</span> to <span>life</span>
+            <div className='skillSection__container'>
+            <p className='skillSection__texts font-stroke hidden'>bringing <span>ideas</span> to <span>life</span> on the web is my calling.
                 </p>
-                <p className='skillSection__container__text font-stroke hidden'>
-                    on the web is my calling.</p>
-            </div> */}
 
             <div className='skillSection__skills'>
             <SkillScrollSlider />
+            </div>
+                {/* <p className='skillSection__container__text font-stroke hidden'>
+                    on the web is my calling.</p> */}
             </div>
         </div>
     )

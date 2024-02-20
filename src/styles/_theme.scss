@@ -89,6 +89,12 @@ $yellow: #f4f411;
        
     }
 
+    //SkillScrollSlider component
+        .skill-bgColor {
+            // background-color: 	rgb(250, 249, 246);
+            background-color: 	rgb(247, 238, 236);
+    }
+
 }
 
 .dark {
@@ -131,9 +137,15 @@ $yellow: #f4f411;
         -webkit-text-stroke: 1px $neonblue;
     }
 
-
+    
+    //mainItem component
     .name-color {
         color: #03EADD; 
+    }
+
+    //SkillScrollSlider component
+    .skill-bgColor {
+            background-color: rgb(104, 93, 151);
     }
 
 

@@ -9,8 +9,6 @@ import SkillSection from '../../components/SkillSection/SkillSection';
 import SkillScrollSlider from '../../components/SkillScrollSlider/SkillScrollSlider';
 
 
-
-
 const HomeScreen = () => {
     const { theme } = useContext(ThemeContext);
 

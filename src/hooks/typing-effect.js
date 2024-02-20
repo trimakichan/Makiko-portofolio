@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 export function useTypingEffect(
-    textToType, //Makiko
+    textToType, 
     interKeyStrokeDurationInMs
 ) {
     const [currentPosition, setCurrentPosition] = useState(0);

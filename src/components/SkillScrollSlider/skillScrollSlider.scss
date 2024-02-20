@@ -1,71 +1,106 @@
 @use '../../styles' as *;
 
+.scroller {
+    width: 100%;
 
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
 
+        .skill {
+            width: 5.5rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
 
+            &__name {
+                text-align: center;
+                margin: auto 0;
+            }
+        }
+    }
+ 
+}
+
+.font-style {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: start;
+    color: transparent;
+}
+
+.tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+
+    li {
+        padding: .5rem;
+        border-radius: .5rem;
+        box-shadow: 0 0.5rem 1rem -0.25rem (rgb(104, 93, 151));
+    }
+}
 
 @media (min-width: $breakpoint-small) {
     .scroller {
-        
+
         width: 100%;
         overflow: hidden;
         -webkit-mask:
             linear-gradient(90deg, transparent, white 10%, white 80%, transparent);
-        mask: linear-gradient(90deg, transparent, white 10%, white 80%, transparent);
-
-        border: 1px solid lime;
-
-
+        mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
 
         &__inner {
             width: max-content;
             padding-block: 1rem;
             display: flex;
+            flex-direction: row;
             gap: 1rem;
-            animation: scroll 24s linear infinite;
+            animation: scroll 30s linear infinite;
 
             &:hover {
                 animation-play-state: paused;
             }
 
-            .skill {  
-                // text-align: center;
+            .skill {
+                width: 7rem;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
 
-                &__icon {
-                    // height: 60%;
-                    // // width: 2rem;
-                    object-fit: cover;
-                
-
-                }
-
                 &__name {
-                    // height: 40%;
-        
-                    
+                    text-align: center;
+                    margin: auto 0;
                 }
-                
+
                 &:hover {
                     transform: scale(1.2);
                     transition: transform .8s ease-in-out;
                 }
             }
 
-        
+
             @keyframes scroll {
                 to {
                     transform: translate(calc(-50% - 0.5rem));
                 }
             }
         }
-    
     }
 
+    .font-style {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: start;
+        color: transparent;
+    }
 
     .tag-list {
         margin: 0;
@@ -73,10 +108,10 @@
         list-style: none;
 
         li {
-            padding: 1rem;
-            background-color: $orange-30;
+            padding: .5rem;
+            // background-color: rgb(104, 93, 151);
             border-radius: .5rem;
-            box-shadow: 0 0.5rem 1rem -0.25rem ($orange-30);
+            // box-shadow: 0 0.5rem 1rem -0.25rem (rgb(104, 93, 151));
         }
     }
 }
