@@ -14,15 +14,41 @@
         text-transform: uppercase;
         color: transparent;
 
-        span {
-            background: url('../../assets/images/colorful.webp') bottom;
-            object-fit: contain;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-stroke: 1px purple;
+        // span {
+        //     background: url('../../assets/images/colorful.webp') bottom;
+        //     object-fit: contain;
+        //     background-clip: text;
+        //     -webkit-background-clip: text;
+        //     -webkit-text-stroke: 1px purple;
+        // }
+
+        span:nth-child(1) {
+            color: #70d6ff;
         }
 
         span:nth-child(2) {
+            color: #fcf6bd;
+        }
+
+
+        span:nth-child(2) {
+            color: #d0f4de;
+        }
+
+
+        span:nth-child(3) {
+            color: #e4c1f9;
+        }
+
+        span:nth-child(4) {
+            color: #ede7b1;
+        }
+
+        span:nth-child(5) {
+            color: #43bccd;
+        }
+
+        .life {
             background: url('../../assets/images/leaves.webp') bottom;
             object-fit: contain;
             background-clip: text;
@@ -43,7 +69,7 @@
         margin: auto auto;
         border-radius: 2rem;
 
-    } 
+    }
 
 }
 
@@ -51,8 +77,8 @@
     .skillSection {
 
         &__skills {
-            width: 70%;    
-        } 
+            width: 70%;
+        }
 
     }
 }

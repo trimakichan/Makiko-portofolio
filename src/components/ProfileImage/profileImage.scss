@@ -30,12 +30,12 @@
   &__Makiko {
     position: absolute;
     margin-inline: auto;
+    inset: auto 0 0;
     transition: transform 250ms ease-in-out;
     border-radius: 0 0 100vw 100vw;
     overflow: hidden;
     width: 80%;
-    inset: auto 0 0;
-
+    
     &:hover {
       transform: scale(1.05) translateY(-.35rem);
     }
@@ -73,10 +73,18 @@
 
     &__Makiko {
       &:hover {
-        transform: scale(1.05) translateY(-.4rem);
+        transform: scale(1.05) translateY(-.76rem);
 
       }
 
     }
   }
+}
+
+@media (min-width: $breakpoint-extra-large) {
+  .myImage {
+    margin-inline: 8% ;
+    max-width: 28rem;
+  }
+
 }

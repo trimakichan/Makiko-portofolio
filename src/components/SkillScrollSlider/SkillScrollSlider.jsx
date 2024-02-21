@@ -7,8 +7,8 @@ import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 const SkillScrollSlider = () => {
   const {isDesktop} = useContext(ScreenSizeContext)
   
-  const skill = dataSkills
-  const skills = dataSkills.concat(dataSkills);
+  const skills = dataSkills
+  const skillDuplicated = dataSkills.concat(dataSkills);
   // Creat an component for this part 
   // eslint-disable-next-line react/prop-types
   const Item = ({ items }) => {
@@ -29,12 +29,12 @@ const SkillScrollSlider = () => {
 
   return (
     <div>
-   <p className="font-style font-stroke">Skills</p>
+   <p className="font-style font-stroke">My Skills</p>
       <div className='scroller' data-animated='true' >
         <ul className="tag-list scroller__inner">
        
           {isDesktop ? 
-           <Item items={skills} /> : <Item items={skill}/>}
+           <Item items={skillDuplicated} /> : <Item items={skills}/>}
 
         </ul>
       </div>
