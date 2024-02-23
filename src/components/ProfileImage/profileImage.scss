@@ -3,7 +3,7 @@
 .myImage {
   position: relative;
   max-width: 55%;
-  margin-inline: auto;
+  margin-inline: auto; 
 
   &__container {
     // z-index: 1;
@@ -36,7 +36,7 @@
     overflow: hidden;
     width: 80%;
     
-    &:hover {
+    &:hover, &:active {
       transform: scale(1.05) translateY(-.35rem);
     }
 

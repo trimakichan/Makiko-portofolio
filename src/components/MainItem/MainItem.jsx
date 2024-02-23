@@ -13,17 +13,18 @@ import { IoNewspaperOutline } from "react-icons/io5";
 
 
 const MainItem = () => {
-    const text = useTypingEffect("Makiko", 500);
+    const myName = useTypingEffect("Makiko", 500, 2000);
+    const BackgroundText = useTypingEffect("WEB DEVELOPER", 200, 5000)
     const { theme } = useContext(ThemeContext);
 
 
     return (
 
         <div className={`"main" ${theme}`}>
-            <h1 className='main__bgText color-decoration'>WEB DEVELOPER</h1>
+            <h1 className='main__bgText color-decoration'>{BackgroundText}</h1>
             <div className="main__contentWrapper">
                 <section className="main__content">
-                    <p className="color-primary"><span className='bold'>HI, I AM </span><span className='main__content__nameText name-color'>{text}</span></p>
+                    <p className="color-primary"><span className='bold'>HI, I AM </span><span className='main__content__nameText name-color'>{myName}</span></p>
                     <div className='main__content__description'>
                         <p className='color-secondary'>
                             A Front-End Web Developer passionate about creating interactive applications and experiences on the web.
@@ -31,9 +32,9 @@ const MainItem = () => {
                     </div>
 
                     <div>
-                        <IconContext.Provider value={{ color: "rgba(255,255,255,.6 )", size: "2rem" }}>
-                            <div className='main__content__icons'>
-                                <FaGithub />
+                        <IconContext.Provider value={{ className: "reactIcons"}} >
+                            <div className='main__content__icons' >
+                                <FaGithub/>
                                 <FaLinkedin />
                                 <IoNewspaperOutline />
                             </div>

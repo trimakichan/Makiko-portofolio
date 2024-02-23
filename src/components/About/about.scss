@@ -1,0 +1,60 @@
+@use "../../styles" as *;
+
+.about {
+    // background-color: rgba(0,0,0,.2);
+    max-width: 1500px;
+    margin-inline: auto auto;
+
+    background-color: rgba(255,255,255,.6);
+    border-top-left-radius: 11vw;
+    border-bottom-right-radius: 11vw;
+
+    &__container {
+
+        border: 1px solid red;
+
+    }
+
+    &__photo {
+        border: 1px solid purple;
+
+        img {
+            aspect-ratio: 1/1;
+            width: 80%;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+            
+
+           
+            border: 1px solid pink;
+        }
+
+    }
+
+    &__content {
+        padding: 2rem;
+        border: 1px solid mediumspringgreen;
+        
+        .title {
+           font-size: 3rem;
+           text-transform: uppercase;
+        }
+
+    }
+}
+
+@media (min-width: $breakpoint-small) {
+
+    .about {
+        &__container {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+        }
+
+        
+
+
+    }
+
+}

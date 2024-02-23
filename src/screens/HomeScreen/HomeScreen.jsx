@@ -7,6 +7,7 @@ import "./homeScreen.scss";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import SkillSection from '../../components/SkillSection/SkillSection';
 import SkillScrollSlider from '../../components/SkillScrollSlider/SkillScrollSlider';
+import About from '../../components/About/About';
 
 
 const HomeScreen = () => {
@@ -40,7 +41,7 @@ const HomeScreen = () => {
 
 
                 <section className="section section-height" id="about">
-                    <h1>About</h1>
+                    <About />
                 </section>
 
                 <section className="section section-height" id="projects">

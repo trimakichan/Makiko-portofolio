@@ -55,7 +55,18 @@ opacity: .3;
         &__icons {
             display: flex;
             justify-content: center;
-            gap: 1rem
+            gap: 1rem;     
+        }
+
+        .reactIcons {
+            color: rgba(255,255,255,.6 );
+            font-size: 2rem;
+
+            &:hover {
+                cursor: pointer;
+                color: red;
+            }
+
         }
 
         .bold {
@@ -148,13 +159,15 @@ opacity: .3;
             // border: 1px solid red;
 
             &__description {
-                text-align: start;
+                text-align: center;
             
     
             }
 
             &__icons {
                 justify-content: end;
+                
+        
             }
         }
 
