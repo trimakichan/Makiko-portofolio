@@ -20,7 +20,7 @@ const MainItem = () => {
 
     return (
 
-        <div className={`"main" ${theme}`}>
+        <main className={`"main" ${theme}`}>
             <h1 className='main__bgText color-decoration'>{BackgroundText}</h1>
             <div className="main__contentWrapper">
                 <section className="main__content">
@@ -46,7 +46,7 @@ const MainItem = () => {
                 </section>
 
             </div>
-        </div>
+        </main>
 
 
 

@@ -22,14 +22,14 @@ const Navbar = () => {
   }
 
   return (
-    <div className="nav-container">
+    <nav className="nav-container">
       <nav className="nav">
         <div className="nav__close" onClick={() => setShowNav(false)}>
           <IoMdClose />
         </div>
 
         <a href="#" className="nav__logo">
-          <img src={logo} />
+          <img className='logo' src={logo} />
         </a>
 
         <ul className="nav__list">
@@ -67,7 +67,7 @@ const Navbar = () => {
           </p>
         </ul>
       </nav>
-    </div>
+    </nav>
   );
 };
 

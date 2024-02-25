@@ -36,7 +36,7 @@ const Header = () => {
       {showNav && !isDesktop ? (
         <Navbar />
       ) : (
-        <div className="header">
+        <header className="header">
           <nav className="header__nav">
             <img href="#" src={logo} className="header__nav__logo" />
 
@@ -47,7 +47,7 @@ const Header = () => {
               </div>
             </div>
           </nav>
-        </div>
+        </header>
       ) }
     </>
   );

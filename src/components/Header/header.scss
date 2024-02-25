@@ -1,7 +1,7 @@
 @use "../../styles" as *;
 
 .header {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.45);
     backdrop-filter: blur(10px);
     top: 0;
     left: 0;
@@ -28,7 +28,7 @@
 
     .menu-icon {
         font-size: 2rem;
-        color: grey;
+        color: rgb(40, 39, 39);
     }
 
 }

@@ -8,13 +8,25 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 import SkillSection from '../../components/SkillSection/SkillSection';
 import SkillScrollSlider from '../../components/SkillScrollSlider/SkillScrollSlider';
 import About from '../../components/About/About';
+import { ScreenSizeContext } from '../../contexts/ScreenSizeContext';
+import { NavContext } from '../../contexts/NavContext';
+
+
 
 
 const HomeScreen = () => {
+    const { isDesktop } = useContext(ScreenSizeContext);
+    const {showNav, setShowNav} = useContext(NavContext)
     const { theme } = useContext(ThemeContext);
 
+    function showNavToFalse() {
+        if(!isDesktop && showNav) {
+            setShowNav(false)
+        }
+    }
+
     return (
-        <div className={theme}>
+        <div className={theme} onClick={showNavToFalse}>
             <div className="home gradient-bg">
                 <Header />
                 <div className="home__background">
