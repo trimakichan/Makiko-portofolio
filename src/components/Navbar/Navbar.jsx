@@ -2,7 +2,8 @@ import { useContext, useEffect } from "react";
 import "./navbar.scss";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { NavContext } from "../../contexts/NavContext";
-import logo from '../../assets/images/logo.webp'
+import logo from '../../assets/images/logo.svg'
+// import logo2 from '../../assets/images/logo.svg'
 
 // icons
 import { MdDarkMode } from "react-icons/md";

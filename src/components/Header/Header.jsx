@@ -4,7 +4,7 @@ import "./header.scss";
 import { NavContext } from "../../contexts/NavContext";
 import { IoMenu } from "react-icons/io5";
 import Navbar from "../Navbar/Navbar";
-import logo from '../../assets/images/logo.webp'
+import logo from "../../assets/images/logo.svg"
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 
 const Header = () => {

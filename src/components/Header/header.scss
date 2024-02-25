@@ -13,13 +13,16 @@
         @include base-container;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 1rem 0;
 
         &__logo {
-            width: 2em;
+            width: 30%;
+            object-fit: contain;
+
         }
 
-        // cursor isn't working fix this later
+    
         &__toggle {
             cursor: pointer;
         }

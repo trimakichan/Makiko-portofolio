@@ -1,5 +1,5 @@
 import './footer.scss'
-import logo from '../../assets/images/logo.webp'
+import logo from '../../assets/images/logo.svg'
 
 //icons
 import { FaLinkedin } from "react-icons/fa6";

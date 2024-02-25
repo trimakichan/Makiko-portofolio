@@ -62,9 +62,9 @@ opacity: .3;
             color: rgba(255,255,255,.6 );
             font-size: 2rem;
 
-            &:hover {
+            &:hover, &:focus {
                 cursor: pointer;
-                color: red;
+                color: $purple;
             }
 
         }
@@ -164,11 +164,11 @@ opacity: .3;
     
             }
 
-            &__icons {
-                justify-content: end;
+            // &__icons {
+            //     justify-content: center;
                 
         
-            }
+            // }
         }
 
         &__image {
@@ -204,16 +204,9 @@ opacity: .3;
                 // border: 1px solid yellow;
             }
             
-        
-            &__icons {
-                justify-content: center;
-            }
         }
 
-        &__image {
-     
-            
-        }
+
 
 
     }
