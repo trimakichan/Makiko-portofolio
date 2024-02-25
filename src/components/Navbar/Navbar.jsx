@@ -34,27 +34,27 @@ const Navbar = () => {
         </a>
 
         <ul className="nav__list">
-          <li className="nav__item">
-            <a href="#" className="nav__link" onClick={handleLinkClick}>
+          <li className="nav__list__item">
+            <a href="#" className="nav__list__item__link" onClick={handleLinkClick}>
               Home
               <AiOutlineHome className="icon"/>
             </a>
           
           </li>
-          <li className="nav__item">
-            <a href="#about" className="nav__link" onClick={handleLinkClick}>
+          <li className="nav__list__item">
+            <a href="#about" className="nav__list__item__link" onClick={handleLinkClick}>
               About
               <LuUser className="icon"/>
             </a>
           </li>
-          <li className="nav__item">
-            <a href="#projects" className="nav__link" onClick={handleLinkClick}>
+          <li className="nav__list__item">
+            <a href="#projects" className="nav__list__item__link" onClick={handleLinkClick}>
               Projects
               <RiBriefcase3Fill className="icon" />
             </a>
           </li>
-          <li className="nav__item">
-            <a href="#contact" className="nav__link" onClick={handleLinkClick}>
+          <li className="nav__list__item">
+            <a href="#contact" className="nav__list__item__link" onClick={handleLinkClick}>
               Contact
               <FiMessageSquare className="icon"/>
             </a>

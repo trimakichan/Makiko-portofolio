@@ -7,7 +7,7 @@ export const ScreenSizeProvider = ({children}) => {
 
     useEffect(() => {
         const handleResize = () => {
-          setIsDesktop(window.innerWidth > 576); 
+          setIsDesktop(window.innerWidth > 767); 
         }; 
   
         handleResize(); 
