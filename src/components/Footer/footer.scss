@@ -1,58 +1,83 @@
 @use "../../styles" as *;
 
-.footer {
-    height: 10rem;
-    background-color:antiquewhite;
-    border-top: 1px solid rgb(188, 187, 187);
-    display: flex;
+.footer__container {
+    background-color: $white-opacity;
 
 
-    &__left {
-        //create mixin later
+    .footer {
         padding: 1rem;
-        width: 40%;
-        border-right: 1px solid rgb(188, 187, 187);
-        text-align: center;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-
+        align-items: center;
+    
         &__logo {
-            width: 4rem;
-            line-height: 0;
+            padding: .8rem;
+            text-align: center;
+          
+            .logo {
+                width: 40%;
+            }
+    
+            p {
+                text-align: left;
+            }
         }
+    
+        &__content {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+          
+    
+            .icons {
+                display: flex;
+                font-size: 2rem;
+                gap: .5em;
+               
+
+                a {
+                    color: $grey;
+
+                    &:hover,  &:focus {
+                        cursor: pointer;
+                        color: $blue-60;
+                    }
+                }
+            }
+        }
+    
     }
 
-    &__right {
+    .copyRight {
+        margin: 0 2rem;
         padding: 1rem;
-        width: 60%; 
-
-        p {
-            text-align: center;
-        }
-
-        &__icons {
-            font-size: 2rem;
-           margin-top: 1em;
-           display: flex;
-           justify-content: space-evenly;
-        }
+        border-top: 1px solid $grey;
+        text-align: center;
         
     }
-
 }
 
-@media (min-width: $breakpoint-small) {
-   .footer {
 
-    &__left {
-        width: 20%;
-    }
 
-    &__right {
-        width: 80%;
+// @media (min-width: $breakpoint-small) {
+//    .footer {
+//     flex-direction: row;
 
-    }
+//     &__logo {
+        
 
-   }
-}
+
+//         .logo {
+
+//         }
+//     }
+
+//     &__content {
+
+//     }
+
+
+
+//    }
+// }
+

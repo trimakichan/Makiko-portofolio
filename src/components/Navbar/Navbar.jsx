@@ -2,8 +2,8 @@ import { useContext, useEffect } from "react";
 import "./navbar.scss";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { NavContext } from "../../contexts/NavContext";
-import logo from '../../assets/images/logo.svg'
-// import logo2 from '../../assets/images/logo.svg'
+import logoLight from '../../assets/images/logoLight.svg'
+import logoDark from '../../assets/images/logoDark.svg'
 
 // icons
 import { MdDarkMode } from "react-icons/md";
@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
 
         <a href="#" className="nav__logo">
-          <img className='logo' src={logo} />
+          <img className='logo' src={theme === 'light' ? logoLight : logoDark} />
         </a>
 
         <ul className="nav__list">

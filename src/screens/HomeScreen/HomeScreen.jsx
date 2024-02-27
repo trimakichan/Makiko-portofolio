@@ -11,9 +11,6 @@ import About from '../../components/About/About';
 import { ScreenSizeContext } from '../../contexts/ScreenSizeContext';
 import { NavContext } from '../../contexts/NavContext';
 
-
-
-
 const HomeScreen = () => {
     const { isDesktop } = useContext(ScreenSizeContext);
     const {showNav, setShowNav} = useContext(NavContext)

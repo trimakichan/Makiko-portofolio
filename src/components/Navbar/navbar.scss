@@ -2,7 +2,7 @@
 
 .nav-container {
   z-index: 9;
-  background-color: rgba(255, 255, 255, 0.45);
+  background-color: $white-opacity;
   backdrop-filter: blur(10px);
   padding: 2rem;
   position: fixed;
@@ -24,7 +24,7 @@
  
     &__close {
       font-size: 1.5rem;
-      color: rgb(40, 39, 39);
+      color: $grey;
    
     }
 

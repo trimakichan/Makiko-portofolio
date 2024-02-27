@@ -4,8 +4,8 @@ import "./mainItem.scss";
 import ProfileImage from '../ProfileImage/ProfileImage';
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { useTypingEffect } from '../../hooks/typing-effect';
-import { IconContext } from "react-icons";
 
+import { IconContext } from "react-icons";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { IoNewspaperOutline } from "react-icons/io5";
@@ -34,9 +34,9 @@ const MainItem = () => {
                     <div>
                         <IconContext.Provider value={{ className: "reactIcons"}} >
                             <div className='main__content__icons' >
-                                <FaGithub/>
-                                <FaLinkedin />
-                                <IoNewspaperOutline />
+                            <a href='https://github.com/trimakichan' target='_blank' rel='noopener noreferrer'><FaGithub/></a>
+                                <a href='https://www.linkedin.com/in/makiko-yokoyama' target='_blank' rel='noopener noreferrer'><FaLinkedin /></a>
+                                <a><IoNewspaperOutline /></a>
                             </div>
                         </IconContext.Provider>
                     </div>
