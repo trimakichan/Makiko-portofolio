@@ -10,6 +10,7 @@ import SkillScrollSlider from '../../components/SkillScrollSlider/SkillScrollSli
 import About from '../../components/About/About';
 import { ScreenSizeContext } from '../../contexts/ScreenSizeContext';
 import { NavContext } from '../../contexts/NavContext';
+import Contact from '../../components/Contact/contact';
 
 const HomeScreen = () => {
     const { isDesktop } = useContext(ScreenSizeContext);
@@ -49,16 +50,17 @@ const HomeScreen = () => {
                 </div>
 
 
-                <section className="section section-height" id="about">
+                <section  className="section" id="about" >
                     <About />
                 </section>
 
-                <section className="section section-height" id="projects">
+                <section className="section projects" id="projects">
                     <h1>Projects</h1>
                 </section>
 
-                <section className="section section-height" id="contact">
-                    <h1>Contact</h1>
+
+                <section className="section center" id="contact">
+                   <Contact/>
                 </section>
 
                 <Footer />

@@ -44,6 +44,14 @@
     fill: #FFFFFF;
 }
 
+.projects {
+    background-color: $orange-50;
+    height: 40rem;
+    border-radius: 1rem;
+}
+
+
+
 @media (min-width: $breakpoint-medium) {
     .home {
         .wavy_top {
