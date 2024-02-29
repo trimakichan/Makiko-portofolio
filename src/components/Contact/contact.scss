@@ -1,58 +1,94 @@
 @use "../../styles" as *;
 
 .container {
-    // margin: auto auto;
-    max-inline-size: 1500px;
-    margin-inline: auto;
-    display: grid;
-    border: 1px solid red;
+    position: relative;
+    max-width: 70rem;
+    min-height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 8;
 
-    .item1, .item2 {
-        border: 2px solid orangered;
+    .contactInfo {
+        position: relative;
+        top: 30px;
+        padding: 1.5rem;
+        background: $white-opacity;
+        width: calc(100% - 60px);
+        z-index: 1;
+
+        li {
+            list-style: none;
+        }
+
+        .info {}
+
+        .icons {
+            display: flex;
+            justify-content: end;
+            gap: 1rem;
+        }
     }
 
-
-    .item1 { 
-            width: 80%;
-            height: 15rem;
-            border-radius: 20px;
-            margin-inline: auto;
-            background-color: white;
-            margin-bottom: -2rem;
-            z-index: 0;
-
-    }
-
-    .item2 {
+    .contactForm {
+        padding: 40px 1rem;
+        background-color: $blue-60;
         width: 100%;
-        height: 20rem;
-       border-radius: 1rem;
-        background-color: navy;
-      
+
+        .formBox {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: 30px;
+
+            .inputBox {
+                position: relative;
+                margin: 0 0 2.5rem 0;
+
+                input {
+                    width: 100%;
+                    padding: 5px 0;
+                }
+            }
+
+            .w50 {
+                width: 47%;
+            }
+
+            .w100 {
+                width: 100%;
+            }
+        }
+
     }
 
-    
 }
 
 @media (min-width: $breakpoint-medium) {
+
     .container {
-        grid-template-columns: 1fr 3fr;
-        align-items: center;
+        flex-direction: row;
 
-        .item1 {
-            width: 100%;
-            height: 28rem;
-            margin-right: -1rem;
-            margin-bottom: 0;
-            justify-self: end;
+        .contactInfo {
+            position: absolute;
+            top: 2.5rem;
+            width: 21rem;
+            height: calc(100% - 80px);
+            background: $white-100;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .item2 {
-            height: 30rem;
-            margin-left: -1rem;
+        .contactForm {
+            position: absolute;
+            padding: 3.5rem 3rem;
+            margin-left: 150px;
+            padding-left: 250px;
+            width: calc(100% - 150px);
+            height: 100%;
+            box-shadow: 2.5rem 2.5rem 0 rgba(255, 255, 255, .3); 
         }
-        
-
-       
     }
 }

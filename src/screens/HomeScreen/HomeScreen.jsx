@@ -28,9 +28,9 @@ const HomeScreen = () => {
             <div className="home gradient-bg">
                 <Header />
                 <div className="home__background">
-                    <div>
+                    {/* <div> */}
                         <MainItem />
-                    </div>
+                    {/* </div> */}
 
                     <div className={`wavy_top ${theme}`}>
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -54,12 +54,12 @@ const HomeScreen = () => {
                     <About />
                 </section>
 
-                <section className="section projects" id="projects">
+                <section className="section " id="projects">
                     <h1>Projects</h1>
                 </section>
 
 
-                <section className="section center" id="contact">
+                <section className="section" id="contact">
                    <Contact/>
                 </section>
 

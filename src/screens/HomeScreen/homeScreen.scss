@@ -2,6 +2,8 @@
 
 
 .home {
+
+
     &__background {
         position: relative;
     }
@@ -47,9 +49,13 @@
 .projects {
     background-color: $orange-50;
     height: 40rem;
-    border-radius: 1rem;
+    // border-radius: 1rem;
 }
 
+
+.section {
+    margin: 1rem;
+}
 
 
 @media (min-width: $breakpoint-medium) {
@@ -57,6 +63,10 @@
         .wavy_top {
             position: static;
         }
+    }
+
+    .section {
+        margin: 3rem;
     }
 
 }
