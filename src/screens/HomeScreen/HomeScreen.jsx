@@ -59,7 +59,7 @@ const HomeScreen = () => {
                 </section>
 
 
-                <section className="section" id="contact">
+                <section className="section center" id="contact">
                    <Contact/>
                 </section>
 

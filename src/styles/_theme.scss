@@ -11,15 +11,15 @@ $orange-40: #FFF0E9;
 $orange-30: #FFF7F4;
 
 
-$blue-100: #000000;
-$blue-90: #1b1239;
-$blue-80: #291b71;
-$blue-70: #3223ae;
-$blue-60: #5323e1;
-$blue-50: #8060f6;
-$blue-40: #b093fb;
-$blue-30: #d9c8fe;
-$blue-20:  #e2d7f9;
+
+$purple-90: #1b1239;
+$purple-80: #291b71;
+$purple-70: #3223ae;
+$purple-60: #5323e1;
+$purple-50: #8060f6;
+$purple-40: #b093fb;
+$purple-30: #d9c8fe;
+$purple-20: #e2d7f9;
 ;
 
 /** SCSS greyWhite COLORS */
@@ -29,10 +29,23 @@ $white-80: #f0e6e2;
 $white-70: #f5eeeb;
 $white-60: #faf7f5;
 
-$white-opacity: rgba(255,255,255, .6);
-$grey:  #282727;
+// 使ってる色
+$white-opacity: rgba(255, 255, 255, .6);
+$white-orange: #f7eeec;
+$grey: #282727;
+$black: #181717;
 $navy: #1b133f;
+$light-purple: #685d97;
 $neonblue: #03EADD;
+$cyan: #50D8D7;
+$pink: #CB3CD0;
+$dark-pink: #DB1DDD;
+// $dark-pink: ;
+$dark-yellow: #F28B08;
+$lime-yellow: #e1eea6;
+$light-pink: #e9b5bb;
+
+// rgba(27, 19, 63,.4)
 
 //nav links
 $purple: #4e034e;
@@ -62,19 +75,19 @@ $yellow: #f4f411;
 * Created with https://www.css-gradient.com
 * Gradient link: https://www.css-gradient.com/?c1=cb3cd0&c2=f28b08&gt=r&gd=dtl
 */
-        background: #CB3CD0;
-        background: radial-gradient(at left top, #CB3CD0, #F28B08);
+        background: $pink;
+        background: radial-gradient(at left top, $pink, $dark-yellow);
     }
 
     .shape-fill {
-        fill: #FFFFFF;
+        fill: $white-100;
     }
 
     .bg-color {
-        background-color: #FFFFFF;
+        background-color: $white-100;
     }
 
-    .picBg-color{
+    .picBg-color {
         background-color: $orange-50;
     }
 
@@ -86,16 +99,21 @@ $yellow: #f4f411;
 
     //mainItem component
     .name-color {
-        color: #e1eea6; 
-       
+        color: $lime-yellow;
+
     }
 
     //SkillScrollSlider component
-        .skill-bgColor {
-            // background-color: 	rgb(250, 249, 246);
-            background-color: 	rgb(247, 238, 236);
+    .skill-bgColor {
+        // background-color: 	rgb(250, 249, 246);
+        background-color: $white-orange;
     }
- 
+
+    //Contact component 
+    .contactForm-bgColor {
+        background: rgba($light-pink, .8);
+    }
+
 }
 
 .dark {
@@ -108,7 +126,7 @@ $yellow: #f4f411;
     }
 
     .color-decoration {
-        color: $blue-60;
+        color: $purple-60;
     }
 
     .gradient-bg {
@@ -116,12 +134,12 @@ $yellow: #f4f411;
 * Created with https://www.css-gradient.com
 * Gradient link: https://www.css-gradient.com/?c1=db1ddd&c2=50d8d7&gt=l&gd=dbl
 */
-        background: #DB1DDD;
-        background: linear-gradient(45deg, #DB1DDD, #50D8D7);
+        background: $dark-pink;
+        background: linear-gradient(45deg, $dark-pink, $cyan);
     }
 
     .shape-fill {
-        fill: #1b133f;
+        fill: $navy;
     }
 
     .bg-color {
@@ -129,7 +147,7 @@ $yellow: #f4f411;
     }
 
     .picBg-color {
-        background-color: $blue-20;
+        background-color: $purple-20;
     }
 
 
@@ -138,19 +156,19 @@ $yellow: #f4f411;
         -webkit-text-stroke: 1px $neonblue;
     }
 
-    
+
     //mainItem component
     .name-color {
-        color: #03EADD; 
+        color: $neonblue;
     }
 
     //SkillScrollSlider component
     .skill-bgColor {
-            background-color: rgb(104, 93, 151);
+        background-color: $light-purple;
     }
 
-
-
-
-
+    //Contact component 
+    .contactForm-bgColor {
+        background: rgba($navy, .4);
+    }
 }

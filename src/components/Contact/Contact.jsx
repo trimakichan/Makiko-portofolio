@@ -32,7 +32,7 @@ const Contact = () => {
 
                 </div>
               
-                <div className="contactForm">
+                <div className="contactForm contactForm-bgColor">
                     <h2>Send a Message</h2>
                     <div className="formBox">
                         <div className="inputBox w50">

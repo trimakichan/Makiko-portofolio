@@ -88,7 +88,7 @@
             &.dark {
                 &::after {
                     @include highlight;
-                    background: linear-gradient(to bottom, #0000 60%,  $blue-40 40% );
+                    background: linear-gradient(to bottom, #0000 60%,  $purple-40 40% );
                 }
             }
 
