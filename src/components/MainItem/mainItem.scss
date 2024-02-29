@@ -59,12 +59,13 @@ opacity: .3;
         }
 
         .reactIcons {
-            color: rgba(255,255,255,.6 );
+            color: rgba(255,255,255,.5);
             font-size: 2rem;
 
             &:hover, &:focus {
                 cursor: pointer;
-                color: $purple-60;
+                // color: $purple-60;
+                color: $white-100
             }
 
         }

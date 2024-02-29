@@ -12,7 +12,6 @@ import { MdOutlinePhoneIphone } from "react-icons/md";
 
 const Contact = () => {
     return (
-
             <div className="container">
             
                 <div className="contactInfo">
@@ -33,19 +32,21 @@ const Contact = () => {
                 </div>
               
                 <div className="contactForm contactForm-bgColor">
-                    <h2>Send a Message</h2>
-                    <div className="formBox">
+                    <h1>Send a Message</h1>
+                    <form className="formBox"  action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="97f0fff2-2d01-47fc-8b0f-7f72303d8a0f" />
+
                         <div className="inputBox w50">
-                            <input type='text' name="" required />
+                            <input type='text' name="fname" required />
                             <span>First Name</span>
                         </div>
                         <div className="inputBox w50">
-                            <input type='text' name="" required />
+                            <input type='text' name="lname" required />
                             <span>Last Name</span>
                         </div>
 
                         <div className="inputBox w50">
-                            <input type='text' name="" required />
+                            <input type='email' name="email" required />
                             <span>Email Address</span>
                         </div>
 
@@ -55,15 +56,12 @@ const Contact = () => {
                         </div>
 
                         <div className="inputBox w100">
-                            <textarea name="" required></textarea>
+                            <textarea name="message" placeholder="Your message" required></textarea>
                             <span>Write your message here...</span>
                         </div>
 
-                        <div className="inputBox">
-                            <input type='submit' value='send' />
-
-                        </div>
-                    </div>
+                        <button type="submit">Send Message</button>
+                    </form>
                 </div>
             </div>
     

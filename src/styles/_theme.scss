@@ -112,9 +112,17 @@ $yellow: #f4f411;
     //Contact component 
     .contactForm-bgColor {
         background: rgba($light-pink, .8);
+
+        input, textarea {
+            background-color: rgba($white-100, .4);
+        }
+
+
     }
 
 }
+
+// DARK THEME----------------------------------------------
 
 .dark {
     .color-primary {
@@ -170,5 +178,10 @@ $yellow: #f4f411;
     //Contact component 
     .contactForm-bgColor {
         background: rgba($navy, .4);
+
+        input, textarea {
+            background-color: rgba($white-100, .2);
+        }
     }
+
 }

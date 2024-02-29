@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from 'react';
+
 import "./mainItem.scss";
 import ProfileImage from '../ProfileImage/ProfileImage';
-import { ThemeContext } from "../../contexts/ThemeContext";
 import { useTypingEffect } from '../../hooks/typing-effect';
 
 import { IconContext } from "react-icons";
@@ -15,12 +14,10 @@ import { IoNewspaperOutline } from "react-icons/io5";
 const MainItem = () => {
     const myName = useTypingEffect("Makiko", 500, 2000);
     const BackgroundText = useTypingEffect("WEB DEVELOPER", 200, 5000)
-    const { theme } = useContext(ThemeContext);
-
 
     return (
 
-        <main className={`"main" ${theme}`}>
+        <main className="main">
             <h1 className='main__bgText color-decoration'>{BackgroundText}</h1>
             <div className="main__contentWrapper">
                 <section className="main__content">
