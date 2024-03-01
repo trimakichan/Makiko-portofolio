@@ -128,6 +128,7 @@ $yellow: #f4f411;
 
     // About component 
     .title {
+        color: $grey;
             &::after {
                 background: linear-gradient(to bottom, #0000 60%,  $orange-80 40% );
             }
@@ -192,6 +193,7 @@ $yellow: #f4f411;
  
     .contactForm {
         color: $white-100;
+
         .contact-title {
 
             &::after {
@@ -202,11 +204,12 @@ $yellow: #f4f411;
     
         input, textarea {
             background-color: rgba($white-100, .2);
+            color: $white-100;
         }
     }
 
     .title {
- 
+        color: $white-100;
         &::after {
             background: linear-gradient(to bottom, #0000 60%,  $purple-40 40% );
 

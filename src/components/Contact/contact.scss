@@ -14,9 +14,35 @@
         position: relative;
         top: 30px;
         padding: 1.5rem;
-        background: $white-opacity;
+        background: rgba($white-80, .8);
         width: calc(100% - 60px);
         z-index: 1;
+
+        .chat-image {
+            width: 100%;
+            aspect-ratio: 1/1;
+            margin: auto auto;
+            animation: floating 5s ease-in-out infinite;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
+
+
+            @keyframes floating {
+                0%, 100% {
+                    transform: translate(0, 0);
+                }
+                
+                50% {
+                    transform: translate(0, 50px);
+                }
+            } 
+
+        }
 
         li {
             list-style: none;
@@ -53,12 +79,11 @@
 
             .inputBox {
                 position: relative;
-                margin: 0 0 2.5rem 0;
+                margin: 0 0 2rem;
 
                 input, textarea{
                     width: 100%;
-                    color: $white-100;
-                    padding: 5px 0;
+                    padding: .8rem;
                     border-radius: 5px;
                     border: none;
                     outline: none;
@@ -111,28 +136,25 @@
 @media (min-width: $breakpoint-medium) {
 
     .container {
-        height: 40rem;
-        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+        justify-content: end;
+
 
         .contactInfo {
-            position: absolute;
-            top: 2.5rem;
-            width: 21rem;
-            height: calc(100% - 80px);
-            background: $white-100;
-            padding: 3rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            position: static;
+            width: 100%;
+            height: 90%;
+            margin-left: 1rem;
+   
         }
-
+        
         .contactForm {
-            position: absolute;
-            padding: 3.5rem 3rem;
-            margin-left: 150px;
-            padding-left: 250px;
-            width: calc(100% - 150px);
-            height: 100%;
+            margin-left: -1rem;
+            padding: 2rem 1rem 2rem 4rem;
             box-shadow: 1.5rem 1.5rem 0 rgba(255, 255, 255, .3); 
         }
     }

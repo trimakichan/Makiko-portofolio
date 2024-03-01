@@ -1,5 +1,6 @@
 import "./contact.scss";
 import pic from "../../assets/images/woman.svg";
+import chat from "../../assets/images/chat-dark.svg"
 
 import { CiMail } from "react-icons/ci";
 import { FaLinkedin } from "react-icons/fa6";
@@ -15,7 +16,7 @@ const Contact = () => {
             <div className="container">
             
                 <div className="contactInfo">
-                    <h2>Contact Info</h2>
+                    <h2 className="">Contact Info</h2>
                     <ul className="info">
                         <li><span><MdOutlinePhoneIphone /></span><span>(206)488-7550</span></li>
                         <li>
@@ -28,6 +29,11 @@ const Contact = () => {
                         <li>  <a href='https://www.linkedin.com/in/makiko-yokoyama' target='_blank' rel='noopener noreferrer'><FaLinkedin /></a></li>
                         <li>     <a href='https://github.com/trimakichan' target='_blank' rel='noopener noreferrer'><FaGithub /></a></li>
                     </ul>
+
+                    
+                    <div className="chat-image">
+                        <img src={chat} alt="talking woman image"/>
+                    </div>
 
                 </div>
               
@@ -51,12 +57,12 @@ const Contact = () => {
                         </div>
 
                         <div className="inputBox w50">
-                            <input type='text' name="" required />
+                            <input type='text' name="phone"  />
                             <span>Phone Number</span>
                         </div>
 
                         <div className="inputBox w100">
-                            <textarea name="message" placeholder="Your message" required></textarea>
+                            <textarea name="message" placeholder="Please write your message here..." required></textarea>
                             <span>Write your message here...</span>
                         </div>
 

@@ -2,8 +2,6 @@
 
 
 .home {
-
-
     &__background {
         position: relative;
     }
@@ -55,6 +53,10 @@
 
 .section {
     margin: 1rem;
+}
+
+.projects-bg {
+    background-color: $white-100;
 }
 
 
