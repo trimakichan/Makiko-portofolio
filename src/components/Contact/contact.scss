@@ -3,7 +3,7 @@
 .container {
     position: relative;
     max-width: 1400px;
-    height: 40rem;
+    height: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -33,9 +33,16 @@
 
     .contactForm {
         padding: 40px 1rem;
-        // background: rgba($navy, .4);
         width: 100%;
-        color: $white-90;
+        border: 1px solid $white-90;
+
+        .contact-title {
+            @include highligntTitle;
+
+            &::after {
+                @include highlight;
+            }
+        }
 
         .formBox {
             display: flex;
@@ -50,11 +57,12 @@
 
                 input, textarea{
                     width: 100%;
+                    color: $white-100;
                     padding: 5px 0;
                     border-radius: 5px;
                     border: none;
                     outline: none;
-                    resize: none;
+                    // resize: none;
 
                     &:hover, &:focus {
                         border: 1px solid $white-60;
@@ -84,7 +92,7 @@
                 border-radius: 10px;
                 border: 1px solid $white-100;
                 font-weight: bold;
-                color: $white-100;
+                color: inherit;
                 background-color: transparent;
                 cursor: pointer;
             
@@ -103,6 +111,7 @@
 @media (min-width: $breakpoint-medium) {
 
     .container {
+        height: 40rem;
         flex-direction: row;
 
         .contactInfo {

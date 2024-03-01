@@ -105,21 +105,34 @@ $yellow: #f4f411;
 
     //SkillScrollSlider component
     .skill-bgColor {
-        // background-color: 	rgb(250, 249, 246);
         background-color: $white-orange;
     }
 
     //Contact component 
-    .contactForm-bgColor {
-        background: rgba($light-pink, .8);
+    .contactForm {
+        color: $grey;
+
+        .contact-title {
+            &::after {
+                background: linear-gradient(to bottom, #0000 60%, $orange-80 40% );
+    
+            }
+
+        }
 
         input, textarea {
             background-color: rgba($white-100, .4);
+           
         }
-
-
     }
 
+    // About component 
+    .title {
+            &::after {
+                background: linear-gradient(to bottom, #0000 60%,  $orange-80 40% );
+            }
+        }
+        
 }
 
 // DARK THEME----------------------------------------------
@@ -176,12 +189,29 @@ $yellow: #f4f411;
     }
 
     //Contact component 
-    .contactForm-bgColor {
-        background: rgba($navy, .4);
+ 
+    .contactForm {
+        color: $white-100;
+        .contact-title {
 
+            &::after {
+                background: linear-gradient(to bottom, #0000 60%,  $purple-40 40% );
+    
+            }
+        }
+    
         input, textarea {
             background-color: rgba($white-100, .2);
         }
     }
+
+    .title {
+ 
+        &::after {
+            background: linear-gradient(to bottom, #0000 60%,  $purple-40 40% );
+
+        }
+    }
+
 
 }
