@@ -1,22 +1,27 @@
 import "./contact.scss";
 import pic from "../../assets/images/woman.svg";
-import chat from "../../assets/images/chat-dark.svg"
+import chatDark from "../../assets/images/chat-dark.svg";
+import chatLight from "../../assets/images/chat-light.svg";
 
 import { CiMail } from "react-icons/ci";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { ImMail4 } from "react-icons/im";
 import { MdOutlinePhoneIphone } from "react-icons/md";
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 
 
 
 const Contact = () => {
+    const {theme} = useContext(ThemeContext)
+
     return (
             <div className="container">
             
                 <div className="contactInfo">
-                    <h2 className="">Contact Info</h2>
+                    <p className="contactTitle">Contact Info</p>
                     <ul className="info">
                         <li><span><MdOutlinePhoneIphone /></span><span>(206)488-7550</span></li>
                         <li>
@@ -32,7 +37,7 @@ const Contact = () => {
 
                     
                     <div className="chat-image">
-                        <img src={chat} alt="talking woman image"/>
+                        <img src={theme === "light" ? chatLight : chatDark} alt="talking woman image"/>
                     </div>
 
                 </div>

@@ -41,7 +41,7 @@ $cyan: #50D8D7;
 $pink: #CB3CD0;
 $dark-pink: #DB1DDD;
 // $dark-pink: ;
-$dark-yellow: #F28B08;
+$orange: #F28B08;
 $lime-yellow: #e1eea6;
 $light-pink: #e9b5bb;
 
@@ -76,7 +76,7 @@ $yellow: #f4f411;
 * Gradient link: https://www.css-gradient.com/?c1=cb3cd0&c2=f28b08&gt=r&gd=dtl
 */
         background: $pink;
-        background: radial-gradient(at left top, $pink, $dark-yellow);
+        background: radial-gradient(at left top, $pink, $orange);
     }
 
     .shape-fill {
