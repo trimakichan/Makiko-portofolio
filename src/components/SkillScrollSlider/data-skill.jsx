@@ -31,7 +31,13 @@ export const dataSkills = [{
     skill: 'React',
     icon: <FaReact />,
     color: '#61DBFD'
-  }, {
+  },
+  {
+    skill: 'React Native',
+    icon: <FaReact />,
+    color: '#319cde'
+  },
+   {
     skill: 'Angular',
     icon: <FaAngular />,
     color: "#a6120d"

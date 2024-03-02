@@ -31,19 +31,7 @@
           
     
             .icons {
-                display: flex;
-                font-size: 2rem;
-                gap: .5em;
-               
-
-                a {
-                    color: $grey;
-
-                    &:hover,  &:focus {
-                        cursor: pointer;
-                        color: $purple-60;
-                    }
-                }
+             @include icons
             }
         }
     

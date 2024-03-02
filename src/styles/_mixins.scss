@@ -1,11 +1,11 @@
 
+@use './theme.scss' as *;
+
 @mixin base-container {
     width: 90%;
     max-width: 1500px;
     margin: 0 auto;
 }
-
-
 
 @mixin highligntTitle {
     font-size: 3rem;
@@ -24,4 +24,19 @@
     left: 20px;
     bottom: 5px;
     z-index: -1;
+}
+
+@mixin icons {
+    display: flex;
+    font-size: 2rem;
+    gap: .5rem;
+
+    a {
+        color: $light-grey;
+
+        &:hover,  &:focus {
+            cursor: pointer;
+            color: $grey;
+        }
+    }
 }

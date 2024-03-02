@@ -20,52 +20,53 @@
 
         .contactTitle {
             font-style: italic;
-            font-size: 2rem;     
-            margin-bottom: 1rem; 
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
 
         .info {
             font-weight: bold;
             line-height: 2rem;
+
         }
 
         .icons {
-            display: flex;
+            @include icons;
             justify-content: end;
-            gap: 1rem;
+            padding: .5rem;
         }
 
         .chat-image {
-            width: 100%;
-            aspect-ratio: 1/1;
-            margin: auto auto;
+            // width: fit-content;
+            // aspect-ratio: 1/1;
+            // margin: auto auto;
+            display: flex;
+            justify-content: center;
+
             animation: floating 5s ease-in-out infinite;
 
             img {
-                width: 100%;
-                height: 100%;
+                width: 40%;
+                // height: %;
                 object-fit: cover;
 
             }
 
 
             @keyframes floating {
-                0%, 100% {
+
+                0%,
+                100% {
                     transform: translate(0, 0);
                 }
-                
+
                 50% {
-                    transform: translate(0, 30px);
+                    transform: translate(0, 20px);
                 }
-            } 
+            }
 
         }
 
-        li {
-            list-style: none;
-        }
-
- 
     }
 
     .contactForm {
@@ -86,13 +87,14 @@
             justify-content: space-between;
             flex-wrap: wrap;
             padding-top: 30px;
-          
+
 
             .inputBox {
                 position: relative;
                 margin: 0 0 2rem;
 
-                input, textarea{
+                input,
+                textarea {
                     width: 100%;
                     padding: .8rem;
                     border-radius: 5px;
@@ -100,7 +102,8 @@
                     outline: none;
                     // resize: none;
 
-                    &:hover, &:focus {
+                    &:hover,
+                    &:focus {
                         border: 1px solid $white-60;
                     }
                 }
@@ -131,12 +134,12 @@
                 color: inherit;
                 background-color: transparent;
                 cursor: pointer;
-            
-               
+
+
                 &:hover {
                     background: rgba($white-100, .1);
                 }
-                
+
             }
         }
 
@@ -161,26 +164,37 @@
             height: 90%;
             margin-left: 1rem;
 
-            .chat-image{
+            .chat-image {
+                margin: auto auto;
+                aspect-ratio: 1/1;
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                }
 
                 @keyframes floating {
-                    0%, 100% {
+
+                    0%,
+                    100% {
                         transform: translate(0, 0);
                     }
-                    
+
                     50% {
                         transform: translate(0, 50px);
                     }
-                } 
-    
+                }
+
             }
-   
+
         }
-        
+
         .contactForm {
             margin-left: -1rem;
             padding: 2rem 1rem 2rem 4rem;
-            box-shadow: 1.5rem 1.5rem 0 rgba(255, 255, 255, .3); 
+            box-shadow: 1.5rem 1.5rem 0 rgba(255, 255, 255, .3);
         }
     }
 }

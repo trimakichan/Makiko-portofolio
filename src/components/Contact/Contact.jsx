@@ -1,5 +1,4 @@
 import "./contact.scss";
-import pic from "../../assets/images/woman.svg";
 import chatDark from "../../assets/images/chat-dark.svg";
 import chatLight from "../../assets/images/chat-light.svg";
 
@@ -12,70 +11,66 @@ import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 
 
-
-
 const Contact = () => {
-    const {theme} = useContext(ThemeContext)
+    const { theme } = useContext(ThemeContext)
 
     return (
-            <div className="container">
-            
-                <div className="contactInfo">
-                    <p className="contactTitle">Contact Info</p>
-                    <ul className="info">
-                        <li><span><MdOutlinePhoneIphone /></span><span>(206)488-7550</span></li>
-                        <li>
-                            <span><CiMail /></span>
-                            <span>trimakichan@gmail.com</span>
-                        </li>
-                    </ul>
-                    <ul className="icons">
-                        <li>  <a href='mailto:your@email.com'><ImMail4 /></a></li>
-                        <li>  <a href='https://www.linkedin.com/in/makiko-yokoyama' target='_blank' rel='noopener noreferrer'><FaLinkedin /></a></li>
-                        <li>     <a href='https://github.com/trimakichan' target='_blank' rel='noopener noreferrer'><FaGithub /></a></li>
-                    </ul>
+        <div className="container">
 
-                    
-                    <div className="chat-image">
-                        <img src={theme === "light" ? chatLight : chatDark} alt="talking woman image"/>
-                    </div>
+            <div className="contactInfo">
+                <p className="contactTitle">Contact Info</p>
+                <div className="info">
+                    <p><MdOutlinePhoneIphone /><span>(206)488-7550</span></p>
+                    <p><CiMail /><span>trimakichan@gmail.com</span></p>
 
                 </div>
-              
-                <div className="contactForm">
-                    <p className="contact-title">Send a Message</p>
-                    <form className="formBox"  action="https://api.web3forms.com/submit" method="POST">
+                <div className="icons">
+                    <a href='mailto:your@email.com'><ImMail4 /></a>
+                    <a href='https://www.linkedin.com/in/makiko-yokoyama' target='_blank' rel='noopener noreferrer'><FaLinkedin /></a>
+                    <a href='https://github.com/trimakichan' target='_blank' rel='noopener noreferrer'><FaGithub /></a>
+                </div>
+
+
+                <div className="chat-image">
+                    <img src={theme === "light" ? chatLight : chatDark} alt="talking woman image" />
+                </div>
+
+            </div>
+
+            <div className="contactForm">
+                <p className="contact-title">Send a Message</p>
+                <form className="formBox" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="97f0fff2-2d01-47fc-8b0f-7f72303d8a0f" />
 
-                        <div className="inputBox w50">
-                            <input type='text' name="fname" required />
-                            <span>First Name</span>
-                        </div>
-                        <div className="inputBox w50">
-                            <input type='text' name="lname" required />
-                            <span>Last Name</span>
-                        </div>
+                    <div className="inputBox w50">
+                        <input type='text' name="fname" required />
+                        <span>First Name</span>
+                    </div>
+                    <div className="inputBox w50">
+                        <input type='text' name="lname" required />
+                        <span>Last Name</span>
+                    </div>
 
-                        <div className="inputBox w50">
-                            <input type='email' name="email" required />
-                            <span>Email Address</span>
-                        </div>
+                    <div className="inputBox w50">
+                        <input type='email' name="email" required />
+                        <span>Email Address</span>
+                    </div>
 
-                        <div className="inputBox w50">
-                            <input type='text' name="phone"  />
-                            <span>Phone Number</span>
-                        </div>
+                    <div className="inputBox w50">
+                        <input type='text' name="phone" />
+                        <span>Phone Number</span>
+                    </div>
 
-                        <div className="inputBox w100">
-                            <textarea name="message" placeholder="Please write your message here..." required></textarea>
-                            <span>Write your message here...</span>
-                        </div>
+                    <div className="inputBox w100">
+                        <textarea name="message" placeholder="Your message here..." required></textarea>
+                        <span>Write your message here...</span>
+                    </div>
 
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
-    
+        </div>
+
     )
 }
 
