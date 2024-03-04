@@ -1,5 +1,5 @@
 import "./skillScrollSlider.scss";
-import { dataSkills } from "./data-skill";
+import { dataSkills } from "./data-skills";
 import { IconContext } from "react-icons";
 import { useContext } from "react";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
