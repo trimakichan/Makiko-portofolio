@@ -26,6 +26,15 @@
     z-index: -1;
 }
 
+@mixin title {
+        @include highligntTitle;
+        z-index: 4;
+    
+        &::after {
+          @include highlight;
+        }
+}
+
 @mixin icons {
     display: flex;
     font-size: 2rem;

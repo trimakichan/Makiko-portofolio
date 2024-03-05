@@ -38,7 +38,7 @@ const Contact = () => {
             </div>
 
             <div className="contactForm">
-                <p className="contact-title">Send a Message</p>
+                <p className="title">Send a Message</p>
                 <form className="formBox" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="97f0fff2-2d01-47fc-8b0f-7f72303d8a0f" />
 

@@ -74,13 +74,9 @@
         width: 100%;
         border: 1px solid $white-90;
 
-        .contact-title {
-            @include highligntTitle;
-
-            &::after {
-                @include highlight;
-            }
-        }
+    //     .title {
+    //   @include title 
+    //     }
 
         .formBox {
             display: flex;

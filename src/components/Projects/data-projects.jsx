@@ -8,7 +8,7 @@ export const projectsData = [
         description: 'Jisho app is a Japanese/English dictionary and language learning tool. Search words in Japanese or English with kanji, kana, romaji, or Latin alphabets. Get example sentences and kanji details for enhanced learning.',
     },
     {
-        name: 'Eventlight',
+        name: 'Eventlite',
         status: 'active',
         teckStack: ['React', 'Redux', 'Node.js', 'Express.js', 'MongoDB', 'React-Bootstrap'],
         image: './src/assets/images/eventlite.webp',

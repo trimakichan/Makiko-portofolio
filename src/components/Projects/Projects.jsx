@@ -40,12 +40,13 @@ const Projects = () => {
   console.log(projectsData)
   return (
     <section className='projects__container'>
-      <p className='projects__title'>Projects</p>
 
-      <Project items={projectsData} />
+        <p className='title'>Projects</p>
 
-
-
+        <div className='projects__content'>
+        <Project items={projectsData} />
+        </div>
+    
     </section>
   )
 }

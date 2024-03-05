@@ -18,4 +18,8 @@ body {
 }
 
 
+.title {
+    @include title;
+}
+
 

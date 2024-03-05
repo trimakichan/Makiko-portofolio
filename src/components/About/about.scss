@@ -56,26 +56,8 @@
     &__content {
         padding: 1rem;
 
-        .title {
-            @include highligntTitle;
-            z-index: 4;
-         
-
-
-                &::after {
-                    @include highlight;
-        
-                }
-            
-
-        }
-
-
-
     }
 }
-
-
 
 @media (min-width: $breakpoint-medium) {
 

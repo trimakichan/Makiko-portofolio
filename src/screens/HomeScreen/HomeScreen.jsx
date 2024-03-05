@@ -58,10 +58,10 @@ const HomeScreen = () => {
 
 
 
-                <section id="projects">
-                    <div>
+                <section className='section' id="projects" >
+                    
                         <Projects />
-                    </div>
+                
                 </section>
 
 
