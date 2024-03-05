@@ -15,7 +15,7 @@ import Contact from '../../components/Contact/Contact';
 import Projects from '../../components/Projects/Projects';
 
 const HomeScreen = () => {
-    // const { ref:scrollRef, inView:isVisible, entry } = useInView();
+    const { ref, inView, entry } = useInView();
     const scrollRef = useRef();
     const [isVisible, setIsVisible] = useState();
 
@@ -44,9 +44,11 @@ const HomeScreen = () => {
 
     return (
         <div className={theme} onClick={showNavToFalse}>
+            <div className='scroll-watcher scroll-bg'></div>
             <div className="home gradient-bg">
                 <Header />
                 <div className="home__background">
+                
                     {/* <div> */}
                     <MainItem />
                     {/* </div> */}

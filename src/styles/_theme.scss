@@ -71,6 +71,10 @@ $yellow: #f4f411;
         color: $orange-30;
     }
 
+    .scroll-bg {
+        background-color: rgba($dark-pink, 0.6);
+    }
+
     .gradient-bg {
         /*
 * Created with https://www.css-gradient.com
@@ -152,6 +156,10 @@ $yellow: #f4f411;
         color: $purple-60;
     }
 
+    .scroll-bg {
+        background-color: rgba($purple-60, 0.6);
+    }
+
     .gradient-bg {
         /*
 * Created with https://www.css-gradient.com
@@ -182,7 +190,7 @@ $yellow: #f4f411;
 
     //mainItem component
     .name-color {
-        color: $neonblue;
+        color: rgba($purple, .8);
     }
 
     //SkillScrollSlider component
