@@ -1,12 +1,6 @@
 
 export const projectsData = [
-    {
-        name: "Jisho App (Japanese Dictionary App)",
-        status: 'inactive',
-        teckStack: ['React Native', 'Sass', 'SQlite'],
-        image: './src/assets/images/JishoMockup.svg',
-        description: 'Jisho app is a Japanese/English dictionary and language learning tool. Search words in Japanese or English with kanji, kana, romaji, or Latin alphabets. Get example sentences and kanji details for enhanced learning.',
-    },
+
     {
         name: 'Eventlite',
         status: 'active',
@@ -20,6 +14,14 @@ export const projectsData = [
         teckStack: ['Angular', 'Typescript', 'CSS', 'Bootstrap', 'External API (TMDB)'],
         image: './src/assets/images/showtime.webp',
         description: 'A TV and movie application that offers trending films and popular TV shows. Users can also easily search for their favorite content using keywords.',
-    }
+    },
+    {
+        name: "Jisho App (Japanese Dictionary App)",
+        status: 'inactive',
+        isApp: true,
+        teckStack: ['React Native', 'Sass', 'SQlite'],
+        image: './src/assets/images/JishoMockup.svg',
+        description: 'Jisho app is a Japanese/English dictionary and language learning tool. Search words in Japanese or English with kanji, kana, romaji, or Latin alphabets. Get example sentences and kanji details for enhanced learning.',
+    },
 
 ]

@@ -1,3 +1,4 @@
+
 import './project.scss';
 import { projectsData } from './data-projects'
 
@@ -37,16 +38,15 @@ export const Project = ({ items }) => {
 
 
 const Projects = () => {
-  console.log(projectsData)
   return (
     <section className='projects__container'>
 
-        <p className='title'>Projects</p>
+      <p className='title'>Projects</p>
 
-        <div className='projects__content'>
-        <Project items={projectsData} />
-        </div>
-    
+      <div className='projects__content'>
+        <Project className="project-item" items={projectsData} />
+      </div>
+
     </section>
   )
 }

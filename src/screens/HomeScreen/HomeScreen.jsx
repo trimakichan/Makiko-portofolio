@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import MainItem from "../../components/MainItem/MainItem";
@@ -14,9 +15,26 @@ import Contact from '../../components/Contact/Contact';
 import Projects from '../../components/Projects/Projects';
 
 const HomeScreen = () => {
+    // const { ref:scrollRef, inView:isVisible, entry } = useInView();
+    const scrollRef = useRef();
+    const [isVisible, setIsVisible] = useState();
+
+    const aboutRef = useRef();
+    const [aboutRefIsVisible, SetAboutRefIsVisible] = useState()
+
+    console.log('isVisible:', isVisible)
     const { isDesktop } = useContext(ScreenSizeContext);
     const { showNav, setShowNav } = useContext(NavContext)
     const { theme } = useContext(ThemeContext);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+           const entry = entries[0];
+           setIsVisible(entry.isIntersecting)
+        })
+
+        observer.observe(scrollRef.current)
+    }, [])
 
     function showNavToFalse() {
         if (!isDesktop && showNav) {
@@ -51,15 +69,15 @@ const HomeScreen = () => {
                 </div>
 
 
-                <section className="section" id="about" >
+                <section className="section" id="about" ref={aboutRef}>
                     <About />
                 </section>
 
 
 
 
-                <section className='section' id="projects" >
-                    
+                <section className='section' id="projects" ref={scrollRef} >
+                        <div>{isVisible ? "yes" : 'NO'}</div>
                         <Projects />
                 
                 </section>
