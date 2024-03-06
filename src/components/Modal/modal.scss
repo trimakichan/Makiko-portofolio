@@ -17,6 +17,25 @@
         background-color: $white-100;
         margin: 1rem;
         padding: 1rem;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    &__image {
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+    }
+
+    &__content {
+
     }
 
 }
