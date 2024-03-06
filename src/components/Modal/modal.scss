@@ -1,0 +1,23 @@
+@use '../../styles/' as *;
+
+
+.modal-background {
+    width: 100vw;
+    height: 100svh;
+    background-color: rgba($black, .8);
+    position: fixed;
+    z-index: 15;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    &__container {
+        background-color: $white-100;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+}
+

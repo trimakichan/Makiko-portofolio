@@ -1,16 +1,22 @@
 
-import './project.scss';
+import { useState, useContext } from 'react';
+import './projects.scss';
 import { projectsData } from './data-projects'
+import Modal from '../Modal/Modal';
+import { ModalContext } from '../../contexts/ModalContext';
 
 
-export const Project = ({ items }) => {
-  console.log(items)
+export const Card = ({ items }) => {
+  const {modalStatus, setModalStatus, setModalData} = useContext(ModalContext);
 
-  return items.map((item, index) => {
-    console.log('item', item)
+  const handleModalStatus = (item) => {
+    setModalStatus(true);
+    setModalData(item)
+  }
 
+  return items.map((item, index) => {  
     return (
-      <div  key={index} className="card">
+      <div  key={index} className="card" onClick={() => handleModalStatus({item})}>
         <div  className="card__container">
           <div className='card__image'>
             <img src={item.image} />
@@ -21,9 +27,7 @@ export const Project = ({ items }) => {
             <p className='card-techstack'>Tech Stack:{item.teckStack.join(', ')}</p>
             <p className='card-description'>{item.description}</p>
           </div>
-
         </div>
-
       </div>
     )
   }
@@ -32,7 +36,7 @@ export const Project = ({ items }) => {
 }
 
 
-const Projects = () => {
+const Projects = () => { 
   return (
     <section className='projects'>
 
@@ -40,8 +44,9 @@ const Projects = () => {
 
       <p className='title'>Projects</p>
 
-      <div className='projects__content'>
-        <Project className="project-item" items={projectsData} />
+      <div className='projects__content' >
+        <Card className="project-item" items={projectsData}  />
+    
       </div>
 
     </div>

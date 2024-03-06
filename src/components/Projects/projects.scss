@@ -3,9 +3,13 @@
 
 .card {
 
+    
+
     &:hover, &:focus {
         transform: scale(1.08);
-        transition: transform .3s ease-in-out;
+        transition: transform .5s ease-in-out;
+        cursor: pointer;
+
     }
 
     .card__container {
@@ -21,6 +25,11 @@
         grid-template-rows:15rem 15rem;
 
         box-shadow: 1rem 1rem 0 rgba(255, 255, 255, .3); 
+
+        &:hover, &:focus {
+            box-shadow: 1rem 1rem 0 rgba($black, .3); 
+            border: 1px solid $navy;
+        }
 
     }
 

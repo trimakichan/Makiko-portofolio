@@ -13,19 +13,27 @@ import { ScreenSizeContext } from '../../contexts/ScreenSizeContext';
 import { NavContext } from '../../contexts/NavContext';
 import Contact from '../../components/Contact/Contact';
 import Projects from '../../components/Projects/Projects';
+import { ModalContext } from '../../contexts/ModalContext';
+import Modal from '../../components/Modal/Modal';
 
 const HomeScreen = () => {
+
+    //scroll animation----------------------------
     const { ref, inView, entry } = useInView();
     const scrollRef = useRef();
     const [isVisible, setIsVisible] = useState();
 
     const aboutRef = useRef();
     const [aboutRefIsVisible, SetAboutRefIsVisible] = useState()
+     //scroll animation----------------------------
 
-    console.log('isVisible:', isVisible)
+      //Contexts----------------------------
+    // console.log('isVisible:', isVisible)
     const { isDesktop } = useContext(ScreenSizeContext);
     const { showNav, setShowNav } = useContext(NavContext)
     const { theme } = useContext(ThemeContext);
+    const {modalStatus} = useContext(ModalContext)
+    //Contexts----------------------------
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -44,6 +52,7 @@ const HomeScreen = () => {
 
     return (
         <div className={theme} onClick={showNavToFalse}>
+            {modalStatus && <Modal />}
             <div className='scroll-watcher scroll-bg'></div>
             <div className="home gradient-bg">
                 <Header />

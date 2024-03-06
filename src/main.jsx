@@ -4,15 +4,18 @@ import App from "./App.jsx";
 import { ThemeProvider } from "./contexts/ThemeContext.jsx";
 import { NavProvider } from "./contexts/NavContext.jsx";
 import { ScreenSizeProvider } from "./contexts/ScreenSizeContext.jsx";
+import { ModalProvider } from "./contexts/ModalContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ScreenSizeProvider>
-    <ThemeProvider>
-      <NavProvider>
-        <App />
-      </NavProvider>
-    </ThemeProvider>
+      <ThemeProvider>
+        <NavProvider>
+          <ModalProvider>
+            <App />
+          </ModalProvider>
+        </NavProvider>
+      </ThemeProvider>
     </ScreenSizeProvider>
   </React.StrictMode>
 );
