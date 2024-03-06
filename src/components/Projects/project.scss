@@ -3,11 +3,14 @@
 
 .card {
 
-    
+    &:hover, &:focus {
+        transform: scale(1.08);
+        transition: transform .3s ease-in-out;
+    }
 
     .card__container {
         padding: 1rem;
-        margin: 1.5rem 1rem 0;
+        margin: 2.5rem 1rem 0;
         // gap: 1rem;
         // border-radius: 10px;
         // background: rgba($light-pink , .5);
@@ -22,13 +25,12 @@
     }
 
     &__image {
-     
-        // border: 1px solid $white-opacity;
 
         img {
             width: 100%;
             height: 100%;
             object-fit : contain;
+            display: block;
         }
     }
 
@@ -68,11 +70,21 @@
 
 @media (min-width: $breakpoint-medium) {
 
+    .card {
+
+    
+        .card__container {
+            padding: 1rem;
+            margin: 1.5rem 1rem 0;
+        }
+    }
+
     .projects {
 
         &__content {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
         }
 
     }

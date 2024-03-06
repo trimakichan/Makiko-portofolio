@@ -11,9 +11,9 @@ const About = () => {
         <section className= "about">
             <div className='about__container'>
                 <div className='about__photo'>
-                    <div className='image'><img src={nature}></img></div>
-                    <div className='image image-Joy'><img src={Joy}></img></div>
-                    <div className='image'><img src={diy}></img></div>
+                    <div className='image'><div className='image-overlay'></div><img src={nature}></img></div>
+                    <div className='image image-Joy'><div className='image-overlay'></div><img src={Joy}></img></div>
+                    <div className='image'><div className='image-overlay'></div><img src={diy}></img></div>
 
                 </div>
                 <div className='about__content'>
