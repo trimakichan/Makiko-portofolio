@@ -3,23 +3,27 @@
 
 .card {
 
+    
+
     .card__container {
         padding: 1rem;
-        margin: 1rem 1rem 0;
+        margin: 1.5rem 1rem 0;
         // gap: 1rem;
-        border-radius: 10px;
-        background: rgba($grey , 0.3);
-        // border: 1px solid blue;
+        // border-radius: 10px;
+        // background: rgba($light-pink , .5);
+        border: 1px solid $white-100;
 
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows:15rem 15rem;
 
+        box-shadow: 1rem 1rem 0 rgba(255, 255, 255, .3); 
+
     }
 
     &__image {
      
-        border: 1px solid $white-opacity;
+        // border: 1px solid $white-opacity;
 
         img {
             width: 100%;
