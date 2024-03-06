@@ -6,17 +6,12 @@ import { projectsData } from './data-projects'
 export const Project = ({ items }) => {
   console.log(items)
 
-  // const techStack = techStack => {
-  //   return techStack.replace('')
-
-  // } 
-
   return items.map((item, index) => {
     console.log('item', item)
 
     return (
-      <div key={index} className="card__container">
-        <div className="card">
+      <div  key={index} className="card">
+        <div  className="card__container">
           <div className='card__image'>
             <img src={item.image} />
           </div>
@@ -39,7 +34,9 @@ export const Project = ({ items }) => {
 
 const Projects = () => {
   return (
-    <section className='projects__container'>
+    <section className='projects'>
+
+    <div className='projects__container'>
 
       <p className='title'>Projects</p>
 
@@ -47,6 +44,7 @@ const Projects = () => {
         <Project className="project-item" items={projectsData} />
       </div>
 
+    </div>
     </section>
   )
 }

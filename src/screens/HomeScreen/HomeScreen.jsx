@@ -79,17 +79,13 @@ const HomeScreen = () => {
 
 
                 <section className='section' id="projects" ref={scrollRef} >
-                        <div>{isVisible ? "yes" : 'NO'}</div>
+                        {/* <div>{isVisible ? "yes" : 'NO'}</div> */}
                         <Projects />
                 
                 </section>
 
 
-
-
-
-
-                <section className="section center" id="contact">
+                <section className="section" id="contact">
                     <Contact />
                 </section>
 
