@@ -1,13 +1,16 @@
 import { useContext } from 'react'
 import './modal.scss'
-import { ModalContext } from '../../contexts/ModalContext'
+import { ModalContext } from '../../contexts/ModalContext';
+
+import { IoMdClose } from "react-icons/io";
 
 const Modal = () => {
     const { setModalStatus, modalData } = useContext(ModalContext);
     return (
         <div className='modal modal-background'>
+
             <div className='modal__container'>
-                {/* <button onClick={() => setModalStatus(false)}> X </button> */}
+            <p className="modal-close" onClick={() => setModalStatus(false)}><IoMdClose /></p>
 
                 <div className='modal__image'>
                     <img src={modalData.item.image}/>
