@@ -3,7 +3,8 @@
 .skillSection {
 
     &__container {
-        padding: 2rem;
+        margin: auto;
+        padding: 2rem 0;
         text-align: center;
     }
 
@@ -13,14 +14,6 @@
         font-weight: bold;
         text-transform: uppercase;
         color: transparent;
-
-        // span {
-        //     background: url('../../assets/images/colorful.webp') bottom;
-        //     object-fit: contain;
-        //     background-clip: text;
-        //     -webkit-background-clip: text;
-        //     -webkit-text-stroke: 1px purple;
-        // }
 
         span:nth-child(1) {
             color: #70d6ff;
@@ -73,11 +66,15 @@
 
 }
 
+
 @media (min-width: $breakpoint-small) {
     .skillSection {
 
-        &__skills {
-            width: 70%;
+        &__container {
+            width: 80%;
+            max-width: 1600px;
+            padding: 0 0 4rem ;
+
         }
 
     }

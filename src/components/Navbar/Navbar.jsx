@@ -19,7 +19,6 @@ const Navbar = () => {
 
   function handleLinkClick () {
     setShowNav(false);
-    // console.log('showNav:', showNav)
   }
 
   return (

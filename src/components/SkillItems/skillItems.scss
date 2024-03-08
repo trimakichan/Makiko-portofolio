@@ -1,0 +1,23 @@
+@use '../../styles/' as *;
+
+.skills {
+    width: 100%;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+
+    }
+
+}
+
+.font-style {
+    margin: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: start;
+    color: transparent;
+}

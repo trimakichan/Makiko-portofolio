@@ -4,7 +4,7 @@ export const NavContext = createContext({})
 
 export const NavProvider = ({children}) => {
     const [showNav, setShowNav] = useState(false);
-    // console.log('ShowNav from Context:', showNav)
+    console.log('ShowNav from Context:', showNav)
 
     return (
         <NavContext.Provider value={{showNav, setShowNav}}>

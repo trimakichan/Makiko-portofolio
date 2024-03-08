@@ -23,3 +23,42 @@ body {
 }
 
 
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.hidden2 {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.hidden3 {
+    opacity: 0;
+}
+
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 2s;
+}
+
+
+
+.showFadeIn {
+    opacity: 1;
+    transition: all 3s;
+}
+
+@media (prefers-reduced-motion) {
+    .hidden, .show {
+        transition: none;
+    }
+
+    
+}
+
+
+

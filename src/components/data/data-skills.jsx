@@ -10,6 +10,11 @@ import { FaBootstrap } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { IoIosPhonePortrait } from "react-icons/io";
+import { BiLogoTypescript } from "react-icons/bi";
+import { FaFigma } from "react-icons/fa";
+import { DiIllustrator } from "react-icons/di";
+import { DiPhotoshop } from "react-icons/di";
+
 
 
 export const dataSkills = [{
@@ -26,6 +31,11 @@ export const dataSkills = [{
     skill: 'JavaScript',
     icon: <RiJavascriptFill />,
     color: '#F0DB4F'
+  },
+  {
+    skill: 'TypeScript',
+    icon: <BiLogoTypescript />,
+    color: '#007acc'
   },
   {
     skill: 'React',
@@ -66,4 +76,21 @@ export const dataSkills = [{
     skill: "Responsive Design",
     icon: <IoIosPhonePortrait />,
     color: '#0096FF'
-}]
+},
+{
+  skill: "Figma",
+  icon: <FaFigma />,
+  color: '#7c24eb'
+},
+{
+  skill: "Illustrator",
+  icon: <DiIllustrator /> ,
+  color: '#a43110'
+},
+{
+  skill: "Photoshop",
+  icon: <DiPhotoshop /> ,
+  color: '#31A8FF'
+},
+]
+

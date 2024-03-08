@@ -1,9 +1,10 @@
-import React, { createContext,useState, useEffect } from 'react';
+import { createContext,useState, useEffect } from 'react';
 
 export const ScreenSizeContext = createContext();
 
 export const ScreenSizeProvider = ({children}) => {
     const [isDesktop, setIsDesktop] = useState(false);
+    console.log('screen', isDesktop)
 
     useEffect(() => {
         const handleResize = () => {

@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext, useRef, useEffect, useState } from 'react';
+import React, { useContext} from 'react';
 import { useInView } from 'react-intersection-observer';
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -19,30 +19,29 @@ import Modal from '../../components/Modal/Modal';
 const HomeScreen = () => {
 
     //scroll animation----------------------------
-    const { ref, inView, entry } = useInView();
-    const scrollRef = useRef();
-    const [isVisible, setIsVisible] = useState();
+    const { ref: aboutRef, inView: aboutIsVisible } = useInView();
+    const { ref: contactRef, inView: contactIsVisible } = useInView();
 
-    const aboutRef = useRef();
-    const [aboutRefIsVisible, SetAboutRefIsVisible] = useState()
-     //scroll animation----------------------------
 
-      //Contexts----------------------------
-    // console.log('isVisible:', isVisible)
+    //Contexts----------------------------
     const { isDesktop } = useContext(ScreenSizeContext);
     const { showNav, setShowNav } = useContext(NavContext)
     const { theme } = useContext(ThemeContext);
-    const {modalStatus} = useContext(ModalContext)
-    //Contexts----------------------------
+    const { modalStatus } = useContext(ModalContext);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-           const entry = entries[0];
-           setIsVisible(entry.isIntersecting)
-        })
 
-        observer.observe(scrollRef.current)
-    }, [])
+    //This is how intersection Observer works-----------------------
+    // const scrollRef = useRef();
+    // const [isVisible, setIsVisible] = useState();
+
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver((entries) => {
+    //        const entry = entries[0];
+    //        inView(entry.isIntersecting)
+    //     })
+
+    //     observer.observe(scrollRef.current)
+    // }, [])
 
     function showNavToFalse() {
         if (!isDesktop && showNav) {
@@ -52,16 +51,16 @@ const HomeScreen = () => {
 
     return (
         <div className={theme} onClick={showNavToFalse}>
+
             {modalStatus && <Modal />}
-            <div className='scroll-watcher scroll-bg'></div>
+ 
+            <div className='scroll-watcher scroll-bg'></div> 
+
+
             <div className="home gradient-bg">
                 <Header />
                 <div className="home__background">
-                
-                    {/* <div> */}
                     <MainItem />
-                    {/* </div> */}
-
                     <div className={`wavy_top ${theme}`}>
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
@@ -69,7 +68,9 @@ const HomeScreen = () => {
                     </div>
                 </div>
 
-                <SkillSection />
+                    <div className='bg-color'>
+                   <SkillSection className='home__skillSection'/>
+                   </div>
 
                 <div className="wavy_bottom">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -79,22 +80,26 @@ const HomeScreen = () => {
                     </svg>
                 </div>
 
-
-                <section className="section" id="about" ref={aboutRef}>
+            
+                <section className={`section ${aboutIsVisible ? 'showFadeIn' : 'hidden3'}`} id="about" ref={aboutRef}>
+    
                     <About />
                 </section>
-
-
-
-
-                <section className='section' id="projects" ref={scrollRef} >
-                        {/* <div>{isVisible ? "yes" : 'NO'}</div> */}
-                        <Projects />
-                
+             
+                     
+           
+                <div className="skillScroll-container">
+                <SkillScrollSlider />
+                </div>
+          
+         
+                <section className='section' id="projects" >
+                    <Projects />
                 </section>
+            
 
 
-                <section className="section" id="contact">
+                <section className={`section ${contactIsVisible ? 'showFadeIn' : 'hidden3'} `}id="contact" ref={contactRef}>
                     <Contact />
                 </section>
 
