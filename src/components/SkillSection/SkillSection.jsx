@@ -12,13 +12,11 @@ const SkillSection = () => {
     return (
         <div className='skillSection' >       
             <div className='skillSection__container'>
-                <p className={`skillSection__texts font-stroke ${phraseIsVisible ? 'show' : 'hidden'}`}  ref={phraseRef}>bringing <span>i</span><span>d</span><span>e</span><span>a</span><span>s</span> to <span className='life'>life</span> on the web is my calling.
+                <p className={`skillSection__texts font-stroke ${phraseIsVisible ? 'showLeft' : 'hiddenLeft'}`}  ref={phraseRef}>bringing <span>i</span><span>d</span><span>e</span><span>a</span><span>s</span> to <span className='life'>life</span> on the web is my calling.
             
                 </p>
 
-                <div className={`skillSection__skills ${skillIsVisible ? 'show' : 'hidden'}`} ref={skillRef}>
-                
-               
+                <div className={`skillSection__skills ${skillIsVisible ? 'showScale' : 'hiddenScale'}`} ref={skillRef}>
                     <SkillItems />
                 </div>
 

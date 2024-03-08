@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext} from 'react';
+import React, { useContext } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -53,8 +53,8 @@ const HomeScreen = () => {
         <div className={theme} onClick={showNavToFalse}>
 
             {modalStatus && <Modal />}
- 
-            <div className='scroll-watcher scroll-bg'></div> 
+
+            <div className='scroll-watcher scroll-bg'></div>
 
 
             <div className="home gradient-bg">
@@ -68,9 +68,9 @@ const HomeScreen = () => {
                     </div>
                 </div>
 
-                    <div className='bg-color'>
-                   <SkillSection className='home__skillSection'/>
-                   </div>
+                <div className='bg-color'>
+                    <SkillSection className='home__skillSection' />
+                </div>
 
                 <div className="wavy_bottom">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -80,26 +80,29 @@ const HomeScreen = () => {
                     </svg>
                 </div>
 
-            
-                <section className={`section ${aboutIsVisible ? 'showFadeIn' : 'hidden3'}`} id="about" ref={aboutRef}>
-    
+
+                {/* ABOUT SECTION--------------------------------------------------------------------------------------------------------------------- */}
+
+                 <p className='japanese-text' id="about" >ウェブディペロッパー</p>
+                <section className={`section project-section ${aboutIsVisible ? 'showFadeIn' : 'hiddenFadeIn'}`} ref={aboutRef}>
                     <About />
                 </section>
-             
-                     
-           
-                <div className="skillScroll-container">
+                <p className='japanese-text text-right'>北海道出身</p>
+
+    
+
+                {/* <div className="skillScroll-container">
                 <SkillScrollSlider />
-                </div>
-          
-         
+                </div> */}
+
+                {/* PROJECT SECTION--------------------------------------------------------------------------------------------------------------------- */}
                 <section className='section' id="projects" >
                     <Projects />
                 </section>
-            
 
 
-                <section className={`section ${contactIsVisible ? 'showFadeIn' : 'hidden3'} `}id="contact" ref={contactRef}>
+
+                <section className={`section ${contactIsVisible ? 'showFadeIn' : 'hiddenFadeIn'} `} id="contact" ref={contactRef}>
                     <Contact />
                 </section>
 
