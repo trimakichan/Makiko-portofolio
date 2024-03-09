@@ -27,6 +27,7 @@ opacity: .3;
         margin-top: 2rem;
         font-size: 1.6rem;
         text-align: center;   
+        // font-style: italic;
         // border: 1px solid blue;
         
         &__nameText {
@@ -49,6 +50,15 @@ opacity: .3;
             transform: translateY(-45%);
             animation: blink 0.7s infinite;
 
+        }
+
+        &__description {
+
+            // span {
+            //     color: $orange-50; 
+            //     font-weight: bold;
+            //     font-style: normal;
+            // }
         }
 
 

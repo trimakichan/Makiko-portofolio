@@ -4,8 +4,7 @@ import "./header.scss";
 import { NavContext } from "../../contexts/NavContext";
 import { IoMenu } from "react-icons/io5";
 import Navbar from "../Navbar/Navbar";
-import logolight from "../../assets/images/logoLight.svg"
-import logodark from "../../assets/images/logoDark.svg"
+import logo from "../../assets/images/logo.svg"
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { ThemeContext } from "../../contexts/ThemeContext";
 
@@ -41,7 +40,7 @@ const Header = () => {
       ) : (
         <header className="header">
           <nav className="header__nav">
-            <img href="#" src={theme === 'light' ? logolight : logodark} className="header__nav__logo" />
+            <img href="#" src={theme === 'light' ? logo : logo} className="header__nav__logo" />
 
             {/* Toggle Button */}
             <div className="header__nav__toggle" id="header-toggle">

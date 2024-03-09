@@ -24,7 +24,7 @@ const MainItem = () => {
                     <p className="color-primary"><span className='bold'>HI, I AM </span><span className='main__content__nameText name-color'>{myName}</span></p>
                     <div className='main__content__description'>
                         <p className='color-secondary'>
-                            A Front-End Web Developer passionate about creating interactive applications and experiences on the web.
+                            <span>A Front-End Web Developer</span> passionate about creating interactive applications and experiences on the web.
                         </p>
                     </div>
 
@@ -41,12 +41,9 @@ const MainItem = () => {
                 <section className="main__image">
                     <ProfileImage />
                 </section>
-
             </div>
+           
         </main>
-
-
-
     );
 };
 

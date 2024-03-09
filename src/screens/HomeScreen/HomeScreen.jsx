@@ -56,7 +56,6 @@ const HomeScreen = () => {
 
             <div className='scroll-watcher scroll-bg'></div>
 
-
             <div className="home gradient-bg">
                 <Header />
                 <div className="home__background">

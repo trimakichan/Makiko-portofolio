@@ -1,15 +1,12 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import './footer.scss'
-import logoLight from '../../assets/images/logoLight.svg';
-import logoDark from '../../assets/images/logoDark.svg';
+import logo from '../../assets/images/logo.svg';
 
 //icons
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { ImMail4 } from "react-icons/im";
-
-
 
 
 const Footer = () => {
@@ -18,7 +15,7 @@ const Footer = () => {
         <div className="footer__container">
             <div className="footer">
                 <div className="footer__logo">
-                    <img src={theme === 'light' ? logoLight : logoDark} className='logo' />
+                    <img src={theme === 'light' ? logo : logo} className='logo' />
                     <p> Creating innovative and user-friendly solutions that bring ideas to life on the web.</p>
                 </div>
 

@@ -60,14 +60,14 @@ $yellow: #f4f411;
         color: $white-100;
     }
 
-    .color-secondary {
+    .color-secondary, .color-decoration {
         color: $orange-30;
     }
 
     //change the color later
-    .color-decoration {
-        color: $orange-30;
-    }
+    // .color-decoration {
+    //     color: $orange-30;
+    // }
 
     .scroll-bg {
         background-color: rgba($dark-pink, 0.6);
@@ -146,13 +146,13 @@ $yellow: #f4f411;
         color: $white-100;
     }
 
-    .color-secondary {
+    .color-secondary,   .color-decoration {
         color: $white-60;
     }
 
-    .color-decoration {
-        color: $purple-60;
-    }
+    // .color-decoration {
+    //     color: $purple-60;
+    // }
 
     .scroll-bg {
         background-color: rgba($purple-60, 0.6);

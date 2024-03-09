@@ -1,10 +1,43 @@
 @use '../../styles' as *;
 
 
+.card-inactive {
+    position: relative;
+
+    .inactive-text {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($black, .8);
+        color: $white-100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+      
+
+        p {
+            font-size: 5vw;
+            border-bottom: 2px solid $white-opacity;
+        }
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+
+        }
+
+        
+
+    }
+}
+
 .card {
 
-
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         transform: scale(1.08);
         transition: transform .5s ease-in-out;
         cursor: pointer;
@@ -21,12 +54,13 @@
 
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows:15rem 15rem;
+        grid-template-rows: 15rem 15rem;
 
-        box-shadow: 1rem 1rem 0 rgba(255, 255, 255, .3); 
+        box-shadow: 1rem 1rem 0 rgba(255, 255, 255, .3);
 
-        &:hover, &:focus {
-            box-shadow: 1rem 1rem 0 rgba($black, .3); 
+        &:hover,
+        &:focus {
+            box-shadow: 1rem 1rem 0 rgba($black, .3);
             border: 1px solid $navy;
         }
 
@@ -37,7 +71,7 @@
         img {
             width: 100%;
             height: 100%;
-            object-fit : contain;
+            object-fit: contain;
             display: block;
         }
     }
@@ -62,6 +96,7 @@
 
 }
 
+
 .projects {
     max-width: 1600px;
     margin: 0 auto;
@@ -71,6 +106,14 @@
         padding: 1rem;
     }
 
+    &__content {
+
+   
+        
+    
+      
+    }
+
 }
 
 
@@ -78,9 +121,18 @@
 
 @media (min-width: $breakpoint-medium) {
 
+    .card-inactive {
+        .inactive-text {
+            p {
+                font-size: 3vw;
+          
+            }
+        }
+    }
+
     .card {
 
-    
+
         .card__container {
             padding: 1rem;
             margin: 1.5rem 1rem 0;
@@ -98,3 +150,51 @@
     }
 
 }
+
+// border animation 
+
+// .box {
+//     position: relative;
+//     width: min-content;
+//     height: min-content;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 2;
+//     overflow: hidden;
+//     border-radius: 10px;
+//     // background-color: rgba(0,0,0, 0.5)
+
+//     h2 {
+//         text-shadow: 3px 2px  $pink;
+//         z-index: 2;
+//     }
+
+//     &::before {
+//         position: absolute;
+//         content: '';
+//         width: 5rem;
+//         height: 200%;
+//         background: $white-opacity;
+//         // linear-gradient(#00ccff, #d500f9)
+//         animation: rotate 4s linear infinite;
+
+//         @keyframes rotate {
+//             from {
+//                 tranform: rotate(0deg)
+//             }
+//             to {
+//                 transform: rotate(360deg);
+//             }
+
+//         }
+
+//     }
+
+//     &::after {
+//         content: '';
+//         position: absolute;
+//         background-color: $black;
+//         inset: 5px;
+//     }
+// }

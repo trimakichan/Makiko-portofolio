@@ -5,21 +5,33 @@ import { projectsData } from '../data/data-projects'
 import Modal from '../Modal/Modal';
 import { ModalContext } from '../../contexts/ModalContext';
 import { useInView } from 'react-intersection-observer';
+import { ScreenSizeContext } from '../../contexts/ScreenSizeContext';
+
 
 
 export const Card = ({ items }) => {
-  const {modalStatus, setModalStatus, setModalData} = useContext(ModalContext);
-
+  const { modalStatus, setModalStatus, setModalData } = useContext(ModalContext);
+  const { ref: projectRef, inView: projectIsVisible } = useInView();
+  const {isDesktop} = useContext(ScreenSizeContext);
+  console.log('desktopsize', isDesktop)
 
   const handleModalStatus = (item) => {
     setModalStatus(true);
     setModalData(item)
   }
 
-  return items.map((item, index) => {  
+  return items.map((item, index) => {
+
     return (
-      <div  key={index} className='card' onClick={() => handleModalStatus({item})} >
-        <div  className="card__container">
+      <div key={index} className={`card ${!projectIsVisible && isDesktop? 'hiddenLeft' : ''} ${!projectIsVisible && !isDesktop ? 'hiddenFadeIn' : ''} ${isDesktop && projectIsVisible ? `showLeft index${index}` : ''} ${!isDesktop && projectIsVisible ? 'showFadeInMobile' : ''}`} onClick={item.status === "active" ? () => handleModalStatus({ item }) : null} ref={projectRef}>
+        <div className={`card__container  ${item.status === 'inactive' ? 'card-inactive' : ''}`}>
+          {item.status === 'inactive' &&
+            <div className='inactive-text'>
+  
+                <p>In Progress</p>
+
+            </div>
+          }
           <div className='card__image'>
             <img src={item.image} />
           </div>
@@ -31,6 +43,8 @@ export const Card = ({ items }) => {
           </div>
         </div>
       </div>
+
+
     )
   }
   )
@@ -38,22 +52,22 @@ export const Card = ({ items }) => {
 }
 
 
-const Projects = () => { 
+const Projects = () => {
   const { ref: projectRef, inView: projectIsVisible } = useInView();
+
 
   return (
     <section className='projects' ref={projectRef}>
 
-    <div className='projects__container'>
+      <div className='projects__container'>
 
-      <p className='title'>Projects</p>
+        <p className={`title ${projectIsVisible ? 'showFadeIn' : 'hiddenFadeIn'}`}>Projects</p>
 
-      <div className='projects__content'>
-        <Card items={projectsData} />
-    
+        <div className='projects__content'>
+          <Card items={projectsData} />
+        </div>
+
       </div>
-
-    </div>
     </section>
   )
 }
