@@ -7,6 +7,8 @@ import { ModalContext } from '../../contexts/ModalContext';
 import { useInView } from 'react-intersection-observer';
 import { ScreenSizeContext } from '../../contexts/ScreenSizeContext';
 
+import { GrGroup } from "react-icons/gr";
+
 
 
 export const Card = ({ items }) => {
@@ -41,7 +43,7 @@ export const Card = ({ items }) => {
           </div>
 
           <div className='card__content'>
-            <h2 className='card-title'>{item.name}</h2>
+            <h2 className='card-title'><div>{item.name} </div> {item.group ? <GrGroup /> : ''}</h2>
             <p className='card-techstack'>Tech Stack:{item.teckStack.join(', ')}</p>
             <p className='card-description'>{item.description}</p>
           </div>

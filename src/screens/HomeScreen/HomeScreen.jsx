@@ -16,6 +16,7 @@ import Projects from '../../components/Projects/Projects';
 import { ModalContext } from '../../contexts/ModalContext';
 import Modal from '../../components/Modal/Modal';
 
+
 const HomeScreen = () => {
 
     //scroll animation----------------------------
@@ -45,12 +46,13 @@ const HomeScreen = () => {
 
     function showNavToFalse() {
         if (!isDesktop && showNav) {
-            setShowNav(false)
+            setShowNav(!showNav)
         }
     }
 
     return (
-        <div className={theme} onClick={showNavToFalse}>
+        <div className={theme}>
+            {/* onClick={showNavToFalse} */}
 
             {modalStatus && <Modal />}
 
@@ -82,7 +84,7 @@ const HomeScreen = () => {
 
                 {/* ABOUT SECTION--------------------------------------------------------------------------------------------------------------------- */}
 
-                 <p className='japanese-text section-padding' id="about" >ウェブディペロッパー</p>
+                 <p className='japanese-text section-padding' id="about" >ウェブディベロッパー</p>
                 <section className={`section  ${aboutIsVisible ? 'showFadeIn' : 'hiddenFadeIn'}`} ref={aboutRef}>
                     <About />
                 </section>
@@ -103,6 +105,7 @@ const HomeScreen = () => {
 
 
                 <section className={`section section-padding ${contactIsVisible ? 'showFadeIn' : 'hiddenFadeIn'} `} id="contact" ref={contactRef}>
+             
                     <Contact />
                 </section>
 

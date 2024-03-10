@@ -37,11 +37,12 @@ $light-grey: #4c4848;
 $black: #181717;
 $navy: #1b133f;
 $light-purple: #685d97;
+$purple-pink: #D236EC;
 $neonblue: #03EADD;
 $cyan: #50D8D7;
 $pink: #CB3CD0;
 $dark-pink: #DB1DDD;
-// $dark-pink: ;
+
 $orange: #F28B08;
 $lime-yellow: #e1eea6;
 $light-pink: #e9b5bb;
@@ -188,7 +189,7 @@ $yellow: #f4f411;
 
     //mainItem component
     .name-color {
-        color: rgba($purple, .8);
+        color: rgba($purple-pink, .8);
     }
 
     //SkillScrollSlider component
@@ -201,13 +202,13 @@ $yellow: #f4f411;
     .contactForm {
         color: $white-100;
 
-        .contact-title {
+        // .contact-title {
 
-            &::after {
-                background: linear-gradient(to bottom, #0000 60%,  $purple-40 40% );
+        //     &::after {
+        //         background: linear-gradient(to bottom, #0000 60%,  $purple-40 40% );
     
-            }
-        }
+        //     }
+        // }
     
         input, textarea {
             background-color: rgba($white-100, .2);

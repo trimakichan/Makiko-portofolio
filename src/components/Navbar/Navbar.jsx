@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
 import "./navbar.scss";
-import { ThemeContext } from "../../contexts/ThemeContext";
+// import {ToggleSwitch} from 
 import { NavContext } from "../../contexts/NavContext";
-import logo from '../../assets/images/logo.svg'
+import logo from '../../assets/images/logo.svg';
 
 // icons
 import { MdDarkMode } from "react-icons/md";
@@ -11,65 +11,73 @@ import { RiBriefcase3Fill } from "react-icons/ri";
 import { FiMessageSquare } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import { LuUser } from "react-icons/lu";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
+
 
 const Navbar = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
-  const {showNav, setShowNav} = useContext(NavContext);
+ const {isDesktop} = useContext(ScreenSizeContext)
+  const { showNav, setShowNav } = useContext(NavContext);
 
-  function handleLinkClick () {
-    setShowNav(false);
+  function handleLinkClick() {
+    setShowNav(!showNav);
   }
 
   return (
-    <nav className="nav-container">
+    <nav className={`nav-container ${!isDesktop && showNav ? 'showNav' : '' }` } >
       <nav className="nav">
-        <div className="nav__close" onClick={() => setShowNav(false)}>
-          <IoMdClose />
+        <div className="nav__close"  onClick={() => setShowNav(!showNav)}>
+          <IoMdClose/>
         </div>
 
-        <a href="#" className="nav__logo">
-          <img className='logo' src={logo} />
+        <a href="#" className="nav__logo" onClick={() => setShowNav(!showNav)}>
+          <img className='logo' src={logo} alt="Logo" />
+     
         </a>
 
-        <ul className="nav__list">
+        <div className="navSwitch-container">
+        <ul className="nav__list"  onClick={handleLinkClick}>
           <li className="nav__list__item">
-            <a href="#" className="nav__list__item__link" onClick={handleLinkClick}>
+            <a href="#" className="nav__list__item__link">
               Home
-              <AiOutlineHome className="icon"/>
+              <AiOutlineHome className="icon" />
             </a>
-          
+
           </li>
           <li className="nav__list__item">
-            <a href="#about" className="nav__list__item__link" onClick={handleLinkClick}>
+            <a href="#about" className="nav__list__item__link" >
               About
-              <LuUser className="icon"/>
+              <LuUser className="icon" />
             </a>
           </li>
           <li className="nav__list__item">
-            <a href="#projects" className="nav__list__item__link" onClick={handleLinkClick}>
+            <a href="#projects" className="nav__list__item__link">
               Projects
               <RiBriefcase3Fill className="icon" />
             </a>
           </li>
           <li className="nav__list__item">
-            <a href="#contact" className="nav__list__item__link" onClick={handleLinkClick}>
+            <a href="#contact" className="nav__list__item__link" >
               Contact
-              <FiMessageSquare className="icon"/>
+              <FiMessageSquare className="icon" />
             </a>
           </li>
-{/* 
-          <p
-            className="nav__link"
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-          >
-            <MdDarkMode className="moonIcon-color" />
-          </p> */}
 
-          <div className="button">
+
+          {/* <p className="nav__link"
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          > */}
+
+          {/* <MdDarkMode className="moonIcon-color" /> */}
+          {/* </p> */}
+
+          {/* <div className="button">
             <input type="checkbox" onChange={() => setTheme(theme === "light" ? "dark" : "light")}/>
-          </div>
-
+          </div> */}
         </ul>
+        <ToggleSwitch />
+
+        </div>
       </nav>
     </nav>
   );
