@@ -57,13 +57,18 @@ const Navbar = () => {
               <FiMessageSquare className="icon"/>
             </a>
           </li>
-
+{/* 
           <p
             className="nav__link"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
             <MdDarkMode className="moonIcon-color" />
-          </p>
+          </p> */}
+
+          <div className="button">
+            <input type="checkbox" onChange={() => setTheme(theme === "light" ? "dark" : "light")}/>
+          </div>
+
         </ul>
       </nav>
     </nav>
