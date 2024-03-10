@@ -23,9 +23,7 @@
         position: relative;
     }
 
-    &__skillSection {
-        
-    }
+ 
 
 }
 
@@ -72,10 +70,14 @@
     margin: 1rem; 
 }
 
+.section-padding {
+    padding-top: 3rem;
+}
+
 
     .japanese-text {
      font-family: "Dela Gothic One", sans-serif;
-     margin: 1rem;
+     margin: 0 1rem; 
             font-size: 10vw;
             line-height: 100%;
             word-wrap: break-word;
@@ -119,6 +121,11 @@
        
     }
 
+    
+.section-padding {
+    padding-top: 6rem;
+}
+
      .japanese-text {
         font-size: 8vw;
 
@@ -126,7 +133,8 @@
 
     .text-right {
         position: relative;
-        bottom: 200px;
+        // bottom: 200px;
+        line-height: 100%;
     }
 
 }

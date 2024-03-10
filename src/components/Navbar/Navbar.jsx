@@ -28,7 +28,7 @@ const Navbar = () => {
         </div>
 
         <a href="#" className="nav__logo">
-          <img className='logo' src={theme === 'light' ? logo : logo} />
+          <img className='logo' src={logo} />
         </a>
 
         <ul className="nav__list">

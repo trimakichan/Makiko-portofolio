@@ -17,8 +17,14 @@
         padding: 1rem;
 
         &__logo {
-            width: 30%;
-            object-fit: contain;
+            display: flex;
+            align-items: center;
+         
+
+            img {
+                width: 40%;
+                object-fit: contain;
+            }
 
         }
 

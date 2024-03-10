@@ -28,9 +28,6 @@
             opacity: 1;
 
         }
-
-        
-
     }
 }
 
@@ -46,7 +43,7 @@
 
     .card__container {
         padding: 1rem;
-        margin: 2.5rem 1rem 0;
+        // margin: 2.5rem 1rem 0;
         // gap: 1rem;
         // border-radius: 10px;
         // background: rgba($light-pink , .5);
@@ -55,6 +52,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 15rem 15rem;
+      
 
         box-shadow: 1rem 1rem 0 rgba(255, 255, 255, .3);
 
@@ -107,16 +105,12 @@
     }
 
     &__content {
-
-   
-        
-    
+        display: grid;
+        gap: 2.5rem 0;
       
     }
 
 }
-
-
 
 
 @media (min-width: $breakpoint-medium) {
@@ -142,9 +136,8 @@
     .projects {
 
         &__content {
-            display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
+            gap: 2rem;
         }
 
     }

@@ -68,7 +68,7 @@ const HomeScreen = () => {
                 </div>
 
                 <div className='bg-color'>
-                    <SkillSection className='home__skillSection' />
+                    <SkillSection  />
                 </div>
 
                 <div className="wavy_bottom">
@@ -82,26 +82,27 @@ const HomeScreen = () => {
 
                 {/* ABOUT SECTION--------------------------------------------------------------------------------------------------------------------- */}
 
-                 <p className='japanese-text' id="about" >ウェブディペロッパー</p>
-                <section className={`section project-section ${aboutIsVisible ? 'showFadeIn' : 'hiddenFadeIn'}`} ref={aboutRef}>
+                 <p className='japanese-text section-padding' id="about" >ウェブディペロッパー</p>
+                <section className={`section  ${aboutIsVisible ? 'showFadeIn' : 'hiddenFadeIn'}`} ref={aboutRef}>
                     <About />
                 </section>
                 <p className='japanese-text text-right'>北海道出身</p>
 
     
 
-                {/* <div className="skillScroll-container">
+                 {/* <div className="skillScroll-container">
                 <SkillScrollSlider />
-                </div> */}
+                </div>   */}
 
-                {/* PROJECT SECTION--------------------------------------------------------------------------------------------------------------------- */}
-                <section className='section' id="projects" >
+                {/*--------------------------------------------------------------------------------------------------------------------- */}
+               
+                <section className='section section-padding' id="projects" >
                     <Projects />
                 </section>
 
 
 
-                <section className={`section ${contactIsVisible ? 'showFadeIn' : 'hiddenFadeIn'} `} id="contact" ref={contactRef}>
+                <section className={`section section-padding ${contactIsVisible ? 'showFadeIn' : 'hiddenFadeIn'} `} id="contact" ref={contactRef}>
                     <Contact />
                 </section>
 

@@ -12,7 +12,7 @@ import { ScreenSizeContext } from '../../contexts/ScreenSizeContext';
 export const Card = ({ items }) => {
   const { modalStatus, setModalStatus, setModalData } = useContext(ModalContext);
   const { ref: projectRef, inView: projectIsVisible } = useInView();
-  const {isDesktop} = useContext(ScreenSizeContext);
+  const { isDesktop } = useContext(ScreenSizeContext);
   console.log('desktopsize', isDesktop)
 
   const handleModalStatus = (item) => {
@@ -23,12 +23,16 @@ export const Card = ({ items }) => {
   return items.map((item, index) => {
 
     return (
-      <div key={index} className={`card ${!projectIsVisible && isDesktop? 'hiddenLeft' : ''} ${!projectIsVisible && !isDesktop ? 'hiddenFadeIn' : ''} ${isDesktop && projectIsVisible ? `showLeft index${index}` : ''} ${!isDesktop && projectIsVisible ? 'showFadeInMobile' : ''}`} onClick={item.status === "active" ? () => handleModalStatus({ item }) : null} ref={projectRef}>
+
+      <div key={index} className={`card   ${isDesktop &&projectIsVisible ? `showLeft index${index}` : ''} ${isDesktop && !projectIsVisible ? 'hiddenLeft' : ''}`} onClick={item.status === "active" ? () => handleModalStatus({ item }) : null} ref={projectRef}>
         <div className={`card__container  ${item.status === 'inactive' ? 'card-inactive' : ''}`}>
           {item.status === 'inactive' &&
             <div className='inactive-text'>
-  
-                <p>In Progress</p>
+
+{/* ${!cardIsVisible && !isDesktop ? 'hiddenFadeIn' : ''} */}
+{/* ${!isDesktop && cardIsVisible ? 'showFadeInMobile' : ''} */}
+            
+              <p>In Progress</p>
 
             </div>
           }
@@ -43,8 +47,6 @@ export const Card = ({ items }) => {
           </div>
         </div>
       </div>
-
-
     )
   }
   )
