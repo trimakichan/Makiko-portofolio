@@ -18,9 +18,19 @@ const About = () => {
 
                 </div>
                 <div className='about__content'>
-                    <p className='title'>About me.</p>
-                    <div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident animi est, eligendi eos odio, alias iusto magni facilis incidunt sunt laboriosam ad amet ipsam quos cumque maxime repellendus, nesciunt fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit animi aliquam dolore necessitatibus, aliquid sequi ab pariatur veritatis, alias blanditiis nihil tenetur eveniet repudiandae consequuntur quia officia ipsum nemo laudantium.
+                    <p className='title' >About me.</p>
+                    <div className='about-background'>
+                        <h2>Frontend Developer based in Seatte 🌿</h2>
+                        <div className='text-container'>
+                            <p>
+                                Greetings! 👋 I'm a junior frontend developer originally from Japan, now thriving in the vibrant city of Seattle.
+                                My passion lies in bringing the technical and visual elements of digital products to life, and with every problem I solve, I feel an inch taller! </p>
+
+                            <p> Previously an IT support engineer and currently a stay-at-home mom, I've transitioned into web development to pursue my dream of crafting visually appealing and responsive designs, delivering robust user experiences.</p>
+                            <p> Beyond coding, you'll find me immersed in woodworking/DIY projects, enjoying hot yoga, capturing moments through photography, and experimenting with new recipes. As a mother of two girls and a proud owner of a golden retriever🐶, life is always an exciting adventure.</p>
+
+                            <p> Embracing the Japanese philosophy of "kaizen" or continuous improvement, I'm dedicated to enhancing digital experiences one line of code at a time.🖥️💪</p>
+                        </div>
                     </div>
                     {/* <div className='scrollSlider'>
                         <SkillScrollSlider />

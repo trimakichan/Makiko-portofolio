@@ -22,6 +22,10 @@ body {
     @include title;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 
 
 .hiddenLeft {
@@ -61,7 +65,7 @@ body {
 
 .showFadeIn {
     opacity: 1;
-    transition: all 2s;
+    transition: all 1.5s;
 }
 
 .showFadeInMobile {

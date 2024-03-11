@@ -14,7 +14,7 @@
         position: relative;
         top: 30px;
         padding: 1.5rem;
-        background: rgba($white-80, .8);
+        background: $creamy-white;
         width: calc(100% - 60px);
         z-index: 1;
 
@@ -28,6 +28,11 @@
             font-weight: bold;
             line-height: 2rem;
 
+            p {
+                display: flex;
+                align-items: center;
+                gap: .4rem;
+            }
         }
 
         .icons {

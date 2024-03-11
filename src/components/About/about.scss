@@ -11,7 +11,9 @@
     // border-bottom-right-radius: 11vw;
 
 
-    &__container {}
+    &__container {
+ 
+    }
 
 
     &__photo {
@@ -59,19 +61,40 @@
 
     &__content {
         padding: 1rem;
+       
 
-        .scrollSlider {
-            width: 100%;
-            height: min-content;
-            opacity: .2;
+        // .scrollSlider {
+        //     width: 100%;
+        //     height: min-content;
+        //     opacity: .2;
+
+        // }
+
+        .about-background {
+            margin-top: .5rem;
+            background-color: rgba($creamy-white, .85);
+            padding: 1rem 2rem;
+            border-radius: .3rem 3vw;
 
         }
+
+        .text-container {
+            
+            p {
+                font-size: 1.2rem;
+                margin: 1rem 0;
+                line-height: 130%;
+                font-weight: 500;
+            }
+        }
+
+
     }
 
 
 }
 
-@media (min-width: $breakpoint-medium) {
+@media (min-width: $breakpoint-extra-large) {
 
     .about {
         &__container {
@@ -100,7 +123,7 @@
         }
 
         &__content {
-            padding: 2rem;
+            // padding: 2rem;
 
             .scrollSlider {
                 width: 40rem;

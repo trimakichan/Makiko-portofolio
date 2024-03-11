@@ -1,13 +1,5 @@
 @use "../../styles" as *;
 
-@mixin hoverEffect {
-  content: '';
-  background: rgba($purple-pink, .6);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-}
 
 
 .nav-container {
@@ -53,18 +45,22 @@
       align-items: center;
       row-gap: 1.5rem;
       list-style: none;
+      line-height: 100%;
+
+
 
       // border: 1px solid blue;
 
 
       &__item {
+       
         position: relative;
         cursor: pointer;
 
         &::before {
           @include hoverEffect;
           width: 0;
-          transition: 0.3s ease-in-out;
+          transition: .5s ease-in-out;
         }
 
         &:hover::before {
@@ -127,7 +123,7 @@
 @media (min-width: $breakpoint-medium) {
   .nav-container {
     min-height: auto;
-    padding: 1.2rem;
+    padding: .5rem;
     transform: translate(0);
     position: sticky;
 

@@ -9,16 +9,17 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { IoNewspaperOutline } from "react-icons/io5";
 
-
-
 const MainItem = () => {
-    const myName = useTypingEffect("Makiko", 500, 2000);
-    const BackgroundText = useTypingEffect("WEB DEVELOPER", 200, 5000)
+    const myName = useTypingEffect("Makiko", 400, 2000);
+    const BackgroundTextLeft = useTypingEffect("WEB DEVELOPER", 200, 5000);
+    const BackgroundTextRight = useTypingEffect("UX & UI", 200, 8000);
+
+    const resumeUrl = './src/assets/Makiko-resume.pdf'
 
     return (
 
         <main className="main">
-            <h1 className='main__bgText color-decoration'>{BackgroundText}</h1>
+            <h1 className='main-bgTextLeft color-decoration'>{BackgroundTextLeft}</h1>
             <div className="main__contentWrapper">
                 <section className="main__content">
                     <p className="color-primary"><span className='bold'>HI, I AM </span><span className='main__content__nameText name-color'>{myName}</span></p>
@@ -33,7 +34,7 @@ const MainItem = () => {
                             <div className='main__content__icons' >
                             <a href='https://github.com/trimakichan' target='_blank' rel='noopener noreferrer'><FaGithub/></a>
                                 <a href='https://www.linkedin.com/in/makiko-yokoyama' target='_blank' rel='noopener noreferrer'><FaLinkedin /></a>
-                                <a><IoNewspaperOutline /></a>
+                                <a ><IoNewspaperOutline onClick={() => window.open(resumeUrl, '_blank')} /></a>
                             </div>
                         </IconContext.Provider>
                     </div>
@@ -42,6 +43,7 @@ const MainItem = () => {
                     <ProfileImage />
                 </section>
             </div>
+            <h1 className='main-bgTextRight'>{BackgroundTextRight}</h1>
            
         </main>
     );

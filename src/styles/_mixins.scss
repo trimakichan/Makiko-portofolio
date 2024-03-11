@@ -49,3 +49,13 @@
         }
     }
 }
+
+@mixin hoverEffect {
+    content: '';
+    background: rgba($purple-pink, .6);
+    position: absolute;
+    left: 0;
+    bottom: -.3rem;
+    height: 3px;
+  }
+  

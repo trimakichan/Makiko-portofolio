@@ -10,16 +10,27 @@ opacity: .3;
 
 
 .main {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    position: relative;
  
-    &__bgText {
+    &-bgTextLeft {
+        display: none;
+    }
+
+    &-bgTextRight {
         display: none;
     }
 
     &__contentWrapper {
+        max-width: 1500px;
         display: flex;
         flex-direction: column;
         padding: 1rem;
-        // border: 1px solid red;
+    
+        // border: 1px solid blue;
+        
     }
 
     &__content {
@@ -28,7 +39,6 @@ opacity: .3;
         font-size: 1.6rem;
         text-align: center;   
         // font-style: italic;
-        // border: 1px solid blue;
         
         &__nameText {
             position: relative;
@@ -136,8 +146,11 @@ opacity: .3;
 @media (min-width: $breakpoint-small) {
     .main {
         
-        &__bgText {
+        &-bgTextLeft {
             @include bgText;
+            position: absolute;
+            left:0;
+
         }
 
     }
@@ -150,9 +163,17 @@ opacity: .3;
         position: relative;
        
 
-        &__bgText {
+        &-bgTextLeft {
             @include bgText;
             position: absolute;
+
+        }
+
+        &-bgTextRight {
+            @include bgText;
+            position: absolute;
+            right: 0;
+            bottom: 0;
 
         }
 

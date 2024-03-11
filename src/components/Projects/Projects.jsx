@@ -30,12 +30,7 @@ export const Card = ({ items }) => {
         <div className={`card__container  ${item.status === 'inactive' ? 'card-inactive' : ''}`}>
           {item.status === 'inactive' &&
             <div className='inactive-text'>
-
-{/* ${!cardIsVisible && !isDesktop ? 'hiddenFadeIn' : ''} */}
-{/* ${!isDesktop && cardIsVisible ? 'showFadeInMobile' : ''} */}
-            
               <p>In Progress</p>
-
             </div>
           }
           <div className='card__image'>
@@ -44,7 +39,7 @@ export const Card = ({ items }) => {
 
           <div className='card__content'>
             <h2 className='card-title'><div>{item.name} </div> {item.group ? <GrGroup /> : ''}</h2>
-            <p className='card-techstack'>Tech Stack:{item.teckStack.join(', ')}</p>
+            <p className='card-techstack'><span className='bold'>Tech Stack:  </span>{item.teckStack.join(', ')}</p>
             <p className='card-description'>{item.description}</p>
           </div>
         </div>
@@ -65,7 +60,7 @@ const Projects = () => {
 
       <div className='projects__container'>
 
-        <p className={`title ${projectIsVisible ? 'showFadeIn' : 'hiddenFadeIn'}`}>Projects</p>
+        <p className={`title space-bottom ${projectIsVisible ? 'showFadeIn' : 'hiddenFadeIn'}`}>Projects</p>
 
         <div className='projects__content'>
           <Card items={projectsData} />

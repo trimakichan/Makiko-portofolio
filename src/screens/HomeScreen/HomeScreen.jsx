@@ -88,7 +88,7 @@ const HomeScreen = () => {
                 <section className={`section  ${aboutIsVisible ? 'showFadeIn' : 'hiddenFadeIn'}`} ref={aboutRef}>
                     <About />
                 </section>
-                <p className='japanese-text text-right'>北海道出身</p>
+               {isDesktop  && <p className='japanese-text text-right'>北海道出身</p>}
 
     
 
@@ -98,13 +98,13 @@ const HomeScreen = () => {
 
                 {/*--------------------------------------------------------------------------------------------------------------------- */}
                
-                <section className='section section-padding' id="projects" >
+                <section className='section section-top section-bottom' id="projects" >
                     <Projects />
                 </section>
 
 
 
-                <section className={`section section-padding ${contactIsVisible ? 'showFadeIn' : 'hiddenFadeIn'} `} id="contact" ref={contactRef}>
+                <section className={`section section-top  ${contactIsVisible ? 'showFadeIn' : 'hiddenFadeIn'} `} id="contact" ref={contactRef}>
              
                     <Contact />
                 </section>
