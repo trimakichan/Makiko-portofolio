@@ -7,6 +7,14 @@
     margin: 0 auto;
 }
 
+@mixin bgText {
+    display: block;
+    font-size: clamp(1rem, 10vw + 1rem, 10rem);
+    line-height: 1em;
+    text-wrap: nowrap;
+    opacity: .3;
+    }
+
 @mixin highligntTitle {
     font-size: 3rem;
     text-transform: uppercase;

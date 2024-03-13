@@ -16,6 +16,10 @@ import Projects from '../../components/Projects/Projects';
 import { ModalContext } from '../../contexts/ModalContext';
 import Modal from '../../components/Modal/Modal';
 
+import sprinkle from '../../assets/images/sprinkle.svg'
+import sprinkle2 from '../../assets/images/sprinkle5.svg'
+
+
 
 const HomeScreen = () => {
 
@@ -104,11 +108,13 @@ const HomeScreen = () => {
 
 
 
-                <section className={`section section-top  ${contactIsVisible ? 'showFadeIn' : 'hiddenFadeIn'} `} id="contact" ref={contactRef}>
-             
+                <section className={`section section-top home-contact ${contactIsVisible ? 'showFadeIn' : 'hiddenFadeIn'} `} id="contact" ref={contactRef}>
                     <Contact />
+                    <img className='sprinkle1' src={sprinkle} alt='sprinkle illustration' />
+                    <img className='sprinkle2' src={sprinkle} alt='sprinkle illustration' />
+                    
                 </section>
-
+                   
                 <Footer />
             </div>
         </div>

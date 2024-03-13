@@ -57,8 +57,21 @@
     }
 
     &__content {
-
         margin-top: 1rem;
+        
+
+        .modal-body {
+            display: grid;
+            gap: .5rem;
+        }
+
+        .modal-footer {
+            display: flex;
+            gap: 1rem;
+
+          
+        }
+
 
     }
 
@@ -84,7 +97,17 @@
         // }
 
         &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem; 
+
+
             padding: 2rem;
+
+            .modal-footer { 
+                align-self: end;
+            }
+
         
         }
 

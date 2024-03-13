@@ -1,11 +1,10 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import "./navbar.scss";
 // import {ToggleSwitch} from 
 import { NavContext } from "../../contexts/NavContext";
 import logo from '../../assets/images/logo.svg';
 
 // icons
-import { MdDarkMode } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
 import { RiBriefcase3Fill } from "react-icons/ri";
 import { FiMessageSquare } from "react-icons/fi";
@@ -25,7 +24,7 @@ const Navbar = () => {
 
   return (
     <nav className={`nav-container ${!isDesktop && showNav ? 'showNav' : '' }` } >
-      <nav className="nav">
+      <nav className="nav ">
         <div className="nav__close"  onClick={() => setShowNav(!showNav)}>
           <IoMdClose/>
         </div>
@@ -62,18 +61,6 @@ const Navbar = () => {
               <FiMessageSquare className="icon" />
             </a>
           </li>
-
-
-          {/* <p className="nav__link"
-          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-          > */}
-
-          {/* <MdDarkMode className="moonIcon-color" /> */}
-          {/* </p> */}
-
-          {/* <div className="button">
-            <input type="checkbox" onChange={() => setTheme(theme === "light" ? "dark" : "light")}/>
-          </div> */}
         </ul>
         <ToggleSwitch />
 

@@ -16,11 +16,11 @@
 
         &__inner {
             display: flex;
-            width: max-content;
+            // width: 100%;
             padding-block: 1rem;
             flex-direction: row;
             gap: 1rem;
-            animation: scroll 50s linear infinite;
+            animation: scroll 10s linear infinite;
      
             &:hover {
                 animation-play-state: paused;
@@ -30,7 +30,7 @@
 
             @keyframes scroll {
                 to {
-                    transform: translate(calc(-50% - 0.5rem));
+                    transform: translate(calc(-50% - .5rem));
                 }
             }
         }

@@ -12,7 +12,7 @@ import { ImMail4 } from "react-icons/im";
 const Footer = () => {
     const { theme } = useContext(ThemeContext)
     return (
-        <div className="footer__container">
+        <footer className="footer__container">
             <div className="footer">
                 <div className="footer__logo">
                     <img src={theme === 'light' ? logo : logo} className='logo' />
@@ -30,7 +30,7 @@ const Footer = () => {
                 <p className='copyRight'>&#169; 2024 Designed and Developed by Me</p>
 
 
-        </div>
+        </footer>
 
 
     )

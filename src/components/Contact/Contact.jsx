@@ -2,6 +2,7 @@ import "./contact.scss";
 import chatDark from "../../assets/images/chat-dark.svg";
 import chatLight from "../../assets/images/chat-light.svg";
 
+
 import { CiMail } from "react-icons/ci";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
@@ -32,7 +33,7 @@ const Contact = () => {
 
 
                 <div className="chat-image">
-                    <img src={theme === "light" ? chatLight : chatDark} alt="talking woman image" />
+                    <img className='image-woman' src={theme === "light" ? chatLight : chatDark} alt="talking woman illustration" />
                 </div>
 
             </div>

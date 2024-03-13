@@ -1,16 +1,9 @@
 @use "../../styles" as *;
 
-@mixin bgText {
-display: block;
-font-size: clamp(1rem, 10vw + 1rem, 10rem);
-line-height: 1em;
-text-wrap: nowrap;
-opacity: .3;
-}
+
 
 
 .main {
-    // border: 1px solid red;
     display: flex;
     justify-content: center;
     position: relative;
@@ -28,8 +21,6 @@ opacity: .3;
         display: flex;
         flex-direction: column;
         padding: 1rem;
-    
-        // border: 1px solid blue;
         
     }
 
@@ -38,7 +29,6 @@ opacity: .3;
         margin-top: 2rem;
         font-size: 1.6rem;
         text-align: center;   
-        // font-style: italic;
         
         &__nameText {
             position: relative;
@@ -62,15 +52,6 @@ opacity: .3;
 
         }
 
-        &__description {
-
-            // span {
-            //     color: $orange-50; 
-            //     font-weight: bold;
-            //     font-style: normal;
-            // }
-        }
-
 
         &__icons {
             display: flex;
@@ -84,7 +65,6 @@ opacity: .3;
 
             &:hover, &:focus {
                 cursor: pointer;
-                // color: $purple-60;
                 color: $white-100
             }
 
@@ -99,11 +79,8 @@ opacity: .3;
     &__image {
         z-index:2;
         animation: profilePicAnim 2s ease-in;
-         // border: 1px solid greenyellow;
         
     }
-
-
 
     @keyframes neonAnim {
         from {
@@ -145,6 +122,10 @@ opacity: .3;
 
 @media (min-width: $breakpoint-small) {
     .main {
+
+        &__content { 
+            margin-top: 6rem;
+        }
         
         &-bgTextLeft {
             @include bgText;
@@ -158,9 +139,14 @@ opacity: .3;
 }
 
 // 768 px
-@media (min-width: $breakpoint-medium) { 
+@media (min-width: $breakpoint-large) { 
+
     .main {
-        position: relative;
+        // position: relative;
+
+        &__content { 
+            margin-top: 3rem;
+        }
        
 
         &-bgTextLeft {
@@ -183,12 +169,14 @@ opacity: .3;
             align-items: end;
             margin: 1rem 1rem 0;
 
+            // align-items: center;
+            //         justify-content: end; 
+
         }
 
         &__content {
             width: 20rem;
             flex: .5 2 auto;
-            // border: 1px solid red;
 
             &__description {
                 text-align: center;
@@ -196,15 +184,9 @@ opacity: .3;
     
             }
 
-            // &__icons {
-            //     justify-content: center;
-                
-        
-            // }
         }
 
         &__image {
-            // min-width: 22rem;
             align-self: flex-end;
             flex-grow: 1;
    
@@ -215,7 +197,7 @@ opacity: .3;
 }
 
 
-@media (min-width: $breakpoint-extra-large) {
+@media (min-width: $breakpoint-large) {
     .main {
 
         &__contentWrapper {
@@ -224,7 +206,6 @@ opacity: .3;
         }
         
         &__content {
-            // padding-left: 3rem;
             width: 10%;
             font-size: 2rem;
             flex: 1 1 auto;
@@ -233,7 +214,6 @@ opacity: .3;
             &__description {
                 width: 80%;
                 margin: auto;
-                // border: 1px solid yellow;
             }
             
         }

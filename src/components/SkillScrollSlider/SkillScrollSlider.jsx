@@ -1,17 +1,28 @@
 import "./skillScrollSlider.scss";
 import { dataSkills } from "../data/data-skills";
-import SkillItem from "../SkillItem/SkillItem";
+import { IconContext } from "react-icons";
+
+const IconItem = ({items}) => {
+
+  return items.map((item, index) =>
+  <div key={index}>
+        <IconContext.Provider value={{ color: `${item.color}`, size: "4rem" }}>
+          {item.icon}
+        </IconContext.Provider>
+  </div>
+)
+}
 
 
 const SkillScrollSlider = () => {
 
-  const skillDuplicated = dataSkills.concat(dataSkills, dataSkills);
+  const skillDuplicated = dataSkills.concat(dataSkills);
 
   return (
       <div className="scroller">
         <div className='scroller__container' >
           <div className="scroller__inner">
-            <SkillItem items={skillDuplicated} />
+            <IconItem items={skillDuplicated} />
           </div>
         </div>
       </div>

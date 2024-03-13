@@ -47,14 +47,14 @@
             // margin: auto auto;
             display: flex;
             justify-content: center;
+         
 
             animation: floating 5s ease-in-out infinite;
 
-            img {
+            .image-woman {
+                position: relative;
                 width: 40%;
-                // height: %;
                 object-fit: cover;
-
             }
 
 

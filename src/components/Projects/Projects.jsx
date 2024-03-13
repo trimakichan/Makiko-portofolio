@@ -8,6 +8,8 @@ import { useInView } from 'react-intersection-observer';
 import { ScreenSizeContext } from '../../contexts/ScreenSizeContext';
 
 import { GrGroup } from "react-icons/gr";
+import { RxPerson } from "react-icons/rx";
+
 
 
 
@@ -26,23 +28,25 @@ export const Card = ({ items }) => {
 
     return (
 
-      <div key={index} className={`card   ${isDesktop &&projectIsVisible ? `showLeft index${index}` : ''} ${isDesktop && !projectIsVisible ? 'hiddenLeft' : ''}`} onClick={item.status === "active" ? () => handleModalStatus({ item }) : null} ref={projectRef}>
-        <div className={`card__container  ${item.status === 'inactive' ? 'card-inactive' : ''}`}>
-          {item.status === 'inactive' &&
-            <div className='inactive-text'>
-              <p>In Progress</p>
-            </div>
-          }
-          <div className='card__image'>
-            <img src={item.image} />
-          </div>
+      <div key={index} className={`card card${index} ${isDesktop && projectIsVisible ? `showLeft index${index}` : ''} ${isDesktop && !projectIsVisible ? 'hiddenLeft' : ''}`} onClick={item.status === "active" ? () => handleModalStatus({ item }) : null} ref={projectRef}>
 
-          <div className='card__content'>
-            <h2 className='card-title'><div>{item.name} </div> {item.group ? <GrGroup /> : ''}</h2>
-            <p className='card-techstack'><span className='bold'>Tech Stack:  </span>{item.teckStack.join(', ')}</p>
-            <p className='card-description'>{item.description}</p>
+          <div className={`card__container ${item.status === 'inactive' ? 'card-inactive' : ''}`}>
+            {item.status === 'inactive' &&
+              <div className='inactive-text'>
+                <p>In Progress</p>
+              </div>
+            }
+            <div className='card__image'>
+              <img src={item.image} />
+            </div>
+
+            <div className='card__content'>
+              <h2 className='card-title'><div>{item.name} </div> {item.group ? <GrGroup /> : <RxPerson />
+}</h2>
+              <p className='card-techstack'><span className='bold'>Tech Stack:  </span>{item.teckStack.join(', ')}</p>
+              <p className='card-description'>{item.description}</p>
+            </div>
           </div>
-        </div>
       </div>
     )
   }

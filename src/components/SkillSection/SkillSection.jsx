@@ -10,7 +10,7 @@ const SkillSection = () => {
 
 
     return (
-        <div className='skillSection' >       
+        <section className='skillSection' >       
             <div className='skillSection__container'>
                 <p className={`skillSection__texts font-stroke ${phraseIsVisible ? 'showLeft' : 'hiddenLeft'}`}  ref={phraseRef}>bringing <span>i</span><span>d</span><span>e</span><span>a</span><span>s</span> to <span className='life'>life</span> on the web is my calling.
             
@@ -21,7 +21,7 @@ const SkillSection = () => {
                 </div>
 
             </div>
-        </div>
+        </section>
     )
 }
 

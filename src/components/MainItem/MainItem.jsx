@@ -20,8 +20,8 @@ const MainItem = () => {
 
         <main className="main">
             <h1 className='main-bgTextLeft color-decoration'>{BackgroundTextLeft}</h1>
-            <div className="main__contentWrapper">
-                <section className="main__content">
+            <section className="main__contentWrapper">
+                <div className="main__content">
                     <p className="color-primary"><span className='bold'>HI, I AM </span><span className='main__content__nameText name-color'>{myName}</span></p>
                     <div className='main__content__description'>
                         <p className='color-secondary'>
@@ -38,11 +38,11 @@ const MainItem = () => {
                             </div>
                         </IconContext.Provider>
                     </div>
-                </section>
+                </div>
                 <section className="main__image">
                     <ProfileImage />
                 </section>
-            </div>
+            </section>
             <h1 className='main-bgTextRight'>{BackgroundTextRight}</h1>
            
         </main>

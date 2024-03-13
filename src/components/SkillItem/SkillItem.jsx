@@ -3,7 +3,6 @@ import { IconContext } from "react-icons";
 import './skillItem.scss'
 
 const SkillItem = ({items}) => {
-  // console.log('item', items)
 
   return items.map((item, index) =>
     <div key={index}>
