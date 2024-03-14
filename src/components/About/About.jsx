@@ -35,7 +35,6 @@ const About = () => {
                     </div>
                 </div>
                 <div className='about__funFacts'>
-                    {/* <div > */}
                         <ul className='funFacts-content'>
                             <li>😊<em>Hobbies</em>: Woodworking/DIY + Hot Yoga + Photography + Cooking </li>
                             <li>🧒<em>kids</em>: Two girls👩‍👧‍👧</li>
@@ -44,8 +43,6 @@ const About = () => {
                             <li>🩷<em>Favorite Quote</em>: &#8220;Your future is created by what you do today, not tomorrow.&#8221; - Robert Kiyosaki.</li>
                             <li>📙<em>Favorite Books</em>:  &#8220;Atomic Habits&#8221; - James Clear,  &#8220;Limitless&#8221; - Jim Kwik </li>
                         </ul>
-
-                    {/* </div> */}
                     <div className='funFacts-image'>
                         <img src={Joy} alt='my dog picture' />
 

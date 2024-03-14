@@ -16,10 +16,11 @@ const IconItem = ({items}) => {
 
 const SkillScrollSlider = () => {
 
-  const skillDuplicated = dataSkills.concat(dataSkills);
+  const skillDuplicated = dataSkills.concat(dataSkills, dataSkills);
 
   return (
       <div className="scroller">
+      
         <div className='scroller__container' >
           <div className="scroller__inner">
             <IconItem items={skillDuplicated} />

@@ -1,6 +1,7 @@
 @use '../../styles/' as *;
 
 
+//scroll bar on top of the browser. 
 .scroll-watcher {
     height: 7px;
     position: fixed;
@@ -19,8 +20,9 @@
     }
 }
 
-
+//----------------------------------
 .home {
+    
     &__background {
         position: relative;
     }
@@ -37,25 +39,17 @@
 }
 
 .wavy_top svg {
-    // position: relative;
-    // display: block;
     width: calc(130% + 1.3px);
     height: 140px;
 }
 
 .wavy_bottom {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // width: 100%;
     overflow: hidden;
     line-height: 0;
     margin-top: -2px;
 }
 
 .wavy_bottom svg {
-    // position: relative;
-    // display: block;
     width: calc(100% + 1.3px);
     height: 104px;
     transform: rotateY(180deg);
@@ -72,6 +66,36 @@
 
 .section-top {
     padding-top: 3rem;
+}
+
+.home-about {
+    position: relative;
+
+    .doodle1, .doodle2, .arrow {
+        position: absolute;
+      
+    }
+
+    .doodle1, .doodle2  {
+        width: 10%;
+    }
+
+    .arrow {
+        width: 40%;
+        bottom: 0;
+        right: 0;
+        transform: scaleX(-1) rotate(350deg);
+    }
+
+    .doodle1 {
+        bottom: 30%;
+        left: 0;
+    }
+
+    .doodle2 {
+        top: 0;
+        right:0;
+    }
 }
 
 .home-contact {
@@ -111,24 +135,7 @@
 }
 
 
-// .skillScroll-container {
-//     width: 90%;
-//     opacity: .3;
-//     margin: 0 auto;
-// }
 
-// scroll-animations
-
-// .hidden {
-//     opacity: 0;
-//     transition: all 1s
-// }
-
-// .skillScroll-anim {
-//     opacity: 1;
-//     background-color: wheat;
-//     border: 1px solid red;
-// }
 
 @media (min-width: $breakpoint-small) {
 
@@ -136,6 +143,7 @@
 .section {
     margin: 0 3rem;
 }
+
 
 }
 
@@ -175,5 +183,34 @@
     
     
     }
+
+    .home-about {
+    position: relative;
+
+    .doodle1, .doodle2, .arrow {
+        position: absolute;
+    }
+
+    .doodle1, .doodle2  {
+        width: 10%;
+    }
+
+    .arrow {
+        max-width: 20%;
+        bottom: -5%;
+        right: 18%;
+        transform: scaleX(-1) rotate(350deg);
+    }
+
+    .doodle1 {
+        bottom: 30%;
+        left: 0;
+    }
+
+    .doodle2 {
+        top: 0;
+        right:0;
+    }
+}
 
 }

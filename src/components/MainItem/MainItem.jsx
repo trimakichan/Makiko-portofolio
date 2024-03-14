@@ -3,6 +3,7 @@
 import "./mainItem.scss";
 import ProfileImage from '../ProfileImage/ProfileImage';
 import { useTypingEffect } from '../../hooks/typing-effect';
+import doodle2 from '../../assets/images/doodle2.svg'
 
 import { IconContext } from "react-icons";
 import { FaGithub } from "react-icons/fa";
@@ -41,6 +42,7 @@ const MainItem = () => {
                 </div>
                 <section className="main__image">
                     <ProfileImage />
+                    <img className='profileImage-doodle'src={doodle2} alt='doodle illustration' />
                 </section>
             </section>
             <h1 className='main-bgTextRight'>{BackgroundTextRight}</h1>

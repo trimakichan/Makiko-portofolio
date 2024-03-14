@@ -16,10 +16,10 @@ import Projects from '../../components/Projects/Projects';
 import { ModalContext } from '../../contexts/ModalContext';
 import Modal from '../../components/Modal/Modal';
 
-import sprinkle from '../../assets/images/sprinkle.svg'
-import sprinkle2 from '../../assets/images/sprinkle5.svg'
-
-
+import sprinkle from '../../assets/images/sprinkle.svg';
+import doodle1 from '../../assets/images/doodle1.svg';
+import doodle2 from '../../assets/images/doodle2.svg';
+import arrow from '../../assets/images/arrow1.svg';
 
 const HomeScreen = () => {
 
@@ -89,8 +89,11 @@ const HomeScreen = () => {
                 {/* ABOUT SECTION--------------------------------------------------------------------------------------------------------------------- */}
 
                  <p className='japanese-text section-padding' id="about" >ウェブディベロッパー</p>
-                <section className={`section  ${aboutIsVisible ? 'showFadeIn' : 'hiddenFadeIn'}`} ref={aboutRef}>
+                <section className={`section home-about ${aboutIsVisible ? 'showFadeIn' : 'hiddenFadeIn'}`} ref={aboutRef}>
                     <About />
+                    <img className='doodle1' src={doodle1} alt='doodle illustration' />
+                    <img className='doodle2' src={doodle2} alt='doodle illustration' />
+                    <img className='arrow' src={arrow} alt='pink arrow illustration' />
                 </section>
                {isDesktop  && <p className='japanese-text text-right'>北海道出身</p>}
 
@@ -112,6 +115,7 @@ const HomeScreen = () => {
                     <Contact />
                     <img className='sprinkle1' src={sprinkle} alt='sprinkle illustration' />
                     <img className='sprinkle2' src={sprinkle} alt='sprinkle illustration' />
+          
                     
                 </section>
                    

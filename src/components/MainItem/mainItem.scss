@@ -70,16 +70,38 @@
 
         }
 
-        .bold {
-            font-weight: bold;
-        }
-
     }
 
     &__image {
         z-index:2;
         animation: profilePicAnim 2s ease-in;
+        position: relative;
+
+        .profileImage-doodle {
+            width: 10%;
+            position: absolute;
+           
+            transform: rotate(-40deg);
+            animation: doodleAnim 3s linear infinite;
+        }
         
+        
+    }
+
+    @keyframes doodleAnim {
+
+        0%,  100% {
+            top:5%;
+            right: 18%;
+        }
+    
+    
+        50% {
+            top: 3%;
+            right: 17%;
+        }
+
+      
     }
 
     @keyframes neonAnim {
@@ -116,6 +138,7 @@
         50% {
             opacity: 0;
         }
+
     }
 
 }
@@ -187,8 +210,17 @@
         }
 
         &__image {
+            position: relative;
             align-self: flex-end;
             flex-grow: 1;
+
+            .profileImage-doodle {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                right: 15%;
+                transform: rotate(-40deg);
+            }
    
         }
 
