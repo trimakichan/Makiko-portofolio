@@ -1,35 +1,27 @@
 @use "../../styles" as *;
 
-
-
-
 .main {
     display: flex;
     justify-content: center;
     position: relative;
- 
-    &-bgTextLeft {
+
+    &-bgTextLeft,  &-bgTextRight  {
         display: none;
     }
 
-    &-bgTextRight {
-        display: none;
-    }
-
-    &__contentWrapper {
+    &__container {
         max-width: 1500px;
         display: flex;
         flex-direction: column;
         padding: 1rem;
-        
+
     }
 
     &__content {
-        width: 100%;
         margin-top: 2rem;
         font-size: 1.6rem;
-        text-align: center;   
-        
+        text-align: center;
+
         &__nameText {
             position: relative;
             line-height: 2rem;
@@ -38,7 +30,7 @@
             font-style: italic;
             animation: neonAnim 2s alternate-reverse infinite;
         }
-      
+
         &__nameText::before {
             content: "";
             right: -15px;
@@ -56,14 +48,15 @@
         &__icons {
             display: flex;
             justify-content: center;
-            gap: 1rem;     
+            gap: 1rem;
         }
 
         .reactIcons {
-            color: rgba(255,255,255,.5);
+            color: rgba($white-100, .5);
             font-size: 2rem;
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 cursor: pointer;
                 color: $white-100
             }
@@ -73,45 +66,47 @@
     }
 
     &__image {
-        z-index:2;
-        animation: profilePicAnim 2s ease-in;
         position: relative;
+        z-index: 2;
+        animation: profilePicAnim 2s ease-in;
+       
 
         .profileImage-doodle {
             width: 10%;
             position: absolute;
-           
+
             transform: rotate(-40deg);
             animation: doodleAnim 3s linear infinite;
         }
-        
-        
+
+
     }
 
     @keyframes doodleAnim {
 
-        0%,  100% {
-            top:5%;
-            right: 18%;
-        }
-    
-    
-        50% {
-            top: 3%;
+        0%,
+        100% {
+            top: 5%;
             right: 17%;
         }
 
-      
+
+        50% {
+            top: 8%;
+            right: 21%;
+        }
+
+
     }
 
     @keyframes neonAnim {
         from {
-             text-shadow:
-                 0 0 28px 55px $white-100,
-                 0 0 55px 88px $white-100,
-               0 0 128px 155px $white-100;
+            text-shadow:
+                0 0 28px 55px $white-100,
+                0 0 55px 88px $white-100,
+                0 0 128px 155px $white-100;
         }
-    
+
         to {
             text-shadow:
                 0 0 40px $white-100,
@@ -124,16 +119,16 @@
     @keyframes profilePicAnim {
         from {
             opacity: 0;
-    
+
         }
-    
+
         to {
             opacity: 1;
         }
-        
+
     }
 
-    
+
     @keyframes blink {
         50% {
             opacity: 0;
@@ -146,38 +141,25 @@
 @media (min-width: $breakpoint-small) {
     .main {
 
-        &__content { 
+        &__content {
             margin-top: 6rem;
         }
-        
+
+
         &-bgTextLeft {
             @include bgText;
             position: absolute;
-            left:0;
-
+            left: 0;
         }
-
     }
 
-}
+} 
 
-// 768 px
-@media (min-width: $breakpoint-large) { 
+
+@media (min-width: $breakpoint-large) {
 
     .main {
-        // position: relative;
-
-        &__content { 
-            margin-top: 3rem;
-        }
-       
-
-        &-bgTextLeft {
-            @include bgText;
-            position: absolute;
-
-        }
-
+   
         &-bgTextRight {
             @include bgText;
             position: absolute;
@@ -186,33 +168,20 @@
 
         }
 
-        &__contentWrapper {
-            flex-direction: row;
-            justify-content: center;
+        &__container {
+            display: grid;
+            grid-template-columns: 2fr 1.5fr;
             align-items: end;
-            margin: 1rem 1rem 0;
-
-            // align-items: center;
-            //         justify-content: end; 
+            justify-content: center;
 
         }
 
         &__content {
-            width: 20rem;
-            flex: .5 2 auto;
-
-            &__description {
-                text-align: center;
-            
-    
-            }
-
+            font-size: 2rem;
         }
 
         &__image {
             position: relative;
-            align-self: flex-end;
-            flex-grow: 1;
 
             .profileImage-doodle {
                 position: absolute;
@@ -221,37 +190,10 @@
                 right: 15%;
                 transform: rotate(-40deg);
             }
-   
+
         }
 
     }
 
 }
 
-
-@media (min-width: $breakpoint-large) {
-    .main {
-
-        &__contentWrapper {
-            align-items: center;
-            justify-content: end; 
-        }
-        
-        &__content {
-            width: 10%;
-            font-size: 2rem;
-            flex: 1 1 auto;
-            align-self: end; 
-
-            &__description {
-                width: 80%;
-                margin: auto;
-            }
-            
-        }
-
-
-
-
-    }
-}

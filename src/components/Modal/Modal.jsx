@@ -9,6 +9,16 @@ import { FaGithub } from "react-icons/fa";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 
 
+const IconLink = ({ href, color, name, children }) => (
+    <IconContext.Provider value={{ color, size: '3rem' }} className='icon-hover'>
+        <div className='icon-container'>
+        <a href={href} target='_blank' rel='noopener noreferrer'>
+            {children}
+        </a>
+        <p>{name}</p>
+        </div>
+    </IconContext.Provider>
+);
 
 
 const Modal = () => {
@@ -29,35 +39,30 @@ const Modal = () => {
                         <h1>{modalData.item.name}</h1>
                     </div>
 
-                    <div className="modal-body">
+                    <div className="modal-description">
                         <p>{modalData.item.description}</p>
 
                         <p><em>Teck Stack: </em> {modalData.item.teckStack.join(', ')}</p>
                     </div>
 
-                    <div className="modal-footer">
+                    <div className="modal-button">
 
-                        {modalData.item.site && <IconContext.Provider
-                            value={{ color: '#8060f6', size: '3rem' }}
-                        >
-                            <a href={modalData.item.site} target='_blank' rel='noopener noreferrer'>
-                                <HiOutlineDesktopComputer /></a>
-                        </IconContext.Provider>}
+                        {modalData.item.site && (
+                            <IconLink href={modalData.item.site} color="#8060f6" name='Live Site'>
+                                <HiOutlineDesktopComputer />
 
-                        {modalData.item.github &&
-
-                            <IconContext.Provider
-                                value={{ color: '#171515', size: '3rem' }}
-                            >      <a href={modalData.item.github} target='_blank' rel='noopener noreferrer'><FaGithub /></a></IconContext.Provider>}
-
-                        {modalData.item.youtube &&
-
-                            <IconContext.Provider
-                                value={{ color: '#FF0000', size: '3rem' }}
-                            > <a href={modalData.item.youtube} target='_blank' rel='noopener noreferrer'><FaYoutube /></a></IconContext.Provider>}
-
-                        {/* <button onClick={() => setModalStatus(false)}>close</button> */}
-
+                            </IconLink>
+                        )}
+                        {modalData.item.github && (
+                            <IconLink href={modalData.item.github} color="#171515" name='GitHub'>
+                                <FaGithub />
+                            </IconLink>
+                        )}
+                        {modalData.item.youtube && (
+                            <IconLink href={modalData.item.youtube} color="#FF0000" name="Youtube">
+                                <FaYoutube />
+                            </IconLink>
+                        )}
                     </div>
 
                 </div>

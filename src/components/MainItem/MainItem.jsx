@@ -21,7 +21,8 @@ const MainItem = () => {
 
         <main className="main">
             <h1 className='main-bgTextLeft color-decoration'>{BackgroundTextLeft}</h1>
-            <section className="main__contentWrapper">
+            <div className="main__container">
+
                 <div className="main__content">
                     <p className="color-primary"><span className='bold'>HI, I AM </span><span className='main__content__nameText name-color'>{myName}</span></p>
                     <div className='main__content__description'>
@@ -29,8 +30,7 @@ const MainItem = () => {
                             <span>A Front-End Web Developer</span> passionate about creating interactive applications and experiences on the web.
                         </p>
                     </div>
-
-                    <div>
+             
                         <IconContext.Provider value={{ className: "reactIcons"}} >
                             <div className='main__content__icons' >
                             <a href='https://github.com/trimakichan' target='_blank' rel='noopener noreferrer'><FaGithub/></a>
@@ -38,13 +38,15 @@ const MainItem = () => {
                                 <a ><IoNewspaperOutline onClick={() => window.open(resumeUrl, '_blank')} /></a>
                             </div>
                         </IconContext.Provider>
-                    </div>
+            
                 </div>
-                <section className="main__image">
+
+
+                <div className="main__image">
                     <ProfileImage />
                     <img className='profileImage-doodle'src={doodle2} alt='doodle illustration' />
-                </section>
-            </section>
+                </div>
+            </div>
             <h1 className='main-bgTextRight'>{BackgroundTextRight}</h1>
            
         </main>
