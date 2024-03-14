@@ -43,6 +43,9 @@ $neonblue: #03EADD;
 $cyan: #50D8D7;
 $pink: #CB3CD0;
 $dark-pink: #DB1DDD;
+$pastel-pink: rgba(255, 150, 162, 1);
+$pastel-orange: #edcba5;
+$annie-pink: #eeb4aa;
 
 $orange: #F28B08;
 $lime-yellow: #e1eea6;
@@ -82,6 +85,8 @@ $yellow: #f4f411;
 */
         background: $pink;
         background: radial-gradient(at left top, $pink, $orange);
+        // background: radial-gradient(at left top, rgba(233, 134, 155), $pastel-pink)
+        // background: $annie-pink;
     }
 
     .shape-fill {
