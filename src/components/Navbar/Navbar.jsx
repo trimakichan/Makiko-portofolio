@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import "./navbar.scss";
-// import {ToggleSwitch} from 
 import { NavContext } from "../../contexts/NavContext";
 import logo from '../../assets/images/logo.svg';
 
