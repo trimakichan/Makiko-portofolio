@@ -10,6 +10,10 @@ import { ScreenSizeContext } from '../../contexts/ScreenSizeContext';
 import { GrGroup } from "react-icons/gr";
 import { RxPerson } from "react-icons/rx";
 
+import eventlite  from '../../assets/images/eventlite.webp';
+import showtime  from '../../assets/images/showtime.webp';
+import jisho  from '../../assets/images/jishoMockup.svg';
+
 
 
 
@@ -25,6 +29,7 @@ export const Card = ({ items }) => {
   }
 
   return items.map((item, index) => {
+    console.log(item.image)
 
     return (
 
@@ -37,7 +42,9 @@ export const Card = ({ items }) => {
               </div>
             }
             <div className='card__image'>
-              <img src={item.image} />
+              { item.image === "eventlite" && <img src={eventlite}  alt={`${item.name} image`}/>}
+              { item.image === "showtime" && <img src={showtime}  alt={`${item.name} image`}/>}
+              { item.image === "jisho" && <img src={jisho}  alt={`${item.name} image`}/>}
             </div>
 
             <div className='card__content'>
