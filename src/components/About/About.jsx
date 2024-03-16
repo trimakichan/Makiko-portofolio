@@ -14,12 +14,12 @@ const About = () => {
 
             <div className='about__container'>
                 <div className='about__photo'>
-                    <div className='image'><div className='image-overlay'></div><img src={nature}></img></div>
-                    <div className='image image-makiko'><div className='image-overlay'></div><img src={myPhoto}></img></div>
-                    <div className='image'><div className='image-overlay'></div><img src={diy}></img></div>
+                    <div className='image'><div className='image-overlay'></div><img className=" color-thick-border" src={nature}></img></div>
+                    <div className='image image-makiko'><div className='image-overlay'></div><img  className=" color-thick-border" src={myPhoto}></img></div>
+                    <div className='image'><div className='image-overlay'></div><img  className=" color-thick-border" src={diy}></img></div>
                 </div>
                 <div className='about__content'>
-                    <div className='about-background'>
+                    <div className='about-background color-background-accent'> 
                         <h2>Frontend Developer based in Seatte 🌿</h2>
                         <div className='text-container'>
                             <p>
@@ -35,7 +35,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className='about__funFacts'>
-                        <ul className='funFacts-content'>
+                        <ul className='funFacts-content color-background-accent'>
                             <li>😊<em>Hobbies</em>: Woodworking/DIY + Hot Yoga + Photography + Cooking </li>
                             <li>🧒<em>kids</em>: Two girls👩‍👧‍👧</li>
                             <li>🐶<em>Pet</em>: One dog, golden retriever named &#8220;Joy&#8221;</li>

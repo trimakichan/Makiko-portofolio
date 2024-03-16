@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import './footer.scss'
-import logo from '../../assets/images/logo.svg';
+import logo from '../../assets/images/logoFooter.svg';
 
 //icons
 import { FaLinkedin } from "react-icons/fa6";

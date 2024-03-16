@@ -24,9 +24,9 @@ const MainItem = () => {
             <div className="main__container">
 
                 <div className="main__content">
-                    <p className="color-primary"><span className='bold'>HI, I AM </span><span className='main__content__nameText name-color'>{myName}</span></p>
+                    <p className="color-text"><span className='bold'>HI, I AM </span><span className='main__content__nameText name-color'>{myName}</span></p>
                     <div className='main__content__description'>
-                        <p className='color-secondary'>
+                        <p className='color-text'>
                             <span>A Front-End Web Developer</span> passionate about creating interactive applications and experiences on the web.
                         </p>
                     </div>
@@ -47,7 +47,7 @@ const MainItem = () => {
                     <img className='profileImage-doodle'src={doodle2} alt='doodle illustration' />
                 </div>
             </div>
-            <h1 className='main-bgTextRight'>{BackgroundTextRight}</h1>
+            <h1 className='main-bgTextRight color-decoration'>{BackgroundTextRight}</h1>
            
         </main>
     );

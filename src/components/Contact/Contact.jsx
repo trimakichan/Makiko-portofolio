@@ -16,9 +16,9 @@ const Contact = () => {
     const { theme } = useContext(ThemeContext)
 
     return (
-        <div className="container">
+        <div className="contact__container">
 
-            <div className="contactInfo">
+            <div className="contactInfo color-background-contact">
                 <p className="contactTitle">Contact Info</p>
                 <div className="info">
                     <p><MdOutlinePhoneIphone /><span>(206)488-7550</span></p>
@@ -38,32 +38,32 @@ const Contact = () => {
 
             </div>
 
-            <div className="contactForm">
+            <div className="contactForm color-border">
                 <p className="title">Send a Message</p>
                 <form className="formBox" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="97f0fff2-2d01-47fc-8b0f-7f72303d8a0f" />
 
-                    <div className="inputBox w50">
-                        <input type='text' name="fname" required />
+                    <div className="inputBox w50 ">
+                        <input type='text' className='input-hover' name="fname" required />
                         <span>First Name</span>
                     </div>
                     <div className="inputBox w50">
-                        <input type='text' name="lname" required />
+                        <input type='text' className='input-hover' name="lname" required />
                         <span>Last Name</span>
                     </div>
 
                     <div className="inputBox w50">
-                        <input type='email' name="email" required />
+                        <input type='email' className='input-hover' name="email" required />
                         <span>Email Address</span>
                     </div>
 
                     <div className="inputBox w50">
-                        <input type='text' name="phone" />
+                        <input type='text' className='input-hover' name="phone" />
                         <span>Phone Number</span>
                     </div>
 
                     <div className="inputBox w100">
-                        <textarea name="message" placeholder="Your message here..." required></textarea>
+                        <textarea name="message" className='input-hover' placeholder="Your message here..." required></textarea>
                         <span>Write your message here...</span>
                     </div>
 

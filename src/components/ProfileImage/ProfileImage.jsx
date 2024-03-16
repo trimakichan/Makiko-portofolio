@@ -8,7 +8,7 @@ const ProfileImage = () => {
     <>
       <div className='myImage'>
         <div className="myImage__container"> 
-          <img className='myImage__circle picBg-color' alt="" />
+          <img className='myImage__circle color-accent' alt="" />
           <img className='myImage__Makiko' src={profilePic} alt="Makiko Yokoyama photo" />
         </div>
         <div className='myImage__background'>

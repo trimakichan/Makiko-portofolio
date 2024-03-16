@@ -52,13 +52,13 @@
         }
 
         .reactIcons {
-            color: rgba($white-100, .5);
+            color: rgba($grey, .5);
             font-size: 2rem;
 
             &:hover,
             &:focus {
                 cursor: pointer;
-                color: $white-100
+                color: $grey
             }
 
         }
@@ -102,16 +102,16 @@
     @keyframes neonAnim {
         from {
             text-shadow:
-                0 0 28px 55px $white-100,
-                0 0 55px 88px $white-100,
-                0 0 128px 155px $white-100;
+                0 0 28px 55px #3ef3c8,
+                0 0 55px 88px #3ef3c8,
+                0 0 128px 155px #3ef3c8;
         }
 
         to {
             text-shadow:
-                0 0 40px $white-100,
-                0 0 70px $white-100,
-                0 0 100px $white-100;
+                0 0 40px #3ef3c8,
+                0 0 70px #3ef3c8,
+                0 0 100px #3ef3c8;
         }
     }
 
