@@ -32,6 +32,7 @@ console.log('first theme', theme);
     const handleThemeChange = (newTheme) => {
         localStorage.setItem('themeSetting', newTheme);
         setTheme(newTheme);
+        
     }
 
     return (

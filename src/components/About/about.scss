@@ -68,6 +68,27 @@
             // background-color: rgba($annie-creamyPink, 1);
             padding: 1rem 2rem;
             border-radius: .3rem 3vw;
+
+            .resume-container {
+                display: grid;
+                justify-content: end;
+
+                .resume {
+                    cursor: pointer;
+                    color: $white-100;
+                    background-color: rgba($navy, .6);
+                    padding: .3rem .5rem;
+                    border-radius: 10px;
+                    
+                    &:hover, &:focus {
+                        background-color:  rgba($navy, .5)
+                    }
+
+
+
+                    // border: 1px solid red;
+                }
+            }
          
 
         }

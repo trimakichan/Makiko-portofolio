@@ -3,38 +3,40 @@
 .footer__container {
     background-color: $white-opacity;
     margin-top: 4rem;
+  
 
 
     .footer {
         padding: 1rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
-    
+
+
         &__logo {
-            padding: .8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             text-align: center;
-          
+
+
             .logo {
                 width: 40%;
+                margin: 0 auto;
             }
-    
-            p {
-                text-align: left;
-            }
+
         }
-    
+
         &__content {
             display: flex;
             flex-direction: row;
             justify-content: center;
-          
-    
+
+
             .icons {
-             @include icons
+                @include icons
             }
         }
-    
+
     }
 
     .copyRight {
@@ -42,31 +44,37 @@
         padding: 1rem;
         border-top: 1px solid $grey;
         text-align: center;
-        
+
     }
 }
 
 
 
-// @media (min-width: $breakpoint-small) {
-//    .footer {
-//     flex-direction: row;
-
-//     &__logo {
-        
+@media (min-width: $breakpoint-small) {
+    
+    .footer__container{
+    .footer {
 
 
-//         .logo {
-
-//         }
-//     }
-
-//     &__content {
-
-//     }
+        &__logo {
+            display: grid;
+            grid-template-columns: 30% 40%;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
 
 
 
-//    }
-// }
+            .logo {
+                max-width: 100%;
+                margin: 0 0;
+                justify-self: end;
+                margin-right: 2rem;
+            }
 
+            p {}
+
+        }
+    }
+}
+}

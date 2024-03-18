@@ -21,7 +21,8 @@ const Header = () => {
         <header className="header">
           <nav className="header__nav">
             <a href="#"  className="header__nav__logo" >
-              <img src={logo} />
+              {/* <img src={logo} /> */}
+              <p className="mylogo color-logo">M.Y.</p>
             </a>
 
             {/* Toggle Button */}

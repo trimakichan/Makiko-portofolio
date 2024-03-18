@@ -4,6 +4,7 @@ import "./mainItem.scss";
 import ProfileImage from '../ProfileImage/ProfileImage';
 import { useTypingEffect } from '../../hooks/typing-effect';
 import doodle2 from '../../assets/images/doodle2.svg'
+import resume from "../../assets/Makiko-resume.pdf"
 
 import { IconContext } from "react-icons";
 import { FaGithub } from "react-icons/fa";
@@ -15,7 +16,7 @@ const MainItem = () => {
     const BackgroundTextLeft = useTypingEffect("WEB DEVELOPER", 200, 5000);
     const BackgroundTextRight = useTypingEffect("UX & UI", 200, 8000);
 
-    const resumeUrl = './src/assets/Makiko-resume.pdf'
+    // const resumeUrl = './src/assets/Makiko-resume.pdf'
 
     return (
 
@@ -35,7 +36,7 @@ const MainItem = () => {
                             <div className='main__content__icons' >
                             <a href='https://github.com/trimakichan' target='_blank' rel='noopener noreferrer'><FaGithub/></a>
                                 <a href='https://www.linkedin.com/in/makiko-yokoyama' target='_blank' rel='noopener noreferrer'><FaLinkedin /></a>
-                                <a ><IoNewspaperOutline onClick={() => window.open(resumeUrl, '_blank')} /></a>
+                                <a ><IoNewspaperOutline onClick={() => window.open(resume, '_blank')} /></a>
                             </div>
                         </IconContext.Provider>
             

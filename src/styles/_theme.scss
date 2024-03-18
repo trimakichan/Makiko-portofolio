@@ -72,6 +72,9 @@ $yellow: #f4f411;
 
 
 .light {
+
+    
+
     .color-primary {
         color: $pastel-pink;
     }
@@ -107,6 +110,10 @@ $yellow: #f4f411;
 
     .color-decoration {
         color: $pastel-pink-dark;
+    }
+
+    .color-logo {
+        color: #7ed0bd;
     }
 
     .scroll-bg {
@@ -169,22 +176,6 @@ $yellow: #f4f411;
     .nav-color {
         color: $pastel-pink-dark;
     }
-
-    //Contact component 
-    // .contactForm {
-    //     // color: $grey;
-    //     border: 1px solid $pastel-pink 
-
-
-    //     .inputBox {
-    //     input,
-    //     textarea {
-    //         background-color: $annie-creamyPink;
-
-    //     }
-
-    // }
-    // }
 
     .input-hover {
 
@@ -256,6 +247,10 @@ $yellow: #f4f411;
         color: $white-60;
     }
 
+
+    .color-logo {
+        color: $purple-40;
+    }
     .scroll-bg {
         // background-color: rgba($purple-60, 0.6);
         background-color: rgba($purple-50, .7)

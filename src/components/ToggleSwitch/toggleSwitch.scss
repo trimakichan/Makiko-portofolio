@@ -1,14 +1,14 @@
 @use '../../styles/' as *;
 
 
-.toggleSwitch {
+  .toggleSwitch {
 
     input[type="checkbox"] {
       position: relative;
       appearance: none;
       width: 3rem;
       height: 1.5rem;
-      background: rgba($purple-60, .4);
+      background: rgba($purple-60, .6);
       border-radius: 2rem;
       box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
       cursor: pointer;
@@ -16,7 +16,7 @@
     }
 
     input:checked[type="checkbox"] {
-      background: rgba($orange-90, .4);
+      background: rgba($pastel-pink, .4);
   }
 
   input[type='checkbox']::after {
@@ -38,3 +38,8 @@
     left: 50%;
 }
   }
+
+
+
+
+
