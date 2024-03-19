@@ -1,43 +1,70 @@
 @use '../../styles/' as *;
 
-
-  .toggleSwitch {
-
-    input[type="checkbox"] {
-      position: relative;
-      appearance: none;
-      width: 3rem;
-      height: 1.5rem;
-      background: rgba($purple-60, .6);
+@mixin switch {
+  position: relative;
+  appearance: none;
+  width: 3rem;
+  height: 1.5rem;
       border-radius: 2rem;
       box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
       cursor: pointer;
       transition: 0.5s;
+}
+
+@mixin switch-after {
+  position: absolute;
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
+
+
+  .toggleSwitch {
+    input[type="checkbox"] {
+      @include switch;
+      background: rgba($purple-60, .6);
+
     }
 
-    input:checked[type="checkbox"] {
-      background: rgba($pastel-pink, .4);
-  }
 
   input[type='checkbox']::after {
-    position: absolute;
-    content: "";
-    width: 1.5rem;
-    height: 1.5rem;
-    top: 0;
-    left: 0;
-    background: #fff;
-    border-radius: 2rem;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-    transition: 0.4s;
-
+    @include switch-after;
   }
 
   input:checked[type="checkbox"]::after {
     left: 50%;
 }
   }
+
+
+  .toggleSwitch-dark {
+    input[type="checkbox"] {
+      @include switch;
+      background: rgba($pastel-pink, .6);
+  
+    }
+
+  input[type='checkbox']::after {
+    @include switch-after()
+  }
+
+  input:checked[type="checkbox"]::after {
+    left: 50%;
+}
+  }
+
+
+
+
+
 
 
 

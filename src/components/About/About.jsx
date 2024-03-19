@@ -29,7 +29,7 @@ const About = () => {
                             <p>Previously an IT support engineer and ecommerce seller, and currently a stay-at-home mom, I've transitioned into web development to pursue my dream of crafting visually appealing and responsive designs, delivering robust user experiences.</p>
 
                             <p> I'm dedicated to enhancing digital experiences one line of code at a time.🖥️💪</p>
-                            <div className='resume-container'><a onClick={() => window.open(resume, '_blank')} className='resume'>Resume</a></div>
+                            <div className='resume-container  '><a onClick={() => window.open(resume, '_blank')} className='resume color-background-secondary '>Resume</a></div>
                         </div>
                         {/* <button><a>Download Resume</a></button> */}
                         

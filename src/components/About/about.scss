@@ -71,17 +71,18 @@
 
             .resume-container {
                 display: grid;
-                justify-content: end;
+                justify-content: center;
 
                 .resume {
                     cursor: pointer;
                     color: $white-100;
-                    background-color: rgba($navy, .6);
-                    padding: .3rem .5rem;
+                    padding: .3rem 1.5rem;
                     border-radius: 10px;
+                    box-shadow: .6rem .5rem 0 $white-100;
+                    
                     
                     &:hover, &:focus {
-                        background-color:  rgba($navy, .5)
+                        box-shadow: .6rem .5rem 0 rgba($grey, .5);
                     }
 
 

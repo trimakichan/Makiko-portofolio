@@ -1,5 +1,5 @@
 @use './variables' as *;
-
+// @use './mixins' as *;
 // Colors
 $orange-100: #FF6720;
 $orange-90: #FF7636;
@@ -73,7 +73,6 @@ $yellow: #f4f411;
 
 .light {
 
-    
 
     .color-primary {
         color: $pastel-pink;

@@ -9,19 +9,21 @@ const ToggleSwitch = () => {
   const {showNav, setShowNav} = useContext(NavContext)
     const { theme, setTheme } = useContext(ThemeContext);
 
+
     const checkboxFunc = () => {
+
       // setShowNav(!showNav);
       setTheme(theme === "light" ? "dark" : "light");
-      
+      setShowNav(!showNav);
     }  
 
 
-  return (
+   return (
+        <div className={`${theme === 'light' ?"toggleSwitch" : "toggleSwitch-dark" }`}>
+    <input type="checkbox" onChange={checkboxFunc}/>
+  </div> 
+   )
 
-          <div className="toggleSwitch toggleSwitch-bg">
-            <input type="checkbox" onChange={checkboxFunc}/>
-          </div> 
-  )
 }
 
 export default ToggleSwitch
