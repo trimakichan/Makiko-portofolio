@@ -4,6 +4,7 @@ import "./mainItem.scss";
 import ProfileImage from '../ProfileImage/ProfileImage';
 import { useTypingEffect } from '../../hooks/typing-effect';
 import doodle2 from '../../assets/images/doodle2.svg'
+import resume from "../../assets/Makiko-resume.pdf"
 
 import { IconContext } from "react-icons";
 import { FaGithub } from "react-icons/fa";
@@ -15,7 +16,7 @@ const MainItem = () => {
     const BackgroundTextLeft = useTypingEffect("WEB DEVELOPER", 200, 5000);
     const BackgroundTextRight = useTypingEffect("UX & UI", 200, 8000);
 
-    const resumeUrl = './src/assets/Makiko-resume.pdf'
+    // const resumeUrl = './src/assets/Makiko-resume.pdf'
 
     return (
 
@@ -24,9 +25,9 @@ const MainItem = () => {
             <div className="main__container">
 
                 <div className="main__content">
-                    <p className="color-primary"><span className='bold'>HI, I AM </span><span className='main__content__nameText name-color'>{myName}</span></p>
+                    <p className="color-text"><span className='bold'>HI, I AM </span><span className='main__content__nameText name-color'>{myName}</span></p>
                     <div className='main__content__description'>
-                        <p className='color-secondary'>
+                        <p className='color-text'>
                             <span>A Front-End Web Developer</span> passionate about creating interactive applications and experiences on the web.
                         </p>
                     </div>
@@ -35,7 +36,7 @@ const MainItem = () => {
                             <div className='main__content__icons' >
                             <a href='https://github.com/trimakichan' target='_blank' rel='noopener noreferrer'><FaGithub/></a>
                                 <a href='https://www.linkedin.com/in/makiko-yokoyama' target='_blank' rel='noopener noreferrer'><FaLinkedin /></a>
-                                <a ><IoNewspaperOutline onClick={() => window.open(resumeUrl, '_blank')} /></a>
+                                <a ><IoNewspaperOutline onClick={() => window.open(resume, '_blank')} /></a>
                             </div>
                         </IconContext.Provider>
             
@@ -47,7 +48,7 @@ const MainItem = () => {
                     <img className='profileImage-doodle'src={doodle2} alt='doodle illustration' />
                 </div>
             </div>
-            <h1 className='main-bgTextRight'>{BackgroundTextRight}</h1>
+            <h1 className='main-bgTextRight color-decoration'>{BackgroundTextRight}</h1>
            
         </main>
     );

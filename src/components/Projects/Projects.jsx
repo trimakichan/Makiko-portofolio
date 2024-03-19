@@ -1,5 +1,5 @@
 
-import { useState, useContext } from 'react';
+import {useContext } from 'react';
 import './projects.scss';
 import { projectsData } from '../data/data-projects'
 import Modal from '../Modal/Modal';
@@ -29,13 +29,12 @@ export const Card = ({ items }) => {
   }
 
   return items.map((item, index) => {
-    console.log(item.image)
 
     return (
 
       <div key={index} className={`card card${index} ${isDesktop && projectIsVisible ? `showLeft index${index}` : ''} ${isDesktop && !projectIsVisible ? 'hiddenLeft' : ''}`} onClick={item.status === "active" ? () => handleModalStatus({ item }) : null} ref={projectRef}>
 
-          <div className={`card__container ${item.status === 'inactive' ? 'card-inactive' : ''}`}>
+          <div className={`card__container card-box-style ${item.status === 'inactive' ? 'card-inactive' : ''}`}>
             {item.status === 'inactive' &&
               <div className='inactive-text'>
                 <p>In Progress</p>
@@ -47,7 +46,7 @@ export const Card = ({ items }) => {
               { item.image === "jisho" && <img src={jisho}  alt={`${item.name} image`}/>}
             </div>
 
-            <div className='card__content'>
+            <div className='card__content card-bg-color'>
               <h2 className='card-title'><div>{item.name} </div> {item.group ? <GrGroup /> : <RxPerson />
 }</h2>
               <p className='card-techstack'><span className='bold'>Tech Stack:  </span>{item.teckStack.join(', ')}</p>

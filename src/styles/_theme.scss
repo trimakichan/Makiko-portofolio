@@ -1,5 +1,5 @@
 @use './variables' as *;
-
+// @use './mixins' as *;
 // Colors
 $orange-100: #FF6720;
 $orange-90: #FF7636;
@@ -9,7 +9,6 @@ $orange-60: #FFC2A6;
 $orange-50: #FFE1D2;
 $orange-40: #FFF0E9;
 $orange-30: #FFF7F4;
-
 
 
 $purple-90: #1b1239;
@@ -30,26 +29,38 @@ $white-70: #f5eeeb;
 $white-60: #faf7f5;
 
 // 使ってる色
-$creamy-white: #f6e6e0;
 $white-opacity: rgba(255, 255, 255, .6);
+$creamy-white: #f6e6e0;
 $white-orange: #f7eeec;
+
+
 $grey: #282727;
 $light-grey: #4c4848;
 $black: #181717;
+
 $navy: #1b133f;
 $light-purple: #685d97;
+
 $purple-pink: #D236EC;
-$neonblue: #03EADD;
-$cyan: #50D8D7;
 $pink: #CB3CD0;
 $dark-pink: #DB1DDD;
-$pastel-pink: rgba(255, 150, 162, 1);
+
+$pastel-pink: #ff96a2;
+$pastel-pink-dark: #ef767a;
 $pastel-orange: #edcba5;
 $annie-pink: #eeb4aa;
+$annie-creamyPink: #f6e6e0;
+$light-pink: #e9b5bb;
+
+$neonblue: #03EADD;
+$cyan: #50D8D7;
+$mint: #b6e2d8;
+$mint-dark: #3ef3c8;
 
 $orange: #F28B08;
 $lime-yellow: #e1eea6;
-$light-pink: #e9b5bb;
+
+
 
 // rgba(27, 19, 63,.4)
 
@@ -61,55 +72,98 @@ $yellow: #f4f411;
 
 
 .light {
+
+
     .color-primary {
-        color: $white-100;
+        color: $pastel-pink;
     }
 
-    .color-secondary, .color-decoration {
-        color: $orange-30;
+    .color-secondary {
+        color: $navy;
     }
 
-    //change the color later
-    // .color-decoration {
-    //     color: $orange-30;
-    // }
+
+    .color-background-primary {
+        background-color: $creamy-white;
+    }
+
+    .color-background-secondary {
+        background-color: $pastel-pink;
+    }
+
+    .color-background-accent {
+        background-color: rgba($mint, 0.6);
+        
+    }
+
+    .color-background-contact {
+        background-color: $mint;
+    
+    }
+
+    
+
+    .color-text {
+        color: $navy;
+    }
+
+    .color-decoration {
+        color: $pastel-pink-dark;
+    }
+
+    .color-logo {
+        color: #7ed0bd;
+    }
 
     .scroll-bg {
-        background-color: rgba($dark-pink, 0.6);
+        background-color: $pastel-pink;
     }
 
-    .gradient-bg {
-        /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=cb3cd0&c2=f28b08&gt=r&gd=dtl
-*/
-        background: $pink;
-        background: radial-gradient(at left top, $pink, $orange);
-        // background: radial-gradient(at left top, rgba(233, 134, 155), $pastel-pink)
-        // background: $annie-pink;
-    }
 
     .shape-fill {
-        fill: $white-100;
+        fill: $pastel-pink;
     }
 
-    .bg-color {
-        background-color: $white-100;
+    .color-accent {
+        background-color: $mint;
+
     }
 
-    .picBg-color {
-        background-color: $orange-50;
+    .color-border {
+        border: 1px solid $pastel-pink;
+    }
+
+    .color-thick-border {
+        border: 5px solid $mint;
+    }
+
+
+
+    .card-bg-color {
+        background-color: rgba($pastel-pink, .2);
+    }
+
+
+    .card-box-style {
+        border: 1px solid $pastel-pink;
+        box-shadow: 1rem 1rem 0 rgba($pastel-pink, .5);
+
+        &:hover {
+            border: 2px solid $mint;
+            box-shadow: 1rem 1rem 0 rgba($mint, 1);
+        }
     }
 
     // PhraseItem component 
     .font-stroke {
-        -webkit-text-stroke: 2px $grey;
+        -webkit-text-stroke: 2px $navy;
 
     }
 
     //mainItem component
     .name-color {
-        color: $lime-yellow;
+        color: $pastel-pink-dark;
+        // color: #BA5A50;
 
     }
 
@@ -118,74 +172,123 @@ $yellow: #f4f411;
         background-color: $white-orange;
     }
 
-    //Contact component 
-    .contactForm {
-        color: $grey;
+    .nav-color {
+        color: $pastel-pink-dark;
+    }
 
-        .contact-title {
-            &::after {
-                background: linear-gradient(to bottom, #0000 60%, $orange-80 40% );
-    
-            }
+    .input-hover {
 
-        }
+        border: none;
+        outline: none;
 
-        input, textarea {
-            background-color: rgba($white-100, .4);
-           
+        &:hover,
+        &:focus {
+            border: 2px solid $pastel-pink;
         }
     }
+
+    // _________
+
+
+
+    //___________
 
     // About component 
     .title {
         color: $grey;
-            &::after {
-                background: linear-gradient(to bottom, #0000 60%,  $orange-80 40% );
-            }
+
+        &::after {
+            background: linear-gradient(to bottom, #0000 60%, $pastel-pink 40%);
         }
-        
+    }
+
 }
 
 // DARK THEME----------------------------------------------
 
 .dark {
+
+    .color-background-primary {
+        /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=db1ddd&c2=50d8d7&gt=l&gd=dbl
+// */
+        background: linear-gradient(45deg, $dark-pink, $cyan);
+    }
+
+    .color-background-secondary {
+        background-color: $navy;
+    }
+
+    .color-background-accent {
+        background-color: rgba($white-100, 0.6);
+    }
+
+    .color-background-contact {
+        background-color: $white-100;
+    
+    }
+
+    .color-text {
+        color: $white-100;
+    }
+
+    .color-decoration {
+        color: $white-100;
+    }
+
+
     .color-primary {
         color: $white-100;
     }
 
-    .color-secondary,   .color-decoration {
+    .color-secondary {
         color: $white-60;
     }
 
-    // .color-decoration {
-    //     color: $purple-60;
-    // }
 
-    .scroll-bg {
-        background-color: rgba($purple-60, 0.6);
+    .color-logo {
+        color: $purple-40;
     }
-
-    .gradient-bg {
-        /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=db1ddd&c2=50d8d7&gt=l&gd=dbl
-*/
-        background: $dark-pink;
-        background: linear-gradient(45deg, $dark-pink, $cyan);
+    .scroll-bg {
+        // background-color: rgba($purple-60, 0.6);
+        background-color: rgba($purple-50, .7)
     }
 
     .shape-fill {
         fill: $navy;
     }
 
-    .bg-color {
-        background-color: $navy;
-    }
-
-    .picBg-color {
+    .color-accent {
         background-color: $purple-20;
+  
     }
 
+    .color-border {
+        border: 1px solid $white-100;
+    }
+
+    .color-thick-border {
+        border: 5px solid rgba($white-100, .8);
+    }
+
+    .card-bg-color {
+        background-color: rgba($white-100, .2);
+    }
+
+    .card-box-style {
+        border: 1px solid $white-100;
+        box-shadow: 1rem 1rem 0 rgba($white-100, .5);
+
+        &:hover {
+            border: 1px solid $grey;
+            box-shadow: 1rem 1rem 0 rgba($grey, .6);
+        }
+    }
+
+    .nav-color {
+        color: $pastel-pink
+    }
 
     // PhraseItem component 
     .font-stroke {
@@ -195,7 +298,7 @@ $yellow: #f4f411;
 
     //mainItem component
     .name-color {
-        color: rgba($purple-pink, .8);
+        color: rgba($purple-50, 1);
     }
 
     //SkillScrollSlider component
@@ -203,29 +306,27 @@ $yellow: #f4f411;
         background-color: $light-purple;
     }
 
+    .nav-color {
+        color: $purple-50;
+    }
+
     //Contact component 
- 
-    .contactForm {
-        color: $white-100;
+    .input-hover {
 
-        // .contact-title {
+        border: none;
+        outline: none;
 
-        //     &::after {
-        //         background: linear-gradient(to bottom, #0000 60%,  $purple-40 40% );
-    
-        //     }
-        // }
-    
-        input, textarea {
-            background-color: rgba($white-100, .2);
-            color: $white-100;
+        &:hover,
+        &:focus {
+            border: 2px solid $purple-40;
         }
     }
 
-    .title{
+    .title {
         color: $white-100;
+
         &::after {
-            background: linear-gradient(to bottom, #0000 60%,  $purple-40 40% );
+            background: linear-gradient(to bottom, #0000 60%, $purple-40 40%);
 
         }
     }

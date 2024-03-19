@@ -20,6 +20,8 @@ import sprinkle from '../../assets/images/sprinkle.svg';
 import doodle1 from '../../assets/images/doodle1.svg';
 import doodle2 from '../../assets/images/doodle2.svg';
 import arrow from '../../assets/images/arrow1.svg';
+import Loading from '../../components/Loading/loading';
+import ProfileImage from '../../components/ProfileImage/ProfileImage';
 
 const HomeScreen = () => {
 
@@ -62,7 +64,7 @@ const HomeScreen = () => {
 
             <div className='scroll-watcher scroll-bg'></div>
 
-            <div className="home gradient-bg">
+            <div className="home color-background-primary">
                 <Header />
                 <div className="home__background">
                     <MainItem />
@@ -73,7 +75,7 @@ const HomeScreen = () => {
                     </div>
                 </div>
 
-                <div className='bg-color'>
+                <div className='color-background-secondary'>
                     <SkillSection  />
                 </div>
 
@@ -105,7 +107,7 @@ const HomeScreen = () => {
 
                 {/*--------------------------------------------------------------------------------------------------------------------- */}
                
-                <section className='section section-top section-bottom' id="projects" >
+                <section className='section section-top section-bottom ' id="projects" >
                     <Projects />
                 </section>
 
@@ -122,6 +124,7 @@ const HomeScreen = () => {
                 <Footer />
             </div>
         </div>
+
     )
 
 };

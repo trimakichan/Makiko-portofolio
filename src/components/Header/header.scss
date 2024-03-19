@@ -18,6 +18,11 @@
         &__logo {
             display: flex;
             align-items: center;
+            text-decoration: none;
+
+            .mylogo {
+                @include logo(2rem);
+            }
          
 
             img {

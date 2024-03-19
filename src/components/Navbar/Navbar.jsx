@@ -29,41 +29,42 @@ const Navbar = () => {
         </div>
 
         <a href="#" className="nav__logo" onClick={() => setShowNav(!showNav)}>
-          <img className='logo' src={logo} alt="Logo" />
+          {/* <img className='logo' src={logo} alt="Logo" /> */}
+          <p className="mylogo color-logo">M.Y.</p>
      
         </a>
 
-        <div className="navSwitch-container">
-        <ul className="nav__list"  onClick={handleLinkClick}>
-          <li className="nav__list__item">
-            <a href="#" className="nav__list__item__link">
+        <ul className="nav__list nav-color" >
+          <li className="nav__list__item " onClick={handleLinkClick}>
+            <a href="#" className="nav-link ">
+            {/* nav-link */}
               Home
-              <AiOutlineHome className="icon" />
+              <AiOutlineHome  />
             </a>
 
           </li>
-          <li className="nav__list__item">
-            <a href="#about" className="nav__list__item__link" >
+          <li className="nav__list__item" onClick={handleLinkClick}>
+            <a href="#about" className="nav-link" >
               About
-              <LuUser className="icon" />
+              <LuUser />
             </a>
           </li>
-          <li className="nav__list__item">
-            <a href="#projects" className="nav__list__item__link">
+          <li className="nav__list__item" onClick={handleLinkClick}>
+            <a href="#projects" className="nav-link">
               Projects
-              <RiBriefcase3Fill className="icon" />
+              <RiBriefcase3Fill />
             </a>
           </li>
-          <li className="nav__list__item">
-            <a href="#contact" className="nav__list__item__link" >
+          <li className="nav__list__item" onClick={handleLinkClick}>
+            <a href="#contact" className="nav-link" >
               Contact
-              <FiMessageSquare className="icon" />
+              <FiMessageSquare />
             </a>
+          </li>
+          <li>
+          <ToggleSwitch />
           </li>
         </ul>
-        <ToggleSwitch />
-
-        </div>
       </nav>
     </nav>
   );

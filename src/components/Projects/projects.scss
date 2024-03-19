@@ -57,16 +57,16 @@
 .card {
     &__container {
         padding: 1rem;
-        border: 1px solid $white-100;
+        // border: 1px solid $grey;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 15rem 15rem;
-        box-shadow: 1rem 1rem 0 rgba($white-100, .3);
+        // box-shadow: 1rem 1rem 0 rgba($pastel-pink, .5);
 
         &:hover,
         &:focus {
             box-shadow: 1rem 1rem 0 rgba($black, .3);
-            border: 1px solid $navy;
+            // border: 1px solid $navy;
             cursor: pointer;
         }
 
@@ -87,7 +87,7 @@
         flex-direction: column;
         gap: 1rem;
 
-        background-color: rgba($white-100, .2);
+        // background-color: rgba($white-100, .2);
         margin-top: .5rem;
         padding: 1rem;
         border-radius: 10px;

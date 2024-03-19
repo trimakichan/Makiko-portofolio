@@ -1,0 +1,14 @@
+@use "../../styles" as *;
+
+
+.loader {
+    font-size: 5rem;
+    font-style: italic;
+    font-weight: bold;
+    color: $pastel-pink;
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

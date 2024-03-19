@@ -8,14 +8,14 @@ import { ModalProvider } from "./contexts/ModalContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+        <ThemeProvider>
     <ScreenSizeProvider>
-      <ThemeProvider>
         <NavProvider>
           <ModalProvider>
             <App />
           </ModalProvider>
         </NavProvider>
-      </ThemeProvider>
     </ScreenSizeProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );

@@ -25,8 +25,9 @@
         &__nameText {
             position: relative;
             line-height: 2rem;
-            font-size: 3.5em;
-            font-family: 'Reenie Beanie', cursive;
+            font-size: 3rem;
+            // font-family: 'Reenie Beanie', cursive;
+            font-family: $font-family-cherry;
             font-style: italic;
             animation: neonAnim 2s alternate-reverse infinite;
         }
@@ -38,9 +39,9 @@
             position: absolute;
             height: 3.5rem;
             width: 2px;
-            background: $white-80;
+            background: rgba($navy, .4);
             transform: translateY(-45%);
-            animation: blink 0.7s infinite;
+            animation: blink .9s infinite;
 
         }
 
@@ -52,13 +53,13 @@
         }
 
         .reactIcons {
-            color: rgba($white-100, .5);
+            color: rgba($grey, .5);
             font-size: 2rem;
 
             &:hover,
             &:focus {
                 cursor: pointer;
-                color: $white-100
+                color: $grey
             }
 
         }
@@ -102,16 +103,16 @@
     @keyframes neonAnim {
         from {
             text-shadow:
-                0 0 28px 55px $white-100,
-                0 0 55px 88px $white-100,
-                0 0 128px 155px $white-100;
+                0 0 28px 55px $pastel-orange,
+                0 0 55px 88px $pastel-orange,
+                0 0 128px 155px $pastel-orange;
         }
 
         to {
             text-shadow:
-                0 0 40px $white-100,
-                0 0 70px $white-100,
-                0 0 100px $white-100;
+                0 0 40px $pastel-orange,
+                0 0 70px $pastel-orange,
+                0 0 100px $pastel-orange;
         }
     }
 
@@ -143,7 +144,10 @@
 
         &__content {
             margin-top: 6rem;
+                &__nameText {
+                    font-size: 5rem;
         }
+    }
 
 
         &-bgTextLeft {
