@@ -1,112 +1,106 @@
-
 @use './theme.scss' as *;
 @use './variables.scss' as *;
 
 @mixin base-container {
-    width: 90%;
-    max-width: 1500px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 @mixin bgText {
-    display: block;
-    font-size: clamp(1rem, 10vw + 1rem, 10rem);
-    line-height: 1em;
-    text-wrap: nowrap;
-    opacity: .3;
-  
-    }
-
-@mixin highligntTitle {
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-style: italic;
-    position: relative;
-    display: inline-block;
+  display: block;
+  font-size: clamp(1rem, 10vw + 1rem, 10rem);
+  line-height: 1em;
+  text-wrap: nowrap;
+  opacity: .3;
 
 }
 
-@mixin highlight {
-    content:'';
+
+@mixin title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+  z-index: 4;
+
+  &::after {
+
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     left: 20px;
     bottom: 5px;
     z-index: -1;
-}
 
-@mixin title {
-        @include highligntTitle;
-        z-index: 4;
-    
-        &::after {
-          @include highlight;
-        }
+  }
 }
 
 @mixin icons {
-    display: flex;
-    font-size: 2rem;
-    gap: .5rem;
+  display: flex;
+  font-size: 2rem;
+  gap: .5rem;
 
-    a {
-        color: $light-grey;
+  a {
+    color: $light-grey;
 
-        &:hover,  &:focus {
-            cursor: pointer;
-            color: $grey;
-        }
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: $grey;
     }
+  }
 }
 
 @mixin hoverEffect {
+  content: '';
+  background: rgba($purple-pink, .6);
+  position: absolute;
+  left: 0;
+  bottom: -.3rem;
+  height: 3px;
+}
+
+
+@mixin lhCrop($line-height) {
+  &::before {
     content: '';
-    background: rgba($purple-pink, .6);
-    position: absolute;
-    left: 0;
-    bottom: -.3rem;
-    height: 3px;
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
   }
-  
+}
 
-  @mixin lhCrop($line-height) {
-    &::before {
-      content: '';
-      display: block;
-      height: 0;
-      width: 0;
-      margin-top: calc((1 - #{$line-height}) * 0.5em);
-    }
+@mixin logo($font-size) {
+  @include lhCrop(1.3);
+
+  margin-top: 0;
+  font-size: $font-size;
+  padding: 0.5rem;
+  font-family: $font-family-cherry;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+
+@mixin toggleSwitch($color1, $color2) {
+  input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 3rem;
+    height: 1.5rem;
+    background: $color1;
+    border-radius: 2rem;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.5s;
   }
 
-  @mixin logo($font-size) {
-    @include lhCrop(1.3);
-
-    margin-top: 0;
-    font-size: $font-size;
-    padding: 0.5rem;
-    font-family: $font-family-cherry;
-    font-weight: bold;
-    line-height: 100%;
-  }
-  
-
-  @mixin toggleSwitch($color1, $color2) {
-    input[type="checkbox"] {
-      position: relative;
-      appearance: none;
-      width: 3rem;
-      height: 1.5rem;
-      background: $color1;
-      border-radius: 2rem;
-      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      transition: 0.5s;
-    }
-
-    input:checked[type="checkbox"] {
-      background: $color2;
+  input:checked[type="checkbox"] {
+    background: $color2;
   }
 
   input[type='checkbox']::after {
@@ -126,6 +120,6 @@
 
   input:checked[type="checkbox"]::after {
     left: 50%;
-}
+  }
 
-  } 
+}
