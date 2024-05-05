@@ -35,4 +35,14 @@ export const projectsData = [
         description: 'Jisho app is a Japanese/English dictionary and language learning tool. Search words in Japanese or English with kanji, kana, romaji, or Latin alphabets. Get example sentences and kanji details for enhanced learning.',
     },
 
+    {
+        name: "Fairhaven Yachts",
+        status: 'inactive',
+        group: false,
+        teckStack: ['React', 'Sass', 'MongoDB', 'Node.js', 'Express.js', 'Figma'],
+        image: 'FY',
+        description: 'A full- stack website for a yacht business is being rebuilt to be visually appealing and user - friendly. It will include an admin portal for adding listings, which are then displayed on the main site for users to view.',
+    },
+
+
 ]

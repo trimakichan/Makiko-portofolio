@@ -14,6 +14,8 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { FaFigma } from "react-icons/fa";
 import { DiIllustrator } from "react-icons/di";
 import { DiPhotoshop } from "react-icons/di";
+import { SiMysql } from "react-icons/si";
+
 
 
 
@@ -56,6 +58,14 @@ export const dataSkills = [{
     icon: <FaNode />,
     color: "#6cc24a"
   }, {
+    skill: 'MongoDB',
+    icon: <SiMongodb />,
+    color: '#589636'
+  }, {
+    skill: 'MySQL',
+     icon: <SiMysql />,
+     color: '#03618A'
+  }, {
     skill: 'SASS',
     icon: <FaSass />,
     color: "#CD6799"
@@ -68,11 +78,7 @@ export const dataSkills = [{
     skill: 'Git & GitHub',
     icon: <FaGithub />,
     color: "#333",
-  }, {
-    skill: 'MongoDB',
-    icon: <SiMongodb />,
-    color: '#589636'
-  }, {
+  },  {
     skill: "Responsive Design",
     icon: <IoIosPhonePortrait />,
     color: '#0096FF'
