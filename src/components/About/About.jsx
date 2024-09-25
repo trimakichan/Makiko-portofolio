@@ -44,7 +44,7 @@ const About = () => {
                         <li>🧒<em>kids</em>: Two girls👩‍👧‍👧</li>
                         <li>🐶<em>Pet</em>: One dog, golden retriever named &#8220;Joy&#8221;</li>
                         <li>🌱<em>Personality Type</em>: Enneagram Type 9 &#8317;THE PEACEMAKER&#8318;</li>
-                        <li>🩷<em>Favorite Quote</em>: &#8220;Your future is created by what you do today, not tomorrow.&#8221; - Robert Kiyosaki.</li>
+                        <li>🩷<em>Favorite Quote</em>: &#8220;Life&#39;s not about waiting for the storm to pass, it&#39;s about learning to dance in the rain&#8221; </li>
                         <li>📙<em>Favorite Books</em>:  &#8220;Atomic Habits&#8221; - James Clear,  &#8220;Limitless&#8221; - Jim Kwik </li>
                     </ul>
                     <div className='funFacts-image'>

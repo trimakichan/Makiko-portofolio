@@ -8,19 +8,13 @@ import { FaYoutube } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 
-import eventlite  from '../../assets/images/eventlite.webp';
-import showtime  from '../../assets/images/showtime.webp';
-import jisho  from '../../assets/images/jishoMockup.svg';
-
-
-
 const IconLink = ({ href, color, name, children }) => (
     <IconContext.Provider value={{ color, size: '3rem' }} className='icon-hover'>
         <div className='icon-container'>
-        <a href={href} target='_blank' rel='noopener noreferrer'>
-            {children}
-        </a>
-        <p>{name}</p>
+            <a href={href} target='_blank' rel='noopener noreferrer'>
+                {children}
+            </a>
+            <p>{name}</p>
         </div>
     </IconContext.Provider>
 );
@@ -28,19 +22,20 @@ const IconLink = ({ href, color, name, children }) => (
 
 const Modal = () => {
     const { modalData, setModalStatus } = useContext(ModalContext);
-   
+
     return (
-        <div className='modal modal-background'>
+        <div className='modal'>
+            <div className='modal__background'></div>
 
             <div className='modal__container'>
                 <p className="modal-close" onClick={() => setModalStatus(false)}><IoMdClose /></p>
 
-                <div className='modal__image'>
-                { modalData.item.image === "eventlite" && <img src={eventlite}  alt={`${modalData.item.name} image`}/>}
-              { modalData.item.image === "showtime" && <img src={showtime}  alt={`${modalData.item.name} image`}/>}
-              { modalData.item.image === "jisho" && <img src={jisho}  alt={`${modalData.item.name} image`}/>}
+                <div className={Array.isArray(modalData.item.images) ? 'modal__images' : 'modal__image'}>
+                    {Array.isArray(modalData.item.images) ?
+                        modalData.item.images.map((image, index) => <img key={index} src={image} alt={`${modalData.item.name} image`} />)
+                        : <img src={modalData.item.images} alt={`${modalData.item.name} image`} />}
                 </div>
-
+      
                 <div className='modal__content'>
                     <div className="modal-title">
                         <h1>{modalData.item.name}</h1>

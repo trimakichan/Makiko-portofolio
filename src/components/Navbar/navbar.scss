@@ -1,8 +1,6 @@
 @use "../../styles" as *;
 
 
-
-
 .nav-container {
   z-index: 30;
   // background-color: rgba($navy, .2);
@@ -124,6 +122,7 @@ background-color: rgba($white-100, 0.6);
     padding: 1rem;
     transform: translate(0);
     position: sticky;
+
 
 
     .nav {

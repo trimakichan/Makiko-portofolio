@@ -59,13 +59,13 @@ const HomeScreen = () => {
     return (
         <div className={theme}>
             {/* onClick={showNavToFalse} */}
-
-            {modalStatus && <Modal />}
-
             <div className='scroll-watcher scroll-bg'></div>
 
             <div className="home color-background-primary">
                 <Header />
+
+                {modalStatus && <Modal />}
+                
                 <div className="home__background">
                     <MainItem />
                     <div className={`wavy_top ${theme}`}>

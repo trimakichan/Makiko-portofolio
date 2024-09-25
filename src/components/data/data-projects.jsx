@@ -3,11 +3,23 @@
 export const projectsData = [
 
     {
+        name: "Fairhaven Yachts",
+        status: 'active',
+        group: false,
+        teckStack: ['React', 'Sass', 'Figma'],
+        images: ['/projectImages/FY.webp', '/projectImages/FYDesign.webp'],
+        description: 'A website for the Fairhaven Yachts business is designed and developed to be visually appealing and more user-friendly The YachtWorld API has been integrated to display yachts directly on the site, enhancing user retention and improving SEO performance.',
+        github: 'https://github.com/trimakichan/fairhaven_yatchts.git',
+        site: 'https://www.fysyachts.com/'
+
+    },
+
+    {
         name: 'Eventlite',
         status: 'active',
         teckStack: ['React', 'Redux', 'Node.js', 'Express.js', 'MongoDB', 'React-Bootstrap'],
         group: true,
-        image: 'eventlite',
+        images: '/projectImages/eventlite.webp',
         description: 'A full-stack mini Eventbrite-like application where users can create an account and purchase event tickets using PayPal.',
         github: 'https://github.com/trimakichan/react-eventProject',
         site: 'https://react-eventlite.herokuapp.com/',
@@ -20,7 +32,7 @@ export const projectsData = [
         status: 'active',
         group: false,
         teckStack: ['Angular', 'Typescript', 'CSS', 'Bootstrap', 'External API (TMDB)'],
-        image: 'showtime',
+        images: '/projectImages/showtime.webp',
         description: 'A TV and movie application that offers trending films and popular TV shows. Users can also easily search for their favorite content using keywords.',
         github: 'https://github.com/trimakichan/AngularShowTime',
         site: 'https://itisshowtime.netlify.app/',
@@ -31,18 +43,7 @@ export const projectsData = [
         group: true,
         isApp: true,
         teckStack: ['React Native', 'Sass', 'SQlite'],
-        image: 'jisho',
+        images: '/projectImages/jishoMockup.svg',
         description: 'Jisho app is a Japanese/English dictionary and language learning tool. Search words in Japanese or English with kanji, kana, romaji, or Latin alphabets. Get example sentences and kanji details for enhanced learning.',
     },
-
-    {
-        name: "Fairhaven Yachts",
-        status: 'inactive',
-        group: false,
-        teckStack: ['React', 'Sass', 'MongoDB', 'Node.js', 'Express.js', 'Figma'],
-        image: 'FY',
-        description: 'A full- stack website for a yacht business is being rebuilt to be visually appealing and user - friendly. It will include an admin portal for adding listings, which are then displayed on the main site for users to view.',
-    },
-
-
 ]
